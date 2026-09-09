@@ -22,12 +22,56 @@ Esquema normalizado de una oferta (dict):
 
 from __future__ import annotations
 
+import re
 from abc import ABC, abstractmethod
 from datetime import datetime
 
 
 def now_iso() -> str:
     return datetime.now().strftime("%Y-%m-%d %H:%M")
+
+
+# Detección de modalidad por reglas — barata (regex sobre texto que ya
+# tenemos), sin llamar a ninguna IA. Ver la conversación de diseño: la
+# etapa 2 (LLM grande) ya cuesta y sólo cubre ~10 finalistas, así que la
+# modalidad se saca de acá y del scrape, no del modelo.
+#
+# EL ORDEN IMPORTA y es contraintuitivo:
+#   1. HÍBRIDO primero. Computrabajo etiqueta los avisos mixtos con el chip
+#      literal "Presencial y remoto" (verificado en vivo, 09/09/2026) — eso
+#      es híbrido, no remoto. Si "remoto" se chequeara antes, todos esos
+#      avisos (la mayoría de los que traen modalidad) saldrían mal como
+#      "remoto" y no se les aplicaría la penalización de cercanía que
+#      corresponde. También cubre el título que dice "... / Híbrido".
+#   2. REMOTO después: sólo cuando es remoto "puro" (sin "presencial" al lado).
+#   3. PRESENCIAL al final: la palabra más ambigua.
+_MODALITY_PATTERNS = [
+    ("hibrido", re.compile(
+        r"\b(h[ií]brid[oa]|hybrid|esquema h[ií]brido|modalidad h[ií]brida|"
+        r"presencial\s*(?:y|/|o|\+|&)\s*remot[oa]|"
+        r"remot[oa]\s*(?:y|/|o|\+|&)\s*presencial|"
+        r"remoto parcial|parcialmente remoto)\b", re.IGNORECASE)),
+    ("remoto", re.compile(
+        r"\b(100\s?%?\s?remoto|full\s?remote|totalmente remoto|"
+        r"remoto|remota|remote|teletrabajo|home\s?office|"
+        r"trabajo desde casa|desde tu casa)\b", re.IGNORECASE)),
+    ("presencial", re.compile(
+        r"\b(100\s?%?\s?presencial|presencial|on\s?site|on-site|"
+        r"en (?:la )?oficina|en planta|modalidad presencial)\b", re.IGNORECASE)),
+]
+
+
+def detect_modality(*texts: str) -> str:
+    """Devuelve 'remoto' | 'hibrido' | 'presencial' | '' a partir de uno o
+    más textos (título, tag de la tarjeta, snippet). '' = no se pudo
+    determinar (no se penaliza cercanía en ese caso — ver geo.py)."""
+    blob = " ".join(t for t in texts if t)
+    if not blob.strip():
+        return ""
+    for name, pat in _MODALITY_PATTERNS:
+        if pat.search(blob):
+            return name
+    return ""
 
 
 def normalize_job(

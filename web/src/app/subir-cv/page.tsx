@@ -14,9 +14,27 @@ const LOADING_MESSAGES = [
   "Ya casi, preparando tu ranking...",
 ];
 
+// Zonas para priorizar ofertas cercanas cuando son presenciales o híbridas.
+// Sólo se usa si el CV no dice de dónde es la persona (ver api/matching.py).
+// Los valores son los que entiende geo.parse_location en el backend.
+const ZONAS = [
+  "CABA",
+  "GBA Norte",
+  "GBA Oeste",
+  "GBA Sur",
+  "La Plata",
+  "Córdoba",
+  "Rosario",
+  "Santa Fe",
+  "Mendoza",
+  "Mar del Plata",
+  "Tucumán",
+];
+
 export default function SubirCvPage() {
   const router = useRouter();
   const [file, setFile] = useState<File | null>(null);
+  const [zona, setZona] = useState("");
   const [dragOver, setDragOver] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -49,7 +67,7 @@ export default function SubirCvPage() {
     setLoading(true);
     setMessageIndex(0);
     try {
-      await uploadCvAndMatch(file);
+      await uploadCvAndMatch(file, zona);
       router.push("/resultados");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Algo salió mal. Probá de nuevo.");
@@ -114,6 +132,29 @@ export default function SubirCvPage() {
           className="hidden"
           onChange={(e) => pickFile(e.target.files?.[0] ?? null)}
         />
+      </div>
+
+      <div className="mt-6">
+        <label htmlFor="zona" className="text-sm font-semibold text-brown-title">
+          ¿Desde dónde buscás? <span className="font-normal text-brown-body">(opcional)</span>
+        </label>
+        <p className="mt-1 text-xs text-brown-body">
+          Nos ayuda a priorizar ofertas presenciales o híbridas cerca tuyo. Si tu CV ya
+          lo dice, lo tomamos de ahí. Nunca guardamos tu dirección exacta.
+        </p>
+        <select
+          id="zona"
+          value={zona}
+          onChange={(e) => setZona(e.target.value)}
+          className="mt-2 w-full rounded-2xl border border-brown-title/25 bg-white px-4 py-3 text-sm text-brown-title"
+        >
+          <option value="">Prefiero no decir</option>
+          {ZONAS.map((z) => (
+            <option key={z} value={z}>
+              {z}
+            </option>
+          ))}
+        </select>
       </div>
 
       {error && (

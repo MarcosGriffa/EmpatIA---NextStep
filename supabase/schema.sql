@@ -20,6 +20,15 @@
 create extension if not exists "pgcrypto"; -- para gen_random_uuid()
 
 -- CVs subidos y su perfil clasificado por IA (área, seniority, skills, etc.)
+--
+-- cv_text: se guarda con la dirección exacta YA REDACTADA (calle+altura+piso
+--   → "[dirección omitida]") — ver geo.redact_address, aplicado en
+--   api/matching.py antes de este insert. El matching corre sobre el texto
+--   completo en memoria; a la base va la versión sin dirección.
+-- profile.ubicacion: string a nivel ciudad/partido (ej. "Vicente López,
+--   Buenos Aires") o null. Vive dentro del jsonb "profile", no en una
+--   columna aparte — no requiere migración. Sólo se usa para priorizar
+--   ofertas presenciales/híbridas cercanas.
 create table if not exists cv_profiles (
   id          uuid primary key default gen_random_uuid(),
   user_id     text not null,

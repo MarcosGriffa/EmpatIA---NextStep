@@ -33,6 +33,13 @@ export async function POST(request: NextRequest) {
   const filename = file instanceof File ? file.name : "cv.pdf";
   forward.append("file", file, filename);
 
+  // Zona elegida a mano (opcional). El backend sólo la usa si el CV no trae
+  // la ubicación. No es dato sensible a nivel dirección — es zona/ciudad.
+  const zona = incoming.get("zona");
+  if (typeof zona === "string" && zona.trim()) {
+    forward.append("zona", zona.trim());
+  }
+
   let upstream: Response;
   try {
     upstream = await fetch(`${FASTAPI_URL}/api/match`, {

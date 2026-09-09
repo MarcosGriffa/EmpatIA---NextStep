@@ -46,7 +46,8 @@ Vas a recibir el texto de un CV. Tu trabajo es analizarlo y devolver
   "seniority": "junior" | "semi senior" | "senior",
   "skills": ["lista", "de", "5 a 10 skills clave", "detectadas en el CV"],
   "search_queries": ["3 a 5 términos de búsqueda", "cortos y realistas", "para usar en portales de empleo argentinos", "en español, como los escribiría alguien buscando trabajo en este rubro"],
-  "search_queries_en": ["2 a 3 términos equivalentes en inglés", "SOLO si is_tech es true", "ej: 'data analyst', 'python developer'", "si is_tech es false, devolvé una lista vacía []"]
+  "search_queries_en": ["2 a 3 términos equivalentes en inglés", "SOLO si is_tech es true", "ej: 'data analyst', 'python developer'", "si is_tech es false, devolvé una lista vacía []"],
+  "ubicacion": "string | null — SOLO ciudad/partido y provincia de la persona, ej: 'Vicente López, Buenos Aires', 'CABA', 'Córdoba'. NUNCA calle ni número ni piso. Si el CV no dice de dónde es, devolvé null (no lo inventes ni lo deduzcas del lugar de trabajo de una experiencia pasada)."
 }
 
 Reglas:
@@ -58,6 +59,8 @@ Reglas:
   porque se usan en portales de empleo remoto en inglés. Para cualquier
   otro rubro, devolvé search_queries_en como lista vacía.
 - Si el CV no tiene experiencia clara, inferí seniority "junior".
+- ubicacion: es el domicilio/ciudad de la PERSONA, no el de sus trabajos
+  anteriores. A nivel ciudad, nunca la dirección. Si hay duda, null.
 - Devolvé SOLO el JSON, nada más.
 """
 
@@ -124,6 +127,14 @@ def classify_cv(cv_text: str) -> dict:
             raise ValueError(f"JSON incompleto del modelo: {data}")
 
         data.setdefault("search_queries_en", [])
+
+        # Ubicación: nivel ciudad SIEMPRE, aunque el modelo haya desobedecido
+        # y devuelto una dirección. normalize_candidate_location() reconstruye
+        # el string desde componentes (localidad/zona/provincia), así que
+        # estructuralmente no puede quedar calle ni altura. Ver geo.py.
+        import geo
+
+        data["ubicacion"] = geo.normalize_candidate_location(data.get("ubicacion"))
 
         return data
 

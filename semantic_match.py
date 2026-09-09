@@ -183,11 +183,24 @@ def explain_match(cv_text: str, job: dict) -> dict:
     return result
 
 
-def rank_and_explain(cv_text: str, jobs: list[dict], embedding_top_k: int = 30, explain_top_n: int = 15) -> list[dict]:
+def rank_and_explain(
+    cv_text: str,
+    jobs: list[dict],
+    embedding_top_k: int = 30,
+    explain_top_n: int = 15,
+    cand_location=None,
+) -> list[dict]:
     """
     Pipeline completo de matching: prefiltro por embeddings + explicación LLM
-    sobre los finalistas. Devuelve la lista final ordenada por score, con
-    "similarity" (etapa 1) y "score"/"matches"/"gaps"/"explicacion" (etapa 2).
+    sobre los finalistas. Devuelve la lista final ordenada, con "similarity"
+    (etapa 1) y "score"/"matches"/"gaps"/"explicacion" (etapa 2).
+
+    cand_location: un geo.Location (o None). Si viene, cada oferta se anota
+    con la cercanía candidato↔oferta y el orden final usa el score YA
+    ajustado por cercanía (score_final = score * factor_geo). El "score" del
+    LLM queda intacto para mostrarlo y para BI; la penalización sólo aplica
+    a ofertas presenciales/híbridas con ubicación conocida de ambos lados
+    (nunca a remotas, ni a modalidad/ubicación desconocida). Ver geo.py.
     """
     finalists = prefilter_by_embeddings(cv_text, jobs, top_k=embedding_top_k)
     print(f"Prefiltro por embeddings: {len(jobs)} → {len(finalists)} finalistas")
@@ -202,5 +215,12 @@ def rank_and_explain(cv_text: str, jobs: list[dict], embedding_top_k: int = 30, 
         job.update(verdict)
         results.append(job)
 
-    results.sort(key=lambda j: j.get("score", 0), reverse=True)
+    if cand_location is not None:
+        import geo
+
+        for job in results:
+            geo.annotate_job(job, cand_location)
+        results.sort(key=geo.sort_key_score_final, reverse=True)
+    else:
+        results.sort(key=lambda j: j.get("score", 0), reverse=True)
     return results

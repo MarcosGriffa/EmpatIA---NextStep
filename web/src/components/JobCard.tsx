@@ -33,6 +33,11 @@ export function JobCard({
           <p className="mt-1 text-sm text-brown-body">
             {job.company} {job.location ? `· ${job.location}` : ""} · {job.source}
           </p>
+          {job.proximity_label && (
+            <p className="mt-2 inline-block rounded-full bg-cream-soft px-3 py-1 text-xs font-semibold text-brown-title">
+              📍 {job.proximity_label}
+            </p>
+          )}
         </div>
 
         {applied ? (

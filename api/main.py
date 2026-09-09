@@ -37,7 +37,7 @@ import shutil
 import uuid
 from pathlib import Path
 
-from fastapi import Depends, FastAPI, File, HTTPException, UploadFile
+from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
@@ -93,10 +93,17 @@ def health():
 
 
 @app.post("/api/match")
-async def upload_and_match(file: UploadFile = File(...), user_id: str = Depends(get_verified_user_id)):
+async def upload_and_match(
+    file: UploadFile = File(...),
+    zona: str = Form(""),
+    user_id: str = Depends(get_verified_user_id),
+):
     """Recibe un CV (PDF o .txt), corre todo el pipeline (clasificar → buscar
     → matchear) y devuelve los resultados. Puede tardar bastante (hay varias
     llamadas a IA y scraping de portales) — un minuto o dos es normal.
+
+    zona: opcional — la zona que la persona eligió en el formulario. Sólo se
+    usa como ubicación del candidato si el CV no la trae (ver api/matching.py).
 
     Fase 3: requiere sesión real (ver api/auth.py) — el user_id NUNCA se
     toma de lo que mande el cliente, se verifica del token."""
@@ -119,7 +126,10 @@ async def upload_and_match(file: UploadFile = File(...), user_id: str = Depends(
             shutil.copyfileobj(file.file, out)
 
         try:
-            result = run_full_pipeline(user_id=user_id, cv_path=str(dest_path), filename=file.filename or safe_name)
+            result = run_full_pipeline(
+                user_id=user_id, cv_path=str(dest_path),
+                filename=file.filename or safe_name, zona=zona,
+            )
         except RuntimeError as e:
             # Típicamente: falta GROQ_API_KEY, o Groq no devolvió JSON válido.
             raise HTTPException(500, str(e))

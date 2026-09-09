@@ -4,10 +4,12 @@ import type { MatchRunResponse } from "./types";
 // (server-side) sacan la identidad de la sesión de Supabase directamente
 // de las cookies del pedido — ver web/src/lib/supabase/server.ts.
 
-/** Sube el CV y corre todo el pipeline. Puede tardar 1-2 minutos. */
-export async function uploadCvAndMatch(file: File): Promise<MatchRunResponse> {
+/** Sube el CV y corre todo el pipeline. Puede tardar 1-2 minutos.
+ * `zona` es opcional — sólo se usa si el CV no dice de dónde es la persona. */
+export async function uploadCvAndMatch(file: File, zona = ""): Promise<MatchRunResponse> {
   const form = new FormData();
   form.append("file", file);
+  if (zona) form.append("zona", zona);
 
   const res = await fetch("/api/upload", { method: "POST", body: form });
   if (!res.ok) {

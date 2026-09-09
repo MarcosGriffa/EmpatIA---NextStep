@@ -2,10 +2,11 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-// Política de privacidad (19/08/2026). Escrita para ser leída y
+// Política de privacidad (09/09/2026). Escrita para ser leída y
 // entendida, no para cubrirnos legalmente con letra chica — refleja
 // exactamente lo que el código hace hoy (ver api/matching.py,
-// api/storage_backends/supabase_backend.py, semantic_match.py).
+// api/storage_backends/supabase_backend.py, semantic_match.py, geo.py:
+// la redacción de dirección y la ubicación a nivel ciudad).
 //
 // Un criterio importante al redactarla: "no compartimos tus datos con
 // terceros" hubiera sido falso tal cual — el CV SÍ viaja a Groq y Cohere
@@ -27,7 +28,7 @@ export default function PrivacidadPage() {
 
           <h1 className="mt-4 text-3xl font-extrabold text-brown-title">Política de Privacidad</h1>
           <p className="mt-3 text-brown-body">
-            Última actualización: 19 de agosto de 2026. La escribimos para que se entienda,
+            Última actualización: 9 de septiembre de 2026. La escribimos para que se entienda,
             no para llenarla de letra chica — si algo no queda claro, escribinos.
           </p>
 
@@ -42,7 +43,16 @@ export default function PrivacidadPage() {
                 </li>
                 <li>
                   <strong className="text-brown-title">Tu CV:</strong> el texto que subís, y el perfil que arma
-                  la IA a partir de él (área, nivel de experiencia, habilidades).
+                  la IA a partir de él (área, nivel de experiencia, habilidades). Antes de guardarlo,
+                  borramos automáticamente la dirección exacta (calle, altura, piso) si el CV la
+                  trae — reemplazándola por &ldquo;[dirección omitida]&rdquo;.
+                </li>
+                <li>
+                  <strong className="text-brown-title">Tu zona</strong> (ciudad o partido, por ejemplo
+                  &ldquo;Vicente López&rdquo; o &ldquo;CABA&rdquo;): la usamos para priorizar ofertas
+                  presenciales o híbridas cerca tuyo. La sacamos de tu CV o del menú opcional al subirlo;
+                  guardamos sólo el nivel ciudad/partido, <strong className="text-brown-title">nunca la
+                  dirección exacta</strong>. Si no la tenemos, no pasa nada — no se penaliza ninguna oferta.
                 </li>
                 <li>
                   <strong className="text-brown-title">Tus resultados:</strong> las ofertas que te mostramos en

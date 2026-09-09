@@ -48,6 +48,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+import geo
 from pipeline import collect_jobs, EMBEDDING_TOP_K
 from semantic_match import rank_and_explain
 from sources.computrabajo import ComputrabajoSource
@@ -112,8 +113,14 @@ def procesar_usuario(user_id: str, admin_client) -> None:
         return
 
     cv_text = cv_entry["cv_text"]
+    # Ubicación del candidato guardada en el perfil (CVs clasificados desde
+    # la Fase de cercanía en adelante). Los perfiles viejos no la tienen →
+    # cand_location = None → no se penaliza nada por cercanía.
+    ubic_guardada = perfil.get("ubicacion")
+    cand_location = geo.parse_location(ubic_guardada) if ubic_guardada else None
     explicadas = rank_and_explain(
-        cv_text, candidatas_nuevas, embedding_top_k=EMBEDDING_TOP_K, explain_top_n=MAX_OFERTAS_NUEVAS_A_EXPLICAR
+        cv_text, candidatas_nuevas, embedding_top_k=EMBEDDING_TOP_K,
+        explain_top_n=MAX_OFERTAS_NUEVAS_A_EXPLICAR, cand_location=cand_location,
     )
 
     # Se marcan como vistas TODAS las que se llegaron a explicar (aunque no

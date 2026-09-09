@@ -45,7 +45,7 @@ import os
 import requests
 from dotenv import load_dotenv
 
-from .base import JobSource, normalize_job
+from .base import JobSource, normalize_job, detect_modality
 
 load_dotenv()
 
@@ -103,8 +103,14 @@ class JoobleSource(JobSource):
             if salary:
                 snippet = f"Salario: {salary}. {snippet}"
 
+            # Modalidad: primero por reglas sobre título + snippet + el campo
+            # "type" que a veces trae Jooble; si nada, el fallback histórico
+            # (location contiene "remot", ej. "Remoto (Argentina)").
+            title_txt = item.get("title", "")
             job_type = (item.get("type") or "").lower()
-            modality = "remoto" if "remot" in job_type or "remot" in (item.get("location") or "").lower() else ""
+            modality = detect_modality(title_txt, snippet, job_type)
+            if not modality and "remot" in (item.get("location") or "").lower():
+                modality = "remoto"
 
             jobs.append(
                 normalize_job(

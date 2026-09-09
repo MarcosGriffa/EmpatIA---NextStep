@@ -22,6 +22,7 @@ from pathlib import Path
 
 import pandas as pd
 
+import geo
 from cv_profile import extract_cv_text, classify_cv
 from semantic_match import rank_and_explain
 
@@ -165,8 +166,13 @@ def run(cv_path: str):
         print("\n[!] No se encontraron ofertas. Revisá los [WARN]/[ERROR] de arriba.")
         return
 
+    cand_location = geo.parse_location(profile["ubicacion"]) if profile.get("ubicacion") else None
+    if cand_location is not None:
+        print(f"Ubicación del candidato detectada: {profile['ubicacion']}")
+
     results = rank_and_explain(
-        cv_text, jobs, embedding_top_k=EMBEDDING_TOP_K, explain_top_n=EXPLAIN_TOP_N
+        cv_text, jobs, embedding_top_k=EMBEDDING_TOP_K, explain_top_n=EXPLAIN_TOP_N,
+        cand_location=cand_location,
     )
 
     # ── Guardar resultados ──
@@ -188,8 +194,12 @@ def run(cv_path: str):
     print(f"{'=' * 60}")
 
     for i, r in enumerate(results[:10], 1):
-        print(f"\n  #{i} — Score {r.get('score', '?')}/100 — {r['title']}")
-        print(f"  {r['company']} | {r['location']} | fuente: {r['source']}")
+        score_txt = f"Score {r.get('score', '?')}/100"
+        if r.get("score_final") is not None and r.get("score_final") != r.get("score"):
+            score_txt += f" (ajustado por cercanía: {r['score_final']}/100)"
+        print(f"\n  #{i} — {score_txt} — {r['title']}")
+        cercania = f" | {r['proximity_label']}" if r.get("proximity_label") else ""
+        print(f"  {r['company']} | {r['location']}{cercania} | fuente: {r['source']}")
         if r.get("matches"):
             print(f"  ✓ Matchea: {', '.join(r['matches'])}")
         if r.get("gaps"):

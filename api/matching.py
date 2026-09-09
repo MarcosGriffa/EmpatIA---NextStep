@@ -21,6 +21,7 @@ OJO: esto NO reemplaza ni modifica pipeline.py/cv_profile.py/semantic_match.py
 
 from __future__ import annotations
 
+import geo
 from cv_profile import extract_cv_text, classify_cv
 from pipeline import collect_jobs, EMBEDDING_TOP_K, EXPLAIN_TOP_N
 from semantic_match import rank_and_explain
@@ -29,13 +30,30 @@ from . import storage
 from .job_utils import make_job_id
 
 
-def run_full_pipeline(user_id: str, cv_path: str, filename: str) -> dict:
+def run_full_pipeline(user_id: str, cv_path: str, filename: str, zona: str = "") -> dict:
     """Corre CV → clasificación → búsqueda → matching, de punta a punta,
-    y devuelve todo lo que necesita el frontend."""
+    y devuelve todo lo que necesita el frontend.
+
+    zona: lo que la persona eligió (opcional) en el <select> del formulario
+    de subida. Se usa como ubicación del candidato SOLO si el CV no la trae."""
 
     cv_text = extract_cv_text(cv_path)
     profile = classify_cv(cv_text)
-    cv_id = storage.save_cv_profile(user_id, filename, cv_text, profile)
+
+    # Ubicación del candidato: primero la que sacó la IA del CV (ya
+    # normalizada a nivel ciudad en cv_profile.classify_cv), y si no hay, la
+    # que eligió a mano en el formulario. Puede quedar None → no se penaliza
+    # nada por cercanía (ver geo.proximity_score).
+    ubicacion_cand = profile.get("ubicacion") or geo.normalize_candidate_location(zona)
+    profile["ubicacion"] = ubicacion_cand
+    cand_location = geo.parse_location(ubicacion_cand) if ubicacion_cand else None
+
+    # PRIVACIDAD: la dirección exacta (calle + altura + piso) es dato
+    # personal de un tercero. Se borra del texto ANTES de persistirlo — el
+    # matching ya corrió sobre el texto completo en memoria, a la base va la
+    # versión redactada. Ver geo.redact_address y web/.../privacidad.
+    cv_text_guardado = geo.redact_address(cv_text)
+    cv_id = storage.save_cv_profile(user_id, filename, cv_text_guardado, profile)
 
     jobs = collect_jobs(
         profile["search_queries"], profile.get("search_queries_en", []), profile["is_tech"]
@@ -49,7 +67,9 @@ def run_full_pipeline(user_id: str, cv_path: str, filename: str) -> dict:
 
     if jobs:
         results = rank_and_explain(
-            cv_text, jobs, embedding_top_k=EMBEDDING_TOP_K, explain_top_n=EXPLAIN_TOP_N
+            cv_text, jobs,
+            embedding_top_k=EMBEDDING_TOP_K, explain_top_n=EXPLAIN_TOP_N,
+            cand_location=cand_location,
         )
     else:
         results = []

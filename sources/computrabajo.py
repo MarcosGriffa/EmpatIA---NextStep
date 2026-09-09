@@ -17,7 +17,7 @@ import random
 import requests
 from bs4 import BeautifulSoup
 
-from .base import JobSource, normalize_job
+from .base import JobSource, normalize_job, detect_modality
 
 BASE_URL = "https://ar.computrabajo.com"
 HEADERS = {
@@ -89,12 +89,14 @@ def _parse_card(card, query: str) -> dict | None:
             location = _txt(span) if span else _txt(p)
             break
 
-    modality = ""
-    for tag in card.select("span, p"):
-        t = _txt(tag).lower()
-        if t in ("remoto", "híbrido", "hibrido", "presencial"):
-            modality = t
-            break
+    # Modalidad: Computrabajo la muestra como un tag suelto en la tarjeta
+    # ("Presencial" / "Híbrido" / "Remoto" / "Teletrabajo"). El selector
+    # viejo hacía match EXACTO de texto y casi nunca acertaba (en 3 corridas
+    # reales guardadas, todas las ofertas de Computrabajo salían con
+    # modality=""). Ahora pasamos el texto completo de la tarjeta + el
+    # título por detect_modality() (regex), que además tolera "Teletrabajo",
+    # "100% remoto", etc. Ver sources/base.py.
+    modality = detect_modality(title, card.get_text(" ", strip=True))
 
     date_el = card.select_one("p.fs13.fc_aux.mt15")
 
