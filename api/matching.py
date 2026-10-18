@@ -22,6 +22,8 @@ OJO: esto NO reemplaza ni modifica pipeline.py/cv_profile.py/semantic_match.py
 
 from __future__ import annotations
 
+import time
+
 import geo
 from cv_profile import extract_cv_text, classify_cv
 from pipeline import collect_jobs, EMBEDDING_TOP_K, EXPLAIN_TOP_N, SHOW_TOP_N
@@ -38,8 +40,12 @@ def run_full_pipeline(user_id: str, cv_path: str, filename: str, zona: str = "")
     zona: lo que la persona eligió (opcional) en el <select> del formulario
     de subida. Se usa como ubicación del candidato SOLO si el CV no la trae."""
 
+    # Tiempos por etapa: quedan en los logs de Render para ver dónde se va
+    # el tiempo de una búsqueda real (ver la línea "[tiempos]" al final).
+    t = {"inicio": time.perf_counter()}
     cv_text = extract_cv_text(cv_path)
     profile = classify_cv(cv_text)
+    t["clasificar"] = time.perf_counter()
 
     # Ubicación del candidato: primero la que sacó la IA del CV (ya
     # normalizada a nivel ciudad en cv_profile.classify_cv), y si no hay, la
@@ -56,9 +62,11 @@ def run_full_pipeline(user_id: str, cv_path: str, filename: str, zona: str = "")
     cv_text_guardado = geo.redact_address(cv_text)
     cv_id = storage.save_cv_profile(user_id, filename, cv_text_guardado, profile)
 
+    t["guardar_cv"] = time.perf_counter()
     jobs = collect_jobs(
         profile["search_queries"], profile.get("search_queries_en", []), profile["is_tech"]
     )
+    t["buscar"] = time.perf_counter()
 
     for job in jobs:
         job["job_id"] = make_job_id(job)
@@ -76,6 +84,8 @@ def run_full_pipeline(user_id: str, cv_path: str, filename: str, zona: str = "")
     else:
         results = []
 
+    t["matching"] = time.perf_counter()
+
     for r in results:
         r["applied"] = False  # recién generados, ninguno puede estar aplicado todavía
 
@@ -91,6 +101,11 @@ def run_full_pipeline(user_id: str, cv_path: str, filename: str, zona: str = "")
         # inexistente todavía) — sin este try/except, ESO rompería la
         # búsqueda para todo el mundo, no solo para los avisos.
         print(f"[matching] no se pudo marcar seen_jobs (no crítico): {e}")
+
+    t["guardar"] = time.perf_counter()
+    etapas = list(t.items())
+    detalle = " | ".join(f"{k} {v - etapas[i][1]:.1f}s" for i, (k, v) in enumerate(etapas[1:]))
+    print(f"[tiempos] {detalle} | TOTAL {t['guardar'] - t['inicio']:.1f}s | {len(jobs)} ofertas")
 
     return {
         "cv_id": cv_id,
