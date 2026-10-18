@@ -1,0 +1,1601 @@
+﻿par_id,cv_id,oferta_id,relevancia,motivo,tipo_par,gap_seniority,similarity,rank_emb,en_top10_emb,leida_por_llm,en_top30_emb,evaluado_llm,proposito_llm,score_llm,rank_final,en_resultado_final
+CV001-OF001,CV001,OF001,2,"mismo rol, gap de seniority 0, cubre 50%",Mismo rol,0,63.32,4,1,1,1,1,produccion,70,4,1
+CV001-OF002,CV001,OF002,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,54.26,33,0,0,0,0,,,,0
+CV001-OF003,CV001,OF003,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.91,35,0,0,0,0,,,,0
+CV001-OF004,CV001,OF004,2,"mismo rol, gap de seniority 1, cubre 67%",Mismo rol,1,67.16,1,1,1,1,1,produccion,85,1,1
+CV001-OF005,CV001,OF005,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.13,13,0,0,1,0,,,,0
+CV001-OF006,CV001,OF006,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.74,18,0,0,1,0,,,,0
+CV001-OF007,CV001,OF007,1,mismo rol pero gap de seniority 2 / cubre 50%,Mismo rol,2,63.47,3,1,1,1,1,produccion,45,7,1
+CV001-OF008,CV001,OF008,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.68,72,0,0,0,0,,,,0
+CV001-OF009,CV001,OF009,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.9,22,0,0,1,1,what_if,15,,0
+CV001-OF010,CV001,OF010,2,"mismo rol, gap de seniority 0, cubre 50%",Mismo rol,0,57.47,15,0,0,1,1,what_if,70,,0
+CV001-OF011,CV001,OF011,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,57.9,14,0,0,1,0,,,,0
+CV001-OF012,CV001,OF012,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.54,23,0,0,1,0,,,,0
+CV001-OF013,CV001,OF013,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,64.16,2,1,1,1,1,produccion,70,3,1
+CV001-OF014,CV001,OF014,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.47,12,0,0,1,0,,,,0
+CV001-OF015,CV001,OF015,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.45,20,0,0,1,0,,,,0
+CV001-OF016,CV001,OF016,1,mismo rol pero gap de seniority 2 / cubre 50%,Mismo rol,2,61.95,6,1,1,1,1,produccion,30,9,1
+CV001-OF017,CV001,OF017,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.39,47,0,0,0,0,,,,0
+CV001-OF018,CV001,OF018,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.83,54,0,0,0,0,,,,0
+CV001-OF019,CV001,OF019,3,"mismo rol y seniority, cubre 60%",Mismo rol,0,61.74,7,1,1,1,1,produccion,75,2,1
+CV001-OF020,CV001,OF020,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.52,60,0,0,0,0,,,,0
+CV001-OF021,CV001,OF021,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.6,10,1,1,1,1,produccion,55,6,1
+CV001-OF022,CV001,OF022,2,"mismo rol, gap de seniority 1, cubre 50%",Mismo rol,1,63.03,5,1,1,1,1,produccion,70,5,1
+CV001-OF023,CV001,OF023,1,mismo rol pero gap de seniority 2 / cubre 60%,Mismo rol,2,61.36,8,1,1,1,1,produccion,30,10,1
+CV001-OF024,CV001,OF024,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.51,45,0,0,0,0,,,,0
+CV001-OF025,CV001,OF025,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,54.55,31,0,0,0,0,,,,0
+CV001-OF026,CV001,OF026,0,otro rubro,Otro rubro,,46.92,157,0,0,0,0,,,,0
+CV001-OF027,CV001,OF027,0,otro rubro,Otro rubro,,49.33,116,0,0,0,0,,,,0
+CV001-OF028,CV001,OF028,0,otro rubro,Otro rubro,,44.59,182,0,0,0,0,,,,0
+CV001-OF029,CV001,OF029,0,otro rubro,Otro rubro,,46.76,160,0,0,0,0,,,,0
+CV001-OF030,CV001,OF030,0,otro rubro,Otro rubro,,48.26,139,0,0,0,0,,,,0
+CV001-OF031,CV001,OF031,0,otro rubro,Otro rubro,,52.81,55,0,0,0,0,,,,0
+CV001-OF032,CV001,OF032,0,otro rubro,Otro rubro,,44.64,181,0,0,0,0,,,,0
+CV001-OF033,CV001,OF033,0,otro rubro,Otro rubro,,51.73,71,0,0,0,0,,,,0
+CV001-OF034,CV001,OF034,0,otro rubro,Otro rubro,,48.54,130,0,0,0,0,,,,0
+CV001-OF035,CV001,OF035,0,otro rubro,Otro rubro,,47.52,149,0,0,0,0,,,,0
+CV001-OF036,CV001,OF036,0,otro rubro,Otro rubro,,54.74,28,0,0,1,0,,,,0
+CV001-OF037,CV001,OF037,0,otro rubro,Otro rubro,,48.69,129,0,0,0,0,,,,0
+CV001-OF038,CV001,OF038,0,otro rubro,Otro rubro,,49.84,106,0,0,0,0,,,,0
+CV001-OF039,CV001,OF039,0,otro rubro,Otro rubro,,48.44,132,0,0,0,0,,,,0
+CV001-OF040,CV001,OF040,0,otro rubro,Otro rubro,,50.59,91,0,0,0,0,,,,0
+CV001-OF041,CV001,OF041,0,otro rubro,Otro rubro,,43.86,187,0,0,0,0,,,,0
+CV001-OF042,CV001,OF042,0,otro rubro,Otro rubro,,51.6,74,0,0,0,0,,,,0
+CV001-OF043,CV001,OF043,0,otro rubro,Otro rubro,,49.02,123,0,0,0,0,,,,0
+CV001-OF044,CV001,OF044,0,otro rubro,Otro rubro,,45.95,168,0,0,0,0,,,,0
+CV001-OF045,CV001,OF045,0,otro rubro,Otro rubro,,49.31,117,0,0,0,0,,,,0
+CV001-OF046,CV001,OF046,0,otro rubro,Otro rubro,,49.1,122,0,0,0,0,,,,0
+CV001-OF047,CV001,OF047,0,otro rubro,Otro rubro,,49.34,115,0,0,0,0,,,,0
+CV001-OF048,CV001,OF048,0,otro rubro,Otro rubro,,48.09,143,0,0,0,0,,,,0
+CV001-OF049,CV001,OF049,0,otro rubro,Otro rubro,,50.54,96,0,0,0,0,,,,0
+CV001-OF050,CV001,OF050,0,otro rubro,Otro rubro,,47.27,151,0,0,0,0,,,,0
+CV001-OF051,CV001,OF051,0,otro rubro,Otro rubro,,47.43,150,0,0,0,0,,,,0
+CV001-OF052,CV001,OF052,0,otro rubro,Otro rubro,,48.1,142,0,0,0,0,,,,0
+CV001-OF053,CV001,OF053,0,otro rubro,Otro rubro,,48.03,144,0,0,0,0,,,,0
+CV001-OF054,CV001,OF054,0,otro rubro,Otro rubro,,50.86,84,0,0,0,0,,,,0
+CV001-OF055,CV001,OF055,0,otro rubro,Otro rubro,,53.58,43,0,0,0,0,,,,0
+CV001-OF056,CV001,OF056,0,otro rubro,Otro rubro,,48.88,125,0,0,0,0,,,,0
+CV001-OF057,CV001,OF057,0,otro rubro,Otro rubro,,49.66,109,0,0,0,0,,,,0
+CV001-OF058,CV001,OF058,0,otro rubro,Otro rubro,,49.57,111,0,0,0,0,,,,0
+CV001-OF059,CV001,OF059,0,otro rubro,Otro rubro,,47.84,145,0,0,0,0,,,,0
+CV001-OF060,CV001,OF060,0,otro rubro,Otro rubro,,44.49,183,0,0,0,0,,,,0
+CV001-OF061,CV001,OF061,0,otro rubro,Otro rubro,,47.03,155,0,0,0,0,,,,0
+CV001-OF062,CV001,OF062,0,otro rubro,Otro rubro,,45.24,175,0,0,0,0,,,,0
+CV001-OF063,CV001,OF063,0,otro rubro,Otro rubro,,48.27,138,0,0,0,0,,,,0
+CV001-OF064,CV001,OF064,0,otro rubro,Otro rubro,,50.26,100,0,0,0,0,,,,0
+CV001-OF065,CV001,OF065,0,otro rubro,Otro rubro,,49.71,108,0,0,0,0,,,,0
+CV001-OF066,CV001,OF066,0,otro rubro,Otro rubro,,44.88,179,0,0,0,0,,,,0
+CV001-OF067,CV001,OF067,0,otro rubro,Otro rubro,,50.06,103,0,0,0,0,,,,0
+CV001-OF068,CV001,OF068,0,otro rubro,Otro rubro,,53.61,40,0,0,0,0,,,,0
+CV001-OF069,CV001,OF069,0,otro rubro,Otro rubro,,45.06,177,0,0,0,0,,,,0
+CV001-OF070,CV001,OF070,0,otro rubro,Otro rubro,,47.82,147,0,0,0,0,,,,0
+CV001-OF071,CV001,OF071,0,otro rubro,Otro rubro,,48.87,126,0,0,0,0,,,,0
+CV001-OF072,CV001,OF072,0,otro rubro,Otro rubro,,55.12,25,0,0,1,0,,,,0
+CV001-OF073,CV001,OF073,0,otro rubro,Otro rubro,,51.5,76,0,0,0,0,,,,0
+CV001-OF074,CV001,OF074,0,otro rubro,Otro rubro,,48.31,137,0,0,0,0,,,,0
+CV001-OF075,CV001,OF075,0,otro rubro,Otro rubro,,49.14,121,0,0,0,0,,,,0
+CV001-OF076,CV001,OF076,0,otro rubro,Otro rubro,,54.38,32,0,0,0,0,,,,0
+CV001-OF077,CV001,OF077,0,otro rubro,Otro rubro,,48.4,133,0,0,0,0,,,,0
+CV001-OF078,CV001,OF078,0,otro rubro,Otro rubro,,52.69,56,0,0,0,0,,,,0
+CV001-OF079,CV001,OF079,0,otro rubro,Otro rubro,,53.6,41,0,0,0,0,,,,0
+CV001-OF080,CV001,OF080,0,otro rubro,Otro rubro,,54.73,29,0,0,1,0,,,,0
+CV001-OF081,CV001,OF081,0,otro rubro,Otro rubro,,52.44,61,0,0,0,0,,,,0
+CV001-OF082,CV001,OF082,0,otro rubro,Otro rubro,,52.31,62,0,0,0,0,,,,0
+CV001-OF083,CV001,OF083,0,otro rubro,Otro rubro,,53.32,49,0,0,0,0,,,,0
+CV001-OF084,CV001,OF084,0,otro rubro,Otro rubro,,49.52,113,0,0,0,0,,,,0
+CV001-OF085,CV001,OF085,0,otro rubro,Otro rubro,,50.72,88,0,0,0,0,,,,0
+CV001-OF086,CV001,OF086,0,otro rubro,Otro rubro,,46.54,164,0,0,0,0,,,,0
+CV001-OF087,CV001,OF087,0,otro rubro,Otro rubro,,57.12,16,0,0,1,0,,,,0
+CV001-OF088,CV001,OF088,0,otro rubro,Otro rubro,,55.93,21,0,0,1,0,,,,0
+CV001-OF089,CV001,OF089,0,otro rubro,Otro rubro,,49.52,114,0,0,0,0,,,,0
+CV001-OF090,CV001,OF090,0,otro rubro,Otro rubro,,52.63,57,0,0,0,0,,,,0
+CV001-OF091,CV001,OF091,0,otro rubro,Otro rubro,,52.2,65,0,0,0,0,,,,0
+CV001-OF092,CV001,OF092,0,otro rubro,Otro rubro,,48.4,134,0,0,0,0,,,,0
+CV001-OF093,CV001,OF093,0,otro rubro,Otro rubro,,53.55,44,0,0,0,0,,,,0
+CV001-OF094,CV001,OF094,0,otro rubro,Otro rubro,,54.79,27,0,0,1,0,,,,0
+CV001-OF095,CV001,OF095,0,otro rubro,Otro rubro,,48.23,141,0,0,0,0,,,,0
+CV001-OF096,CV001,OF096,0,otro rubro,Otro rubro,,52.96,53,0,0,0,0,,,,0
+CV001-OF097,CV001,OF097,0,otro rubro,Otro rubro,,51.09,82,0,0,0,0,,,,0
+CV001-OF098,CV001,OF098,0,otro rubro,Otro rubro,,51.25,80,0,0,0,0,,,,0
+CV001-OF099,CV001,OF099,0,otro rubro,Otro rubro,,41.75,194,0,0,0,0,,,,0
+CV001-OF100,CV001,OF100,0,otro rubro,Otro rubro,,50.71,89,0,0,0,0,,,,0
+CV001-OF101,CV001,OF101,0,otro rubro,Otro rubro,,43.88,186,0,0,0,0,,,,0
+CV001-OF102,CV001,OF102,0,otro rubro,Otro rubro,,40.61,196,0,0,0,0,,,,0
+CV001-OF103,CV001,OF103,0,otro rubro,Otro rubro,,47.25,152,0,0,0,0,,,,0
+CV001-OF104,CV001,OF104,0,otro rubro,Otro rubro,,48.25,140,0,0,0,0,,,,0
+CV001-OF105,CV001,OF105,0,otro rubro,Otro rubro,,46.77,159,0,0,0,0,,,,0
+CV001-OF106,CV001,OF106,0,otro rubro,Otro rubro,,49.2,118,0,0,0,0,,,,0
+CV001-OF107,CV001,OF107,0,otro rubro,Otro rubro,,45.51,173,0,0,0,0,,,,0
+CV001-OF108,CV001,OF108,0,otro rubro,Otro rubro,,46.1,167,0,0,0,0,,,,0
+CV001-OF109,CV001,OF109,0,otro rubro,Otro rubro,,44.19,184,0,0,0,0,,,,0
+CV001-OF110,CV001,OF110,0,otro rubro,Otro rubro,,38.16,199,0,0,0,0,,,,0
+CV001-OF111,CV001,OF111,0,otro rubro,Otro rubro,,44.01,185,0,0,0,0,,,,0
+CV001-OF112,CV001,OF112,0,otro rubro,Otro rubro,,52.08,66,0,0,0,0,,,,0
+CV001-OF113,CV001,OF113,0,otro rubro,Otro rubro,,38.15,200,0,0,0,0,,,,0
+CV001-OF114,CV001,OF114,0,otro rubro,Otro rubro,,40.06,197,0,0,0,0,,,,0
+CV001-OF115,CV001,OF115,0,otro rubro,Otro rubro,,50.63,90,0,0,0,0,,,,0
+CV001-OF116,CV001,OF116,0,otro rubro,Otro rubro,,43.02,191,0,0,0,0,,,,0
+CV001-OF117,CV001,OF117,0,otro rubro,Otro rubro,,48.85,127,0,0,0,0,,,,0
+CV001-OF118,CV001,OF118,0,otro rubro,Otro rubro,,51.49,77,0,0,0,0,,,,0
+CV001-OF119,CV001,OF119,0,otro rubro,Otro rubro,,43.72,188,0,0,0,0,,,,0
+CV001-OF120,CV001,OF120,0,otro rubro,Otro rubro,,45.69,172,0,0,0,0,,,,0
+CV001-OF121,CV001,OF121,0,otro rubro,Otro rubro,,51.9,68,0,0,0,0,,,,0
+CV001-OF122,CV001,OF122,0,otro rubro,Otro rubro,,51.06,83,0,0,0,0,,,,0
+CV001-OF123,CV001,OF123,0,otro rubro,Otro rubro,,48.81,128,0,0,0,0,,,,0
+CV001-OF124,CV001,OF124,0,otro rubro,Otro rubro,,38.33,198,0,0,0,0,,,,0
+CV001-OF125,CV001,OF125,0,otro rubro,Otro rubro,,47.21,153,0,0,0,0,,,,0
+CV001-OF126,CV001,OF126,0,otro rubro,Otro rubro,,43.38,189,0,0,0,0,,,,0
+CV001-OF127,CV001,OF127,0,otro rubro,Otro rubro,,51.64,73,0,0,0,0,,,,0
+CV001-OF128,CV001,OF128,0,otro rubro,Otro rubro,,45.88,170,0,0,0,0,,,,0
+CV001-OF129,CV001,OF129,0,otro rubro,Otro rubro,,48.51,131,0,0,0,0,,,,0
+CV001-OF130,CV001,OF130,0,otro rubro,Otro rubro,,54.94,26,0,0,1,0,,,,0
+CV001-OF131,CV001,OF131,0,otro rubro,Otro rubro,,49.54,112,0,0,0,0,,,,0
+CV001-OF132,CV001,OF132,0,otro rubro,Otro rubro,,52.98,52,0,0,0,0,,,,0
+CV001-OF133,CV001,OF133,0,otro rubro,Otro rubro,,48.89,124,0,0,0,0,,,,0
+CV001-OF134,CV001,OF134,0,otro rubro,Otro rubro,,53.6,42,0,0,0,0,,,,0
+CV001-OF135,CV001,OF135,0,otro rubro,Otro rubro,,45.8,171,0,0,0,0,,,,0
+CV001-OF136,CV001,OF136,0,otro rubro,Otro rubro,,46.85,158,0,0,0,0,,,,0
+CV001-OF137,CV001,OF137,0,otro rubro,Otro rubro,,49.15,120,0,0,0,0,,,,0
+CV001-OF138,CV001,OF138,0,otro rubro,Otro rubro,,50.82,86,0,0,0,0,,,,0
+CV001-OF139,CV001,OF139,0,otro rubro,Otro rubro,,60.72,9,1,1,1,1,produccion,40,8,1
+CV001-OF140,CV001,OF140,0,otro rubro,Otro rubro,,53.85,38,0,0,0,0,,,,0
+CV001-OF141,CV001,OF141,0,otro rubro,Otro rubro,,46.73,161,0,0,0,0,,,,0
+CV001-OF142,CV001,OF142,0,otro rubro,Otro rubro,,58.57,11,0,0,1,0,,,,0
+CV001-OF143,CV001,OF143,0,otro rubro,Otro rubro,,52.22,64,0,0,0,0,,,,0
+CV001-OF144,CV001,OF144,0,otro rubro,Otro rubro,,45.39,174,0,0,0,0,,,,0
+CV001-OF145,CV001,OF145,0,otro rubro,Otro rubro,,45.23,176,0,0,0,0,,,,0
+CV001-OF146,CV001,OF146,0,otro rubro,Otro rubro,,48.4,135,0,0,0,0,,,,0
+CV001-OF147,CV001,OF147,0,otro rubro,Otro rubro,,50.49,98,0,0,0,0,,,,0
+CV001-OF148,CV001,OF148,0,otro rubro,Otro rubro,,51.74,70,0,0,0,0,,,,0
+CV001-OF149,CV001,OF149,0,otro rubro,Otro rubro,,46.44,165,0,0,0,0,,,,0
+CV001-OF150,CV001,OF150,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,56.82,17,0,0,1,0,,,,0
+CV001-OF151,CV001,OF151,0,otro rubro,Otro rubro,,42.85,192,0,0,0,0,,,,0
+CV001-OF152,CV001,OF152,0,otro rubro,Otro rubro,,46.64,162,0,0,0,0,,,,0
+CV001-OF153,CV001,OF153,0,otro rubro,Otro rubro,,48.35,136,0,0,0,0,,,,0
+CV001-OF154,CV001,OF154,0,otro rubro,Otro rubro,,52.61,58,0,0,0,0,,,,0
+CV001-OF155,CV001,OF155,0,otro rubro,Otro rubro,,53.03,51,0,0,0,0,,,,0
+CV001-OF156,CV001,OF156,0,otro rubro,Otro rubro,,52.54,59,0,0,0,0,,,,0
+CV001-OF157,CV001,OF157,0,otro rubro,Otro rubro,,50.3,99,0,0,0,0,,,,0
+CV001-OF158,CV001,OF158,0,otro rubro,Otro rubro,,49.98,104,0,0,0,0,,,,0
+CV001-OF159,CV001,OF159,0,otro rubro,Otro rubro,,51.35,79,0,0,0,0,,,,0
+CV001-OF160,CV001,OF160,0,otro rubro,Otro rubro,,41.42,195,0,0,0,0,,,,0
+CV001-OF161,CV001,OF161,0,otro rubro,Otro rubro,,43.32,190,0,0,0,0,,,,0
+CV001-OF162,CV001,OF162,0,otro rubro,Otro rubro,,50.8,87,0,0,0,0,,,,0
+CV001-OF163,CV001,OF163,0,otro rubro,Otro rubro,,51.36,78,0,0,0,0,,,,0
+CV001-OF164,CV001,OF164,0,otro rubro,Otro rubro,,53.21,50,0,0,0,0,,,,0
+CV001-OF165,CV001,OF165,0,otro rubro,Otro rubro,,54.72,30,0,0,1,0,,,,0
+CV001-OF166,CV001,OF166,0,otro rubro,Otro rubro,,42.79,193,0,0,0,0,,,,0
+CV001-OF167,CV001,OF167,0,otro rubro,Otro rubro,,52.31,63,0,0,0,0,,,,0
+CV001-OF168,CV001,OF168,0,otro rubro,Otro rubro,,50.58,94,0,0,0,0,,,,0
+CV001-OF169,CV001,OF169,0,otro rubro,Otro rubro,,44.82,180,0,0,0,0,,,,0
+CV001-OF170,CV001,OF170,0,otro rubro,Otro rubro,,46.58,163,0,0,0,0,,,,0
+CV001-OF171,CV001,OF171,0,otro rubro,Otro rubro,,50.59,92,0,0,0,0,,,,0
+CV001-OF172,CV001,OF172,0,otro rubro,Otro rubro,,50.58,95,0,0,0,0,,,,0
+CV001-OF173,CV001,OF173,0,otro rubro,Otro rubro,,51.83,69,0,0,0,0,,,,0
+CV001-OF174,CV001,OF174,0,otro rubro,Otro rubro,,53.87,37,0,0,0,0,,,,0
+CV001-OF175,CV001,OF175,0,otro rubro,Otro rubro,,44.89,178,0,0,0,0,,,,0
+CV001-OF176,CV001,OF176,0,otro rubro,Otro rubro,,46.18,166,0,0,0,0,,,,0
+CV001-OF177,CV001,OF177,0,otro rubro,Otro rubro,,50.22,102,0,0,0,0,,,,0
+CV001-OF178,CV001,OF178,0,otro rubro,Otro rubro,,49.63,110,0,0,0,0,,,,0
+CV001-OF179,CV001,OF179,0,otro rubro,Otro rubro,,53.71,39,0,0,0,0,,,,0
+CV001-OF180,CV001,OF180,0,otro rubro,Otro rubro,,50.53,97,0,0,0,0,,,,0
+CV001-OF181,CV001,OF181,0,otro rubro,Otro rubro,,51.97,67,0,0,0,0,,,,0
+CV001-OF182,CV001,OF182,0,otro rubro,Otro rubro,,53.91,36,0,0,0,0,,,,0
+CV001-OF183,CV001,OF183,0,otro rubro,Otro rubro,,53.4,46,0,0,0,0,,,,0
+CV001-OF184,CV001,OF184,0,otro rubro,Otro rubro,,50.59,93,0,0,0,0,,,,0
+CV001-OF185,CV001,OF185,0,otro rubro,Otro rubro,,55.4,24,0,0,1,0,,,,0
+CV001-OF186,CV001,OF186,0,otro rubro,Otro rubro,,47.83,146,0,0,0,0,,,,0
+CV001-OF187,CV001,OF187,0,otro rubro,Otro rubro,,47.0,156,0,0,0,0,,,,0
+CV001-OF188,CV001,OF188,0,otro rubro,Otro rubro,,51.12,81,0,0,0,0,,,,0
+CV001-OF189,CV001,OF189,0,otro rubro,Otro rubro,,49.2,119,0,0,0,0,,,,0
+CV001-OF190,CV001,OF190,0,otro rubro,Otro rubro,,49.83,107,0,0,0,0,,,,0
+CV001-OF191,CV001,OF191,0,otro rubro,Otro rubro,,56.58,19,0,0,1,0,,,,0
+CV001-OF192,CV001,OF192,0,otro rubro,Otro rubro,,50.23,101,0,0,0,0,,,,0
+CV001-OF193,CV001,OF193,0,otro rubro,Otro rubro,,50.83,85,0,0,0,0,,,,0
+CV001-OF194,CV001,OF194,0,otro rubro,Otro rubro,,47.6,148,0,0,0,0,,,,0
+CV001-OF195,CV001,OF195,0,otro rubro,Otro rubro,,45.92,169,0,0,0,0,,,,0
+CV001-OF196,CV001,OF196,0,otro rubro,Otro rubro,,47.05,154,0,0,0,0,,,,0
+CV001-OF197,CV001,OF197,0,otro rubro,Otro rubro,,53.35,48,0,0,0,0,,,,0
+CV001-OF198,CV001,OF198,0,otro rubro,Otro rubro,,54.08,34,0,0,0,0,,,,0
+CV001-OF199,CV001,OF199,0,otro rubro,Otro rubro,,51.6,75,0,0,0,0,,,,0
+CV001-OF200,CV001,OF200,0,otro rubro,Otro rubro,,49.85,105,0,0,0,0,,,,0
+CV006-OF001,CV006,OF001,0,otro rubro,Otro rubro,,48.52,157,0,0,0,0,,,,0
+CV006-OF002,CV006,OF002,0,otro rubro,Otro rubro,,47.93,163,0,0,0,0,,,,0
+CV006-OF003,CV006,OF003,0,otro rubro,Otro rubro,,51.82,109,0,0,0,0,,,,0
+CV006-OF004,CV006,OF004,0,otro rubro,Otro rubro,,48.91,151,0,0,0,0,,,,0
+CV006-OF005,CV006,OF005,0,otro rubro,Otro rubro,,54.55,54,0,0,0,0,,,,0
+CV006-OF006,CV006,OF006,0,otro rubro,Otro rubro,,56.81,27,0,0,1,0,,,,0
+CV006-OF007,CV006,OF007,0,otro rubro,Otro rubro,,55.31,43,0,0,0,0,,,,0
+CV006-OF008,CV006,OF008,0,otro rubro,Otro rubro,,55.22,46,0,0,0,0,,,,0
+CV006-OF009,CV006,OF009,0,otro rubro,Otro rubro,,54.92,48,0,0,0,0,,,,0
+CV006-OF010,CV006,OF010,0,otro rubro,Otro rubro,,50.42,126,0,0,0,0,,,,0
+CV006-OF011,CV006,OF011,0,otro rubro,Otro rubro,,52.47,96,0,0,0,0,,,,0
+CV006-OF012,CV006,OF012,0,otro rubro,Otro rubro,,52.54,94,0,0,0,0,,,,0
+CV006-OF013,CV006,OF013,0,otro rubro,Otro rubro,,55.59,39,0,0,0,0,,,,0
+CV006-OF014,CV006,OF014,0,otro rubro,Otro rubro,,55.05,47,0,0,0,0,,,,0
+CV006-OF015,CV006,OF015,0,otro rubro,Otro rubro,,52.32,98,0,0,0,0,,,,0
+CV006-OF016,CV006,OF016,0,otro rubro,Otro rubro,,54.39,55,0,0,0,0,,,,0
+CV006-OF017,CV006,OF017,0,otro rubro,Otro rubro,,54.64,52,0,0,0,0,,,,0
+CV006-OF018,CV006,OF018,0,otro rubro,Otro rubro,,53.79,73,0,0,0,0,,,,0
+CV006-OF019,CV006,OF019,0,otro rubro,Otro rubro,,49.49,142,0,0,0,0,,,,0
+CV006-OF020,CV006,OF020,0,otro rubro,Otro rubro,,50.36,129,0,0,0,0,,,,0
+CV006-OF021,CV006,OF021,0,otro rubro,Otro rubro,,54.14,60,0,0,0,0,,,,0
+CV006-OF022,CV006,OF022,0,otro rubro,Otro rubro,,54.3,56,0,0,0,0,,,,0
+CV006-OF023,CV006,OF023,0,otro rubro,Otro rubro,,51.67,112,0,0,0,0,,,,0
+CV006-OF024,CV006,OF024,0,otro rubro,Otro rubro,,48.04,161,0,0,0,0,,,,0
+CV006-OF025,CV006,OF025,0,otro rubro,Otro rubro,,47.5,167,0,0,0,0,,,,0
+CV006-OF026,CV006,OF026,1,mismo rol pero gap de seniority 2 / cubre 75%,Mismo rol,2,62.71,10,1,1,1,1,produccion,85,9,1
+CV006-OF027,CV006,OF027,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.78,90,0,0,0,0,,,,0
+CV006-OF028,CV006,OF028,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,49.57,141,0,0,0,0,,,,0
+CV006-OF029,CV006,OF029,2,"mismo rol, gap de seniority 1, cubre 100%",Mismo rol,1,64.59,6,1,1,1,1,produccion,98,1,1
+CV006-OF030,CV006,OF030,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.74,75,0,0,0,0,,,,0
+CV006-OF031,CV006,OF031,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.63,30,0,0,1,0,,,,0
+CV006-OF032,CV006,OF032,3,"mismo rol y seniority, cubre 100%",Mismo rol,0,68.27,2,1,1,1,1,produccion,95,3,1
+CV006-OF033,CV006,OF033,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,59.44,15,0,0,1,0,,,,0
+CV006-OF034,CV006,OF034,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.31,44,0,0,0,0,,,,0
+CV006-OF035,CV006,OF035,1,mismo rol pero gap de seniority 2 / cubre 75%,Mismo rol,2,65.05,4,1,1,1,1,produccion,88,5,1
+CV006-OF036,CV006,OF036,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,57.89,21,0,0,1,0,,,,0
+CV006-OF037,CV006,OF037,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.68,36,0,0,0,0,,,,0
+CV006-OF038,CV006,OF038,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,65.04,5,1,1,1,1,produccion,88,6,1
+CV006-OF039,CV006,OF039,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.9,26,0,0,1,0,,,,0
+CV006-OF040,CV006,OF040,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.23,31,0,0,0,0,,,,0
+CV006-OF041,CV006,OF041,3,"mismo rol y seniority, cubre 80%",Mismo rol,0,67.73,3,1,1,1,1,produccion,90,4,1
+CV006-OF042,CV006,OF042,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,63.04,8,1,1,1,1,produccion,35,10,1
+CV006-OF043,CV006,OF043,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.57,17,0,0,1,0,,,,0
+CV006-OF044,CV006,OF044,1,mismo rol pero gap de seniority 2 / cubre 75%,Mismo rol,2,63.5,7,1,1,1,1,produccion,85,8,1
+CV006-OF045,CV006,OF045,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,49.66,140,0,0,0,0,,,,0
+CV006-OF046,CV006,OF046,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.14,83,0,0,0,0,,,,0
+CV006-OF047,CV006,OF047,2,"mismo rol, gap de seniority 1, cubre 100%",Mismo rol,1,68.36,1,1,1,1,1,produccion,95,2,1
+CV006-OF048,CV006,OF048,3,"mismo rol y seniority, cubre 75%",Mismo rol,0,62.97,9,1,1,1,1,produccion,88,7,1
+CV006-OF049,CV006,OF049,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.71,34,0,0,0,0,,,,0
+CV006-OF050,CV006,OF050,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.5,40,0,0,0,0,,,,0
+CV006-OF051,CV006,OF051,0,otro rubro,Otro rubro,,47.03,171,0,0,0,0,,,,0
+CV006-OF052,CV006,OF052,0,otro rubro,Otro rubro,,55.4,42,0,0,0,0,,,,0
+CV006-OF053,CV006,OF053,0,otro rubro,Otro rubro,,51.63,114,0,0,0,0,,,,0
+CV006-OF054,CV006,OF054,0,otro rubro,Otro rubro,,54.74,50,0,0,0,0,,,,0
+CV006-OF055,CV006,OF055,0,otro rubro,Otro rubro,,54.72,51,0,0,0,0,,,,0
+CV006-OF056,CV006,OF056,0,otro rubro,Otro rubro,,53.45,79,0,0,0,0,,,,0
+CV006-OF057,CV006,OF057,0,otro rubro,Otro rubro,,51.26,120,0,0,0,0,,,,0
+CV006-OF058,CV006,OF058,0,otro rubro,Otro rubro,,55.28,45,0,0,0,0,,,,0
+CV006-OF059,CV006,OF059,0,otro rubro,Otro rubro,,55.6,38,0,0,0,0,,,,0
+CV006-OF060,CV006,OF060,0,otro rubro,Otro rubro,,48.2,160,0,0,0,0,,,,0
+CV006-OF061,CV006,OF061,0,otro rubro,Otro rubro,,53.12,85,0,0,0,0,,,,0
+CV006-OF062,CV006,OF062,0,otro rubro,Otro rubro,,49.87,135,0,0,0,0,,,,0
+CV006-OF063,CV006,OF063,0,otro rubro,Otro rubro,,52.82,89,0,0,0,0,,,,0
+CV006-OF064,CV006,OF064,0,otro rubro,Otro rubro,,60.24,11,0,0,1,0,,,,0
+CV006-OF065,CV006,OF065,0,otro rubro,Otro rubro,,54.0,67,0,0,0,0,,,,0
+CV006-OF066,CV006,OF066,0,otro rubro,Otro rubro,,54.13,62,0,0,0,0,,,,0
+CV006-OF067,CV006,OF067,0,otro rubro,Otro rubro,,58.17,19,0,0,1,0,,,,0
+CV006-OF068,CV006,OF068,0,otro rubro,Otro rubro,,59.95,12,0,0,1,0,,,,0
+CV006-OF069,CV006,OF069,0,otro rubro,Otro rubro,,47.83,164,0,0,0,0,,,,0
+CV006-OF070,CV006,OF070,0,otro rubro,Otro rubro,,52.38,97,0,0,0,0,,,,0
+CV006-OF071,CV006,OF071,0,otro rubro,Otro rubro,,51.59,116,0,0,0,0,,,,0
+CV006-OF072,CV006,OF072,0,otro rubro,Otro rubro,,57.48,22,0,0,1,0,,,,0
+CV006-OF073,CV006,OF073,0,otro rubro,Otro rubro,,58.52,18,0,0,1,0,,,,0
+CV006-OF074,CV006,OF074,0,otro rubro,Otro rubro,,55.75,32,0,0,0,0,,,,0
+CV006-OF075,CV006,OF075,0,otro rubro,Otro rubro,,50.06,131,0,0,0,0,,,,0
+CV006-OF076,CV006,OF076,0,otro rubro,Otro rubro,,48.95,149,0,0,0,0,,,,0
+CV006-OF077,CV006,OF077,0,otro rubro,Otro rubro,,49.46,143,0,0,0,0,,,,0
+CV006-OF078,CV006,OF078,0,otro rubro,Otro rubro,,51.11,123,0,0,0,0,,,,0
+CV006-OF079,CV006,OF079,0,otro rubro,Otro rubro,,52.03,103,0,0,0,0,,,,0
+CV006-OF080,CV006,OF080,0,otro rubro,Otro rubro,,54.04,66,0,0,0,0,,,,0
+CV006-OF081,CV006,OF081,0,otro rubro,Otro rubro,,51.16,122,0,0,0,0,,,,0
+CV006-OF082,CV006,OF082,0,otro rubro,Otro rubro,,59.46,14,0,0,1,0,,,,0
+CV006-OF083,CV006,OF083,0,otro rubro,Otro rubro,,55.65,37,0,0,0,0,,,,0
+CV006-OF084,CV006,OF084,0,otro rubro,Otro rubro,,53.13,84,0,0,0,0,,,,0
+CV006-OF085,CV006,OF085,0,otro rubro,Otro rubro,,51.23,121,0,0,0,0,,,,0
+CV006-OF086,CV006,OF086,0,otro rubro,Otro rubro,,48.67,156,0,0,0,0,,,,0
+CV006-OF087,CV006,OF087,0,otro rubro,Otro rubro,,54.64,53,0,0,0,0,,,,0
+CV006-OF088,CV006,OF088,0,otro rubro,Otro rubro,,57.34,25,0,0,1,0,,,,0
+CV006-OF089,CV006,OF089,0,otro rubro,Otro rubro,,51.48,117,0,0,0,0,,,,0
+CV006-OF090,CV006,OF090,0,otro rubro,Otro rubro,,54.07,65,0,0,0,0,,,,0
+CV006-OF091,CV006,OF091,0,otro rubro,Otro rubro,,51.78,110,0,0,0,0,,,,0
+CV006-OF092,CV006,OF092,0,otro rubro,Otro rubro,,52.29,99,0,0,0,0,,,,0
+CV006-OF093,CV006,OF093,0,otro rubro,Otro rubro,,56.81,28,0,0,1,1,what_if,12,,0
+CV006-OF094,CV006,OF094,0,otro rubro,Otro rubro,,54.2,59,0,0,0,0,,,,0
+CV006-OF095,CV006,OF095,0,otro rubro,Otro rubro,,49.33,145,0,0,0,0,,,,0
+CV006-OF096,CV006,OF096,0,otro rubro,Otro rubro,,51.85,107,0,0,0,0,,,,0
+CV006-OF097,CV006,OF097,0,otro rubro,Otro rubro,,53.18,82,0,0,0,0,,,,0
+CV006-OF098,CV006,OF098,0,otro rubro,Otro rubro,,53.88,68,0,0,0,0,,,,0
+CV006-OF099,CV006,OF099,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,53.83,70,0,0,0,0,,,,0
+CV006-OF100,CV006,OF100,0,otro rubro,Otro rubro,,49.39,144,0,0,0,0,,,,0
+CV006-OF101,CV006,OF101,0,otro rubro,Otro rubro,,48.69,154,0,0,0,0,,,,0
+CV006-OF102,CV006,OF102,0,otro rubro,Otro rubro,,39.11,197,0,0,0,0,,,,0
+CV006-OF103,CV006,OF103,0,otro rubro,Otro rubro,,45.73,179,0,0,0,0,,,,0
+CV006-OF104,CV006,OF104,0,otro rubro,Otro rubro,,53.59,77,0,0,0,0,,,,0
+CV006-OF105,CV006,OF105,0,otro rubro,Otro rubro,,45.96,175,0,0,0,0,,,,0
+CV006-OF106,CV006,OF106,0,otro rubro,Otro rubro,,45.72,180,0,0,0,0,,,,0
+CV006-OF107,CV006,OF107,0,otro rubro,Otro rubro,,45.9,176,0,0,0,0,,,,0
+CV006-OF108,CV006,OF108,0,otro rubro,Otro rubro,,48.69,155,0,0,0,0,,,,0
+CV006-OF109,CV006,OF109,0,otro rubro,Otro rubro,,44.58,187,0,0,0,0,,,,0
+CV006-OF110,CV006,OF110,0,otro rubro,Otro rubro,,41.91,194,0,0,0,0,,,,0
+CV006-OF111,CV006,OF111,0,otro rubro,Otro rubro,,46.56,174,0,0,0,0,,,,0
+CV006-OF112,CV006,OF112,0,otro rubro,Otro rubro,,49.3,146,0,0,0,0,,,,0
+CV006-OF113,CV006,OF113,0,otro rubro,Otro rubro,,38.33,199,0,0,0,0,,,,0
+CV006-OF114,CV006,OF114,0,otro rubro,Otro rubro,,42.16,193,0,0,0,0,,,,0
+CV006-OF115,CV006,OF115,0,otro rubro,Otro rubro,,54.13,63,0,0,0,0,,,,0
+CV006-OF116,CV006,OF116,0,otro rubro,Otro rubro,,47.07,170,0,0,0,0,,,,0
+CV006-OF117,CV006,OF117,0,otro rubro,Otro rubro,,52.86,88,0,0,0,0,,,,0
+CV006-OF118,CV006,OF118,0,otro rubro,Otro rubro,,51.05,124,0,0,0,0,,,,0
+CV006-OF119,CV006,OF119,0,otro rubro,Otro rubro,,44.5,188,0,0,0,0,,,,0
+CV006-OF120,CV006,OF120,0,otro rubro,Otro rubro,,44.09,189,0,0,0,0,,,,0
+CV006-OF121,CV006,OF121,0,otro rubro,Otro rubro,,47.66,166,0,0,0,0,,,,0
+CV006-OF122,CV006,OF122,0,otro rubro,Otro rubro,,52.76,92,0,0,0,0,,,,0
+CV006-OF123,CV006,OF123,0,otro rubro,Otro rubro,,51.48,118,0,0,0,0,,,,0
+CV006-OF124,CV006,OF124,0,otro rubro,Otro rubro,,40.76,195,0,0,0,0,,,,0
+CV006-OF125,CV006,OF125,0,otro rubro,Otro rubro,,45.13,184,0,0,0,0,,,,0
+CV006-OF126,CV006,OF126,0,otro rubro,Otro rubro,,46.92,172,0,0,0,0,,,,0
+CV006-OF127,CV006,OF127,0,otro rubro,Otro rubro,,49.05,148,0,0,0,0,,,,0
+CV006-OF128,CV006,OF128,0,otro rubro,Otro rubro,,50.21,130,0,0,0,0,,,,0
+CV006-OF129,CV006,OF129,0,otro rubro,Otro rubro,,52.77,91,0,0,0,0,,,,0
+CV006-OF130,CV006,OF130,0,otro rubro,Otro rubro,,52.01,104,0,0,0,0,,,,0
+CV006-OF131,CV006,OF131,0,otro rubro,Otro rubro,,53.8,72,0,0,0,0,,,,0
+CV006-OF132,CV006,OF132,0,otro rubro,Otro rubro,,55.73,33,0,0,0,0,,,,0
+CV006-OF133,CV006,OF133,0,otro rubro,Otro rubro,,51.92,105,0,0,0,0,,,,0
+CV006-OF134,CV006,OF134,0,otro rubro,Otro rubro,,57.44,23,0,0,1,0,,,,0
+CV006-OF135,CV006,OF135,0,otro rubro,Otro rubro,,49.85,136,0,0,0,0,,,,0
+CV006-OF136,CV006,OF136,0,otro rubro,Otro rubro,,44.84,186,0,0,0,0,,,,0
+CV006-OF137,CV006,OF137,0,otro rubro,Otro rubro,,53.24,81,0,0,0,0,,,,0
+CV006-OF138,CV006,OF138,0,otro rubro,Otro rubro,,53.26,80,0,0,0,0,,,,0
+CV006-OF139,CV006,OF139,0,otro rubro,Otro rubro,,55.69,35,0,0,0,0,,,,0
+CV006-OF140,CV006,OF140,0,otro rubro,Otro rubro,,57.4,24,0,0,1,0,,,,0
+CV006-OF141,CV006,OF141,0,otro rubro,Otro rubro,,54.87,49,0,0,0,0,,,,0
+CV006-OF142,CV006,OF142,0,otro rubro,Otro rubro,,54.28,57,0,0,0,0,,,,0
+CV006-OF143,CV006,OF143,0,otro rubro,Otro rubro,,59.74,13,0,0,1,0,,,,0
+CV006-OF144,CV006,OF144,0,otro rubro,Otro rubro,,51.71,111,0,0,0,0,,,,0
+CV006-OF145,CV006,OF145,0,otro rubro,Otro rubro,,43.89,190,0,0,0,0,,,,0
+CV006-OF146,CV006,OF146,0,otro rubro,Otro rubro,,51.85,108,0,0,0,0,,,,0
+CV006-OF147,CV006,OF147,0,otro rubro,Otro rubro,,53.51,78,0,0,0,0,,,,0
+CV006-OF148,CV006,OF148,0,otro rubro,Otro rubro,,50.96,125,0,0,0,0,,,,0
+CV006-OF149,CV006,OF149,0,otro rubro,Otro rubro,,52.2,100,0,0,0,0,,,,0
+CV006-OF150,CV006,OF150,0,otro rubro,Otro rubro,,50.05,132,0,0,0,0,,,,0
+CV006-OF151,CV006,OF151,0,otro rubro,Otro rubro,,40.59,196,0,0,0,0,,,,0
+CV006-OF152,CV006,OF152,0,otro rubro,Otro rubro,,45.17,183,0,0,0,0,,,,0
+CV006-OF153,CV006,OF153,0,otro rubro,Otro rubro,,45.0,185,0,0,0,0,,,,0
+CV006-OF154,CV006,OF154,0,otro rubro,Otro rubro,,48.93,150,0,0,0,0,,,,0
+CV006-OF155,CV006,OF155,0,otro rubro,Otro rubro,,55.48,41,0,0,0,0,,,,0
+CV006-OF156,CV006,OF156,0,otro rubro,Otro rubro,,51.62,115,0,0,0,0,,,,0
+CV006-OF157,CV006,OF157,0,otro rubro,Otro rubro,,51.32,119,0,0,0,0,,,,0
+CV006-OF158,CV006,OF158,0,otro rubro,Otro rubro,,49.85,137,0,0,0,0,,,,0
+CV006-OF159,CV006,OF159,0,otro rubro,Otro rubro,,50.39,128,0,0,0,0,,,,0
+CV006-OF160,CV006,OF160,0,otro rubro,Otro rubro,,38.29,200,0,0,0,0,,,,0
+CV006-OF161,CV006,OF161,0,otro rubro,Otro rubro,,45.78,177,0,0,0,0,,,,0
+CV006-OF162,CV006,OF162,0,otro rubro,Otro rubro,,51.67,113,0,0,0,0,,,,0
+CV006-OF163,CV006,OF163,0,otro rubro,Otro rubro,,49.95,134,0,0,0,0,,,,0
+CV006-OF164,CV006,OF164,0,otro rubro,Otro rubro,,52.59,93,0,0,0,0,,,,0
+CV006-OF165,CV006,OF165,0,otro rubro,Otro rubro,,53.87,69,0,0,0,0,,,,0
+CV006-OF166,CV006,OF166,0,otro rubro,Otro rubro,,42.65,192,0,0,0,0,,,,0
+CV006-OF167,CV006,OF167,0,otro rubro,Otro rubro,,49.17,147,0,0,0,0,,,,0
+CV006-OF168,CV006,OF168,0,otro rubro,Otro rubro,,54.14,61,0,0,0,0,,,,0
+CV006-OF169,CV006,OF169,0,otro rubro,Otro rubro,,38.9,198,0,0,0,0,,,,0
+CV006-OF170,CV006,OF170,0,otro rubro,Otro rubro,,47.14,169,0,0,0,0,,,,0
+CV006-OF171,CV006,OF171,0,otro rubro,Otro rubro,,46.81,173,0,0,0,0,,,,0
+CV006-OF172,CV006,OF172,0,otro rubro,Otro rubro,,47.75,165,0,0,0,0,,,,0
+CV006-OF173,CV006,OF173,0,otro rubro,Otro rubro,,52.53,95,0,0,0,0,,,,0
+CV006-OF174,CV006,OF174,0,otro rubro,Otro rubro,,54.09,64,0,0,0,0,,,,0
+CV006-OF175,CV006,OF175,0,otro rubro,Otro rubro,,43.53,191,0,0,0,0,,,,0
+CV006-OF176,CV006,OF176,0,otro rubro,Otro rubro,,45.75,178,0,0,0,0,,,,0
+CV006-OF177,CV006,OF177,0,otro rubro,Otro rubro,,47.21,168,0,0,0,0,,,,0
+CV006-OF178,CV006,OF178,0,otro rubro,Otro rubro,,48.84,153,0,0,0,0,,,,0
+CV006-OF179,CV006,OF179,0,otro rubro,Otro rubro,,54.22,58,0,0,0,0,,,,0
+CV006-OF180,CV006,OF180,0,otro rubro,Otro rubro,,48.88,152,0,0,0,0,,,,0
+CV006-OF181,CV006,OF181,0,otro rubro,Otro rubro,,53.77,74,0,0,0,0,,,,0
+CV006-OF182,CV006,OF182,0,otro rubro,Otro rubro,,58.07,20,0,0,1,0,,,,0
+CV006-OF183,CV006,OF183,0,otro rubro,Otro rubro,,52.9,87,0,0,0,0,,,,0
+CV006-OF184,CV006,OF184,0,otro rubro,Otro rubro,,52.08,101,0,0,0,0,,,,0
+CV006-OF185,CV006,OF185,0,otro rubro,Otro rubro,,53.83,71,0,0,0,0,,,,0
+CV006-OF186,CV006,OF186,0,otro rubro,Otro rubro,,45.4,181,0,0,0,0,,,,0
+CV006-OF187,CV006,OF187,0,otro rubro,Otro rubro,,48.01,162,0,0,0,0,,,,0
+CV006-OF188,CV006,OF188,0,otro rubro,Otro rubro,,56.69,29,0,0,1,0,,,,0
+CV006-OF189,CV006,OF189,0,otro rubro,Otro rubro,,49.82,138,0,0,0,0,,,,0
+CV006-OF190,CV006,OF190,0,otro rubro,Otro rubro,,53.66,76,0,0,0,0,,,,0
+CV006-OF191,CV006,OF191,0,otro rubro,Otro rubro,,58.73,16,0,0,1,0,,,,0
+CV006-OF192,CV006,OF192,0,otro rubro,Otro rubro,,49.67,139,0,0,0,0,,,,0
+CV006-OF193,CV006,OF193,0,otro rubro,Otro rubro,,53.04,86,0,0,0,0,,,,0
+CV006-OF194,CV006,OF194,0,otro rubro,Otro rubro,,48.43,159,0,0,0,0,,,,0
+CV006-OF195,CV006,OF195,0,otro rubro,Otro rubro,,45.21,182,0,0,0,0,,,,0
+CV006-OF196,CV006,OF196,0,otro rubro,Otro rubro,,48.52,158,0,0,0,0,,,,0
+CV006-OF197,CV006,OF197,0,otro rubro,Otro rubro,,51.87,106,0,0,0,0,,,,0
+CV006-OF198,CV006,OF198,0,otro rubro,Otro rubro,,49.97,133,0,0,0,0,,,,0
+CV006-OF199,CV006,OF199,0,otro rubro,Otro rubro,,50.42,127,0,0,0,0,,,,0
+CV006-OF200,CV006,OF200,0,otro rubro,Otro rubro,,52.05,102,0,0,0,0,,,,0
+CV011-OF001,CV011,OF001,0,otro rubro,Otro rubro,,46.68,116,0,0,0,0,,,,0
+CV011-OF002,CV011,OF002,0,otro rubro,Otro rubro,,45.88,137,0,0,0,0,,,,0
+CV011-OF003,CV011,OF003,0,otro rubro,Otro rubro,,45.04,155,0,0,0,0,,,,0
+CV011-OF004,CV011,OF004,0,otro rubro,Otro rubro,,47.69,106,0,0,0,0,,,,0
+CV011-OF005,CV011,OF005,0,otro rubro,Otro rubro,,45.81,140,0,0,0,0,,,,0
+CV011-OF006,CV011,OF006,0,otro rubro,Otro rubro,,48.5,86,0,0,0,0,,,,0
+CV011-OF007,CV011,OF007,0,otro rubro,Otro rubro,,50.03,64,0,0,0,0,,,,0
+CV011-OF008,CV011,OF008,0,otro rubro,Otro rubro,,50.44,58,0,0,0,0,,,,0
+CV011-OF009,CV011,OF009,0,otro rubro,Otro rubro,,47.81,102,0,0,0,0,,,,0
+CV011-OF010,CV011,OF010,0,otro rubro,Otro rubro,,44.23,166,0,0,0,0,,,,0
+CV011-OF011,CV011,OF011,0,otro rubro,Otro rubro,,43.4,175,0,0,0,0,,,,0
+CV011-OF012,CV011,OF012,0,otro rubro,Otro rubro,,46.37,129,0,0,0,0,,,,0
+CV011-OF013,CV011,OF013,0,otro rubro,Otro rubro,,49.1,74,0,0,0,0,,,,0
+CV011-OF014,CV011,OF014,0,otro rubro,Otro rubro,,52.33,32,0,0,0,0,,,,0
+CV011-OF015,CV011,OF015,0,otro rubro,Otro rubro,,48.95,78,0,0,0,0,,,,0
+CV011-OF016,CV011,OF016,0,otro rubro,Otro rubro,,46.51,121,0,0,0,0,,,,0
+CV011-OF017,CV011,OF017,0,otro rubro,Otro rubro,,48.28,92,0,0,0,0,,,,0
+CV011-OF018,CV011,OF018,0,otro rubro,Otro rubro,,47.66,107,0,0,0,0,,,,0
+CV011-OF019,CV011,OF019,0,otro rubro,Otro rubro,,45.35,152,0,0,0,0,,,,0
+CV011-OF020,CV011,OF020,0,otro rubro,Otro rubro,,50.39,60,0,0,0,0,,,,0
+CV011-OF021,CV011,OF021,0,otro rubro,Otro rubro,,45.75,144,0,0,0,0,,,,0
+CV011-OF022,CV011,OF022,0,otro rubro,Otro rubro,,55.1,15,0,0,1,0,,,,0
+CV011-OF023,CV011,OF023,0,otro rubro,Otro rubro,,48.02,98,0,0,0,0,,,,0
+CV011-OF024,CV011,OF024,0,otro rubro,Otro rubro,,48.2,95,0,0,0,0,,,,0
+CV011-OF025,CV011,OF025,0,otro rubro,Otro rubro,,46.39,128,0,0,0,0,,,,0
+CV011-OF026,CV011,OF026,0,otro rubro,Otro rubro,,51.97,35,0,0,0,0,,,,0
+CV011-OF027,CV011,OF027,0,otro rubro,Otro rubro,,50.49,56,0,0,0,0,,,,0
+CV011-OF028,CV011,OF028,0,otro rubro,Otro rubro,,46.26,132,0,0,0,0,,,,0
+CV011-OF029,CV011,OF029,0,otro rubro,Otro rubro,,48.34,91,0,0,0,0,,,,0
+CV011-OF030,CV011,OF030,0,otro rubro,Otro rubro,,49.63,71,0,0,0,0,,,,0
+CV011-OF031,CV011,OF031,0,otro rubro,Otro rubro,,52.42,31,0,0,0,0,,,,0
+CV011-OF032,CV011,OF032,0,otro rubro,Otro rubro,,46.58,118,0,0,0,0,,,,0
+CV011-OF033,CV011,OF033,0,otro rubro,Otro rubro,,48.98,76,0,0,0,0,,,,0
+CV011-OF034,CV011,OF034,0,otro rubro,Otro rubro,,55.05,16,0,0,1,0,,,,0
+CV011-OF035,CV011,OF035,0,otro rubro,Otro rubro,,43.0,177,0,0,0,0,,,,0
+CV011-OF036,CV011,OF036,0,otro rubro,Otro rubro,,50.36,61,0,0,0,0,,,,0
+CV011-OF037,CV011,OF037,0,otro rubro,Otro rubro,,44.99,156,0,0,0,0,,,,0
+CV011-OF038,CV011,OF038,0,otro rubro,Otro rubro,,46.08,134,0,0,0,0,,,,0
+CV011-OF039,CV011,OF039,0,otro rubro,Otro rubro,,46.86,113,0,0,0,0,,,,0
+CV011-OF040,CV011,OF040,0,otro rubro,Otro rubro,,46.49,124,0,0,0,0,,,,0
+CV011-OF041,CV011,OF041,0,otro rubro,Otro rubro,,45.76,143,0,0,0,0,,,,0
+CV011-OF042,CV011,OF042,0,otro rubro,Otro rubro,,49.29,72,0,0,0,0,,,,0
+CV011-OF043,CV011,OF043,0,otro rubro,Otro rubro,,50.75,48,0,0,0,0,,,,0
+CV011-OF044,CV011,OF044,0,otro rubro,Otro rubro,,46.51,122,0,0,0,0,,,,0
+CV011-OF045,CV011,OF045,0,otro rubro,Otro rubro,,42.2,183,0,0,0,0,,,,0
+CV011-OF046,CV011,OF046,0,otro rubro,Otro rubro,,48.0,99,0,0,0,0,,,,0
+CV011-OF047,CV011,OF047,0,otro rubro,Otro rubro,,45.82,139,0,0,0,0,,,,0
+CV011-OF048,CV011,OF048,0,otro rubro,Otro rubro,,54.3,20,0,0,1,0,,,,0
+CV011-OF049,CV011,OF049,0,otro rubro,Otro rubro,,52.14,33,0,0,0,0,,,,0
+CV011-OF050,CV011,OF050,0,otro rubro,Otro rubro,,50.82,47,0,0,0,0,,,,0
+CV011-OF051,CV011,OF051,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,65.36,1,1,1,1,1,produccion,90,1,1
+CV011-OF052,CV011,OF052,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.45,41,0,0,0,0,,,,0
+CV011-OF053,CV011,OF053,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.7,51,0,0,0,0,,,,0
+CV011-OF054,CV011,OF054,3,"mismo rol y seniority, cubre 60%",Mismo rol,0,61.23,8,1,1,1,1,produccion,85,5,1
+CV011-OF055,CV011,OF055,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.87,26,0,0,1,0,,,,0
+CV011-OF056,CV011,OF056,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.85,37,0,0,0,0,,,,0
+CV011-OF057,CV011,OF057,2,"mismo rol, gap de seniority 1, cubre 60%",Mismo rol,1,65.22,2,1,1,1,1,produccion,70,8,1
+CV011-OF058,CV011,OF058,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,48.79,80,0,0,0,0,,,,0
+CV011-OF059,CV011,OF059,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.63,28,0,0,1,0,,,,0
+CV011-OF060,CV011,OF060,2,"mismo rol, gap de seniority 1, cubre 60%",Mismo rol,1,59.18,9,1,1,1,1,produccion,85,6,1
+CV011-OF061,CV011,OF061,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.51,14,0,0,1,0,,,,0
+CV011-OF062,CV011,OF062,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,48.48,88,0,0,0,0,,,,0
+CV011-OF063,CV011,OF063,3,"mismo rol y seniority, cubre 83%",Mismo rol,0,62.32,6,1,1,1,1,produccion,88,4,1
+CV011-OF064,CV011,OF064,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.62,29,0,0,1,0,,,,0
+CV011-OF065,CV011,OF065,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.96,44,0,0,0,0,,,,0
+CV011-OF066,CV011,OF066,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,64.67,3,1,1,1,1,produccion,58,9,1
+CV011-OF067,CV011,OF067,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,57.14,11,0,0,1,0,,,,0
+CV011-OF068,CV011,OF068,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.17,42,0,0,0,0,,,,0
+CV011-OF069,CV011,OF069,2,"mismo rol, gap de seniority 1, cubre 67%",Mismo rol,1,64.62,4,1,1,1,1,produccion,88,3,1
+CV011-OF070,CV011,OF070,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.0,17,0,0,1,0,,,,0
+CV011-OF071,CV011,OF071,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,49.69,70,0,0,0,0,,,,0
+CV011-OF072,CV011,OF072,3,"mismo rol y seniority, cubre 67%",Mismo rol,0,62.4,5,1,1,1,1,produccion,90,2,1
+CV011-OF073,CV011,OF073,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,54.47,19,0,0,1,0,,,,0
+CV011-OF074,CV011,OF074,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.77,39,0,0,0,0,,,,0
+CV011-OF075,CV011,OF075,3,"mismo rol y seniority, cubre 80%",Mismo rol,0,61.94,7,1,1,1,1,produccion,80,7,1
+CV011-OF076,CV011,OF076,0,otro rubro,Otro rubro,,48.6,83,0,0,0,0,,,,0
+CV011-OF077,CV011,OF077,0,otro rubro,Otro rubro,,46.29,131,0,0,0,0,,,,0
+CV011-OF078,CV011,OF078,0,otro rubro,Otro rubro,,52.02,34,0,0,0,0,,,,0
+CV011-OF079,CV011,OF079,0,otro rubro,Otro rubro,,49.98,67,0,0,0,0,,,,0
+CV011-OF080,CV011,OF080,0,otro rubro,Otro rubro,,50.93,45,0,0,0,0,,,,0
+CV011-OF081,CV011,OF081,0,otro rubro,Otro rubro,,50.19,63,0,0,0,0,,,,0
+CV011-OF082,CV011,OF082,0,otro rubro,Otro rubro,,46.44,126,0,0,0,0,,,,0
+CV011-OF083,CV011,OF083,0,otro rubro,Otro rubro,,50.68,52,0,0,0,0,,,,0
+CV011-OF084,CV011,OF084,0,otro rubro,Otro rubro,,45.8,141,0,0,0,0,,,,0
+CV011-OF085,CV011,OF085,0,otro rubro,Otro rubro,,53.28,23,0,0,1,0,,,,0
+CV011-OF086,CV011,OF086,0,otro rubro,Otro rubro,,44.66,164,0,0,0,0,,,,0
+CV011-OF087,CV011,OF087,0,otro rubro,Otro rubro,,47.64,108,0,0,0,0,,,,0
+CV011-OF088,CV011,OF088,0,otro rubro,Otro rubro,,48.52,85,0,0,0,0,,,,0
+CV011-OF089,CV011,OF089,0,otro rubro,Otro rubro,,50.47,57,0,0,0,0,,,,0
+CV011-OF090,CV011,OF090,0,otro rubro,Otro rubro,,51.63,40,0,0,0,0,,,,0
+CV011-OF091,CV011,OF091,0,otro rubro,Otro rubro,,50.64,53,0,0,0,0,,,,0
+CV011-OF092,CV011,OF092,0,otro rubro,Otro rubro,,49.99,65,0,0,0,0,,,,0
+CV011-OF093,CV011,OF093,0,otro rubro,Otro rubro,,53.0,24,0,0,1,0,,,,0
+CV011-OF094,CV011,OF094,0,otro rubro,Otro rubro,,48.46,89,0,0,0,0,,,,0
+CV011-OF095,CV011,OF095,0,otro rubro,Otro rubro,,51.83,38,0,0,0,0,,,,0
+CV011-OF096,CV011,OF096,0,otro rubro,Otro rubro,,47.7,105,0,0,0,0,,,,0
+CV011-OF097,CV011,OF097,0,otro rubro,Otro rubro,,49.87,69,0,0,0,0,,,,0
+CV011-OF098,CV011,OF098,0,otro rubro,Otro rubro,,54.64,18,0,0,1,0,,,,0
+CV011-OF099,CV011,OF099,0,otro rubro,Otro rubro,,44.96,158,0,0,0,0,,,,0
+CV011-OF100,CV011,OF100,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,49.99,66,0,0,0,0,,,,0
+CV011-OF101,CV011,OF101,0,otro rubro,Otro rubro,,43.91,171,0,0,0,0,,,,0
+CV011-OF102,CV011,OF102,0,otro rubro,Otro rubro,,35.24,198,0,0,0,0,,,,0
+CV011-OF103,CV011,OF103,0,otro rubro,Otro rubro,,44.77,162,0,0,0,0,,,,0
+CV011-OF104,CV011,OF104,0,otro rubro,Otro rubro,,42.78,178,0,0,0,0,,,,0
+CV011-OF105,CV011,OF105,0,otro rubro,Otro rubro,,42.28,182,0,0,0,0,,,,0
+CV011-OF106,CV011,OF106,0,otro rubro,Otro rubro,,39.41,189,0,0,0,0,,,,0
+CV011-OF107,CV011,OF107,0,otro rubro,Otro rubro,,49.03,75,0,0,0,0,,,,0
+CV011-OF108,CV011,OF108,0,otro rubro,Otro rubro,,46.6,117,0,0,0,0,,,,0
+CV011-OF109,CV011,OF109,0,otro rubro,Otro rubro,,38.19,191,0,0,0,0,,,,0
+CV011-OF110,CV011,OF110,0,otro rubro,Otro rubro,,38.26,190,0,0,0,0,,,,0
+CV011-OF111,CV011,OF111,0,otro rubro,Otro rubro,,42.4,181,0,0,0,0,,,,0
+CV011-OF112,CV011,OF112,0,otro rubro,Otro rubro,,46.53,120,0,0,0,0,,,,0
+CV011-OF113,CV011,OF113,0,otro rubro,Otro rubro,,32.66,200,0,0,0,0,,,,0
+CV011-OF114,CV011,OF114,0,otro rubro,Otro rubro,,34.82,199,0,0,0,0,,,,0
+CV011-OF115,CV011,OF115,0,otro rubro,Otro rubro,,47.74,103,0,0,0,0,,,,0
+CV011-OF116,CV011,OF116,0,otro rubro,Otro rubro,,40.93,187,0,0,0,0,,,,0
+CV011-OF117,CV011,OF117,0,otro rubro,Otro rubro,,48.5,87,0,0,0,0,,,,0
+CV011-OF118,CV011,OF118,0,otro rubro,Otro rubro,,48.45,90,0,0,0,0,,,,0
+CV011-OF119,CV011,OF119,0,otro rubro,Otro rubro,,40.9,188,0,0,0,0,,,,0
+CV011-OF120,CV011,OF120,0,otro rubro,Otro rubro,,42.62,180,0,0,0,0,,,,0
+CV011-OF121,CV011,OF121,0,otro rubro,Otro rubro,,46.54,119,0,0,0,0,,,,0
+CV011-OF122,CV011,OF122,0,otro rubro,Otro rubro,,45.65,147,0,0,0,0,,,,0
+CV011-OF123,CV011,OF123,0,otro rubro,Otro rubro,,48.7,81,0,0,0,0,,,,0
+CV011-OF124,CV011,OF124,0,otro rubro,Otro rubro,,38.14,192,0,0,0,0,,,,0
+CV011-OF125,CV011,OF125,0,otro rubro,Otro rubro,,49.91,68,0,0,0,0,,,,0
+CV011-OF126,CV011,OF126,0,otro rubro,Otro rubro,,44.08,168,0,0,0,0,,,,0
+CV011-OF127,CV011,OF127,0,otro rubro,Otro rubro,,44.76,163,0,0,0,0,,,,0
+CV011-OF128,CV011,OF128,0,otro rubro,Otro rubro,,50.22,62,0,0,0,0,,,,0
+CV011-OF129,CV011,OF129,0,otro rubro,Otro rubro,,44.97,157,0,0,0,0,,,,0
+CV011-OF130,CV011,OF130,0,otro rubro,Otro rubro,,48.86,79,0,0,0,0,,,,0
+CV011-OF131,CV011,OF131,0,otro rubro,Otro rubro,,53.0,25,0,0,1,0,,,,0
+CV011-OF132,CV011,OF132,0,otro rubro,Otro rubro,,56.59,12,0,0,1,0,,,,0
+CV011-OF133,CV011,OF133,0,otro rubro,Otro rubro,,50.42,59,0,0,0,0,,,,0
+CV011-OF134,CV011,OF134,0,otro rubro,Otro rubro,,51.89,36,0,0,0,0,,,,0
+CV011-OF135,CV011,OF135,0,otro rubro,Otro rubro,,43.52,174,0,0,0,0,,,,0
+CV011-OF136,CV011,OF136,0,otro rubro,Otro rubro,,43.82,173,0,0,0,0,,,,0
+CV011-OF137,CV011,OF137,0,otro rubro,Otro rubro,,49.23,73,0,0,0,0,,,,0
+CV011-OF138,CV011,OF138,0,otro rubro,Otro rubro,,47.91,101,0,0,0,0,,,,0
+CV011-OF139,CV011,OF139,0,otro rubro,Otro rubro,,50.62,54,0,0,0,0,,,,0
+CV011-OF140,CV011,OF140,0,otro rubro,Otro rubro,,50.85,46,0,0,0,0,,,,0
+CV011-OF141,CV011,OF141,0,otro rubro,Otro rubro,,45.64,148,0,0,0,0,,,,0
+CV011-OF142,CV011,OF142,0,otro rubro,Otro rubro,,46.31,130,0,0,0,0,,,,0
+CV011-OF143,CV011,OF143,0,otro rubro,Otro rubro,,50.75,49,0,0,0,0,,,,0
+CV011-OF144,CV011,OF144,0,otro rubro,Otro rubro,,45.55,149,0,0,0,0,,,,0
+CV011-OF145,CV011,OF145,0,otro rubro,Otro rubro,,43.38,176,0,0,0,0,,,,0
+CV011-OF146,CV011,OF146,0,otro rubro,Otro rubro,,50.97,43,0,0,0,0,,,,0
+CV011-OF147,CV011,OF147,0,otro rubro,Otro rubro,,48.03,97,0,0,0,0,,,,0
+CV011-OF148,CV011,OF148,0,otro rubro,Otro rubro,,45.83,138,0,0,0,0,,,,0
+CV011-OF149,CV011,OF149,0,otro rubro,Otro rubro,,50.59,55,0,0,0,0,,,,0
+CV011-OF150,CV011,OF150,0,otro rubro,Otro rubro,,48.13,96,0,0,0,0,,,,0
+CV011-OF151,CV011,OF151,0,otro rubro,Otro rubro,,36.8,195,0,0,0,0,,,,0
+CV011-OF152,CV011,OF152,0,otro rubro,Otro rubro,,42.1,185,0,0,0,0,,,,0
+CV011-OF153,CV011,OF153,0,otro rubro,Otro rubro,,46.42,127,0,0,0,0,,,,0
+CV011-OF154,CV011,OF154,0,otro rubro,Otro rubro,,44.09,167,0,0,0,0,,,,0
+CV011-OF155,CV011,OF155,0,otro rubro,Otro rubro,,45.95,135,0,0,0,0,,,,0
+CV011-OF156,CV011,OF156,0,otro rubro,Otro rubro,,46.51,123,0,0,0,0,,,,0
+CV011-OF157,CV011,OF157,0,otro rubro,Otro rubro,,44.93,160,0,0,0,0,,,,0
+CV011-OF158,CV011,OF158,0,otro rubro,Otro rubro,,47.11,111,0,0,0,0,,,,0
+CV011-OF159,CV011,OF159,0,otro rubro,Otro rubro,,58.59,10,1,1,1,1,produccion,20,10,1
+CV011-OF160,CV011,OF160,0,otro rubro,Otro rubro,,35.62,197,0,0,0,0,,,,0
+CV011-OF161,CV011,OF161,0,otro rubro,Otro rubro,,42.04,186,0,0,0,0,,,,0
+CV011-OF162,CV011,OF162,0,otro rubro,Otro rubro,,56.23,13,0,0,1,0,,,,0
+CV011-OF163,CV011,OF163,0,otro rubro,Otro rubro,,44.61,165,0,0,0,0,,,,0
+CV011-OF164,CV011,OF164,0,otro rubro,Otro rubro,,47.99,100,0,0,0,0,,,,0
+CV011-OF165,CV011,OF165,0,otro rubro,Otro rubro,,53.58,22,0,0,1,0,,,,0
+CV011-OF166,CV011,OF166,0,otro rubro,Otro rubro,,37.38,193,0,0,0,0,,,,0
+CV011-OF167,CV011,OF167,0,otro rubro,Otro rubro,,45.47,150,0,0,0,0,,,,0
+CV011-OF168,CV011,OF168,0,otro rubro,Otro rubro,,52.87,27,0,0,1,1,what_if,30,,0
+CV011-OF169,CV011,OF169,0,otro rubro,Otro rubro,,35.7,196,0,0,0,0,,,,0
+CV011-OF170,CV011,OF170,0,otro rubro,Otro rubro,,42.69,179,0,0,0,0,,,,0
+CV011-OF171,CV011,OF171,0,otro rubro,Otro rubro,,45.29,154,0,0,0,0,,,,0
+CV011-OF172,CV011,OF172,0,otro rubro,Otro rubro,,46.17,133,0,0,0,0,,,,0
+CV011-OF173,CV011,OF173,0,otro rubro,Otro rubro,,43.86,172,0,0,0,0,,,,0
+CV011-OF174,CV011,OF174,0,otro rubro,Otro rubro,,45.7,146,0,0,0,0,,,,0
+CV011-OF175,CV011,OF175,0,otro rubro,Otro rubro,,36.98,194,0,0,0,0,,,,0
+CV011-OF176,CV011,OF176,0,otro rubro,Otro rubro,,45.75,145,0,0,0,0,,,,0
+CV011-OF177,CV011,OF177,0,otro rubro,Otro rubro,,44.81,161,0,0,0,0,,,,0
+CV011-OF178,CV011,OF178,0,otro rubro,Otro rubro,,45.79,142,0,0,0,0,,,,0
+CV011-OF179,CV011,OF179,0,otro rubro,Otro rubro,,48.62,82,0,0,0,0,,,,0
+CV011-OF180,CV011,OF180,0,otro rubro,Otro rubro,,45.31,153,0,0,0,0,,,,0
+CV011-OF181,CV011,OF181,0,otro rubro,Otro rubro,,48.27,93,0,0,0,0,,,,0
+CV011-OF182,CV011,OF182,0,otro rubro,Otro rubro,,54.25,21,0,0,1,0,,,,0
+CV011-OF183,CV011,OF183,0,otro rubro,Otro rubro,,52.46,30,0,0,1,0,,,,0
+CV011-OF184,CV011,OF184,0,otro rubro,Otro rubro,,47.35,110,0,0,0,0,,,,0
+CV011-OF185,CV011,OF185,0,otro rubro,Otro rubro,,45.95,136,0,0,0,0,,,,0
+CV011-OF186,CV011,OF186,0,otro rubro,Otro rubro,,50.74,50,0,0,0,0,,,,0
+CV011-OF187,CV011,OF187,0,otro rubro,Otro rubro,,44.04,169,0,0,0,0,,,,0
+CV011-OF188,CV011,OF188,0,otro rubro,Otro rubro,,47.74,104,0,0,0,0,,,,0
+CV011-OF189,CV011,OF189,0,otro rubro,Otro rubro,,42.17,184,0,0,0,0,,,,0
+CV011-OF190,CV011,OF190,0,otro rubro,Otro rubro,,48.97,77,0,0,0,0,,,,0
+CV011-OF191,CV011,OF191,0,otro rubro,Otro rubro,,48.23,94,0,0,0,0,,,,0
+CV011-OF192,CV011,OF192,0,otro rubro,Otro rubro,,46.83,114,0,0,0,0,,,,0
+CV011-OF193,CV011,OF193,0,otro rubro,Otro rubro,,46.69,115,0,0,0,0,,,,0
+CV011-OF194,CV011,OF194,0,otro rubro,Otro rubro,,48.57,84,0,0,0,0,,,,0
+CV011-OF195,CV011,OF195,0,otro rubro,Otro rubro,,44.95,159,0,0,0,0,,,,0
+CV011-OF196,CV011,OF196,0,otro rubro,Otro rubro,,47.38,109,0,0,0,0,,,,0
+CV011-OF197,CV011,OF197,0,otro rubro,Otro rubro,,43.99,170,0,0,0,0,,,,0
+CV011-OF198,CV011,OF198,0,otro rubro,Otro rubro,,45.37,151,0,0,0,0,,,,0
+CV011-OF199,CV011,OF199,0,otro rubro,Otro rubro,,46.47,125,0,0,0,0,,,,0
+CV011-OF200,CV011,OF200,0,otro rubro,Otro rubro,,46.89,112,0,0,0,0,,,,0
+CV016-OF001,CV016,OF001,0,otro rubro,Otro rubro,,50.49,95,0,0,0,0,,,,0
+CV016-OF002,CV016,OF002,0,otro rubro,Otro rubro,,49.07,122,0,0,0,0,,,,0
+CV016-OF003,CV016,OF003,0,otro rubro,Otro rubro,,52.5,69,0,0,0,0,,,,0
+CV016-OF004,CV016,OF004,0,otro rubro,Otro rubro,,54.62,41,0,0,0,0,,,,0
+CV016-OF005,CV016,OF005,0,otro rubro,Otro rubro,,53.08,56,0,0,0,0,,,,0
+CV016-OF006,CV016,OF006,0,otro rubro,Otro rubro,,58.12,22,0,0,1,0,,,,0
+CV016-OF007,CV016,OF007,0,otro rubro,Otro rubro,,53.5,50,0,0,0,0,,,,0
+CV016-OF008,CV016,OF008,0,otro rubro,Otro rubro,,52.39,71,0,0,0,0,,,,0
+CV016-OF009,CV016,OF009,0,otro rubro,Otro rubro,,53.01,58,0,0,0,0,,,,0
+CV016-OF010,CV016,OF010,0,otro rubro,Otro rubro,,49.42,114,0,0,0,0,,,,0
+CV016-OF011,CV016,OF011,0,otro rubro,Otro rubro,,53.39,53,0,0,0,0,,,,0
+CV016-OF012,CV016,OF012,0,otro rubro,Otro rubro,,48.99,126,0,0,0,0,,,,0
+CV016-OF013,CV016,OF013,0,otro rubro,Otro rubro,,51.53,79,0,0,0,0,,,,0
+CV016-OF014,CV016,OF014,0,otro rubro,Otro rubro,,57.07,26,0,0,1,0,,,,0
+CV016-OF015,CV016,OF015,0,otro rubro,Otro rubro,,52.24,73,0,0,0,0,,,,0
+CV016-OF016,CV016,OF016,0,otro rubro,Otro rubro,,52.55,67,0,0,0,0,,,,0
+CV016-OF017,CV016,OF017,0,otro rubro,Otro rubro,,52.68,64,0,0,0,0,,,,0
+CV016-OF018,CV016,OF018,0,otro rubro,Otro rubro,,51.53,80,0,0,0,0,,,,0
+CV016-OF019,CV016,OF019,0,otro rubro,Otro rubro,,52.99,60,0,0,0,0,,,,0
+CV016-OF020,CV016,OF020,0,otro rubro,Otro rubro,,50.64,93,0,0,0,0,,,,0
+CV016-OF021,CV016,OF021,0,otro rubro,Otro rubro,,53.48,51,0,0,0,0,,,,0
+CV016-OF022,CV016,OF022,0,otro rubro,Otro rubro,,53.14,54,0,0,0,0,,,,0
+CV016-OF023,CV016,OF023,0,otro rubro,Otro rubro,,51.02,89,0,0,0,0,,,,0
+CV016-OF024,CV016,OF024,0,otro rubro,Otro rubro,,46.82,163,0,0,0,0,,,,0
+CV016-OF025,CV016,OF025,0,otro rubro,Otro rubro,,47.16,160,0,0,0,0,,,,0
+CV016-OF026,CV016,OF026,0,otro rubro,Otro rubro,,49.71,108,0,0,0,0,,,,0
+CV016-OF027,CV016,OF027,0,otro rubro,Otro rubro,,48.2,141,0,0,0,0,,,,0
+CV016-OF028,CV016,OF028,0,otro rubro,Otro rubro,,49.98,104,0,0,0,0,,,,0
+CV016-OF029,CV016,OF029,0,otro rubro,Otro rubro,,48.86,132,0,0,0,0,,,,0
+CV016-OF030,CV016,OF030,0,otro rubro,Otro rubro,,51.28,86,0,0,0,0,,,,0
+CV016-OF031,CV016,OF031,0,otro rubro,Otro rubro,,52.32,72,0,0,0,0,,,,0
+CV016-OF032,CV016,OF032,0,otro rubro,Otro rubro,,49.07,123,0,0,0,0,,,,0
+CV016-OF033,CV016,OF033,0,otro rubro,Otro rubro,,54.01,45,0,0,0,0,,,,0
+CV016-OF034,CV016,OF034,0,otro rubro,Otro rubro,,53.0,59,0,0,0,0,,,,0
+CV016-OF035,CV016,OF035,0,otro rubro,Otro rubro,,48.03,143,0,0,0,0,,,,0
+CV016-OF036,CV016,OF036,0,otro rubro,Otro rubro,,61.37,10,1,1,1,1,produccion,20,9,1
+CV016-OF037,CV016,OF037,0,otro rubro,Otro rubro,,48.57,135,0,0,0,0,,,,0
+CV016-OF038,CV016,OF038,0,otro rubro,Otro rubro,,47.28,159,0,0,0,0,,,,0
+CV016-OF039,CV016,OF039,0,otro rubro,Otro rubro,,52.97,61,0,0,0,0,,,,0
+CV016-OF040,CV016,OF040,0,otro rubro,Otro rubro,,51.66,78,0,0,0,0,,,,0
+CV016-OF041,CV016,OF041,0,otro rubro,Otro rubro,,49.97,105,0,0,0,0,,,,0
+CV016-OF042,CV016,OF042,0,otro rubro,Otro rubro,,54.42,42,0,0,0,0,,,,0
+CV016-OF043,CV016,OF043,0,otro rubro,Otro rubro,,55.18,36,0,0,0,0,,,,0
+CV016-OF044,CV016,OF044,0,otro rubro,Otro rubro,,48.44,139,0,0,0,0,,,,0
+CV016-OF045,CV016,OF045,0,otro rubro,Otro rubro,,49.31,117,0,0,0,0,,,,0
+CV016-OF046,CV016,OF046,0,otro rubro,Otro rubro,,52.64,65,0,0,0,0,,,,0
+CV016-OF047,CV016,OF047,0,otro rubro,Otro rubro,,54.32,43,0,0,0,0,,,,0
+CV016-OF048,CV016,OF048,0,otro rubro,Otro rubro,,45.48,175,0,0,0,0,,,,0
+CV016-OF049,CV016,OF049,0,otro rubro,Otro rubro,,51.8,77,0,0,0,0,,,,0
+CV016-OF050,CV016,OF050,0,otro rubro,Otro rubro,,53.07,57,0,0,0,0,,,,0
+CV016-OF051,CV016,OF051,0,otro rubro,Otro rubro,,46.34,167,0,0,0,0,,,,0
+CV016-OF052,CV016,OF052,0,otro rubro,Otro rubro,,55.41,33,0,0,0,0,,,,0
+CV016-OF053,CV016,OF053,0,otro rubro,Otro rubro,,49.6,110,0,0,0,0,,,,0
+CV016-OF054,CV016,OF054,0,otro rubro,Otro rubro,,54.67,40,0,0,0,0,,,,0
+CV016-OF055,CV016,OF055,0,otro rubro,Otro rubro,,66.46,4,1,1,1,1,produccion,55,6,1
+CV016-OF056,CV016,OF056,0,otro rubro,Otro rubro,,50.44,96,0,0,0,0,,,,0
+CV016-OF057,CV016,OF057,0,otro rubro,Otro rubro,,52.63,66,0,0,0,0,,,,0
+CV016-OF058,CV016,OF058,0,otro rubro,Otro rubro,,55.98,30,0,0,1,0,,,,0
+CV016-OF059,CV016,OF059,0,otro rubro,Otro rubro,,51.3,85,0,0,0,0,,,,0
+CV016-OF060,CV016,OF060,0,otro rubro,Otro rubro,,47.36,157,0,0,0,0,,,,0
+CV016-OF061,CV016,OF061,0,otro rubro,Otro rubro,,56.15,29,0,0,1,0,,,,0
+CV016-OF062,CV016,OF062,0,otro rubro,Otro rubro,,49.38,116,0,0,0,0,,,,0
+CV016-OF063,CV016,OF063,0,otro rubro,Otro rubro,,50.88,91,0,0,0,0,,,,0
+CV016-OF064,CV016,OF064,0,otro rubro,Otro rubro,,59.61,14,0,0,1,0,,,,0
+CV016-OF065,CV016,OF065,0,otro rubro,Otro rubro,,52.48,70,0,0,0,0,,,,0
+CV016-OF066,CV016,OF066,0,otro rubro,Otro rubro,,46.77,164,0,0,0,0,,,,0
+CV016-OF067,CV016,OF067,0,otro rubro,Otro rubro,,56.83,27,0,0,1,0,,,,0
+CV016-OF068,CV016,OF068,0,otro rubro,Otro rubro,,54.73,38,0,0,0,0,,,,0
+CV016-OF069,CV016,OF069,0,otro rubro,Otro rubro,,49.41,115,0,0,0,0,,,,0
+CV016-OF070,CV016,OF070,0,otro rubro,Otro rubro,,58.09,23,0,0,1,0,,,,0
+CV016-OF071,CV016,OF071,0,otro rubro,Otro rubro,,49.11,119,0,0,0,0,,,,0
+CV016-OF072,CV016,OF072,0,otro rubro,Otro rubro,,58.91,17,0,0,1,0,,,,0
+CV016-OF073,CV016,OF073,0,otro rubro,Otro rubro,,58.86,18,0,0,1,0,,,,0
+CV016-OF074,CV016,OF074,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,60.69,12,0,0,1,0,,,,0
+CV016-OF075,CV016,OF075,0,otro rubro,Otro rubro,,51.32,84,0,0,0,0,,,,0
+CV016-OF076,CV016,OF076,2,"mismo rol, gap de seniority 0, cubre 50%",Mismo rol,0,71.93,1,1,1,1,1,produccion,90,1,1
+CV016-OF077,CV016,OF077,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.39,97,0,0,0,0,,,,0
+CV016-OF078,CV016,OF078,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.52,49,0,0,0,0,,,,0
+CV016-OF079,CV016,OF079,2,"mismo rol, gap de seniority 1, cubre 67%",Mismo rol,1,70.43,3,1,1,1,1,produccion,75,5,1
+CV016-OF080,CV016,OF080,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,63.84,9,1,1,1,1,produccion,35,8,1
+CV016-OF081,CV016,OF081,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.41,34,0,0,0,0,,,,0
+CV016-OF082,CV016,OF082,1,mismo rol pero gap de seniority 2 / cubre 60%,Mismo rol,2,59.47,16,0,0,1,0,,,,0
+CV016-OF083,CV016,OF083,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,59.78,13,0,0,1,0,,,,0
+CV016-OF084,CV016,OF084,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.89,32,0,0,0,0,,,,0
+CV016-OF085,CV016,OF085,2,"mismo rol, gap de seniority 0, cubre 50%",Mismo rol,0,61.3,11,0,0,1,1,what_if,85,,0
+CV016-OF086,CV016,OF086,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.96,76,0,0,0,0,,,,0
+CV016-OF087,CV016,OF087,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,57.58,24,0,0,1,0,,,,0
+CV016-OF088,CV016,OF088,2,"mismo rol, gap de seniority 1, cubre 40%",Mismo rol,1,65.81,6,1,1,1,1,produccion,88,3,1
+CV016-OF089,CV016,OF089,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.17,20,0,0,1,0,,,,0
+CV016-OF090,CV016,OF090,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,54.05,44,0,0,0,0,,,,0
+CV016-OF091,CV016,OF091,1,mismo rol pero gap de seniority 2 / cubre 60%,Mismo rol,2,66.11,5,1,1,1,1,produccion,45,7,1
+CV016-OF092,CV016,OF092,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,55.97,31,0,0,0,0,,,,0
+CV016-OF093,CV016,OF093,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.05,74,0,0,0,0,,,,0
+CV016-OF094,CV016,OF094,1,mismo rol pero gap de seniority 0 / cubre 25%,Mismo rol,0,58.13,21,0,0,1,0,,,,0
+CV016-OF095,CV016,OF095,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,48.87,131,0,0,0,0,,,,0
+CV016-OF096,CV016,OF096,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.94,62,0,0,0,0,,,,0
+CV016-OF097,CV016,OF097,2,"mismo rol, gap de seniority 1, cubre 50%",Mismo rol,1,65.08,8,1,1,1,1,produccion,85,4,1
+CV016-OF098,CV016,OF098,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.21,19,0,0,1,0,,,,0
+CV016-OF099,CV016,OF099,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,49.0,125,0,0,0,0,,,,0
+CV016-OF100,CV016,OF100,2,"mismo rol, gap de seniority 1, cubre 50%",Mismo rol,1,70.61,2,1,1,1,1,produccion,90,2,1
+CV016-OF101,CV016,OF101,0,otro rubro,Otro rubro,,45.02,179,0,0,0,0,,,,0
+CV016-OF102,CV016,OF102,0,otro rubro,Otro rubro,,41.73,191,0,0,0,0,,,,0
+CV016-OF103,CV016,OF103,0,otro rubro,Otro rubro,,41.85,189,0,0,0,0,,,,0
+CV016-OF104,CV016,OF104,0,otro rubro,Otro rubro,,47.51,150,0,0,0,0,,,,0
+CV016-OF105,CV016,OF105,0,otro rubro,Otro rubro,,43.01,187,0,0,0,0,,,,0
+CV016-OF106,CV016,OF106,0,otro rubro,Otro rubro,,43.1,186,0,0,0,0,,,,0
+CV016-OF107,CV016,OF107,0,otro rubro,Otro rubro,,41.27,192,0,0,0,0,,,,0
+CV016-OF108,CV016,OF108,0,otro rubro,Otro rubro,,44.7,181,0,0,0,0,,,,0
+CV016-OF109,CV016,OF109,0,otro rubro,Otro rubro,,36.22,198,0,0,0,0,,,,0
+CV016-OF110,CV016,OF110,0,otro rubro,Otro rubro,,38.04,194,0,0,0,0,,,,0
+CV016-OF111,CV016,OF111,0,otro rubro,Otro rubro,,43.69,184,0,0,0,0,,,,0
+CV016-OF112,CV016,OF112,0,otro rubro,Otro rubro,,45.94,173,0,0,0,0,,,,0
+CV016-OF113,CV016,OF113,0,otro rubro,Otro rubro,,35.39,200,0,0,0,0,,,,0
+CV016-OF114,CV016,OF114,0,otro rubro,Otro rubro,,37.51,197,0,0,0,0,,,,0
+CV016-OF115,CV016,OF115,0,otro rubro,Otro rubro,,45.07,178,0,0,0,0,,,,0
+CV016-OF116,CV016,OF116,0,otro rubro,Otro rubro,,45.34,177,0,0,0,0,,,,0
+CV016-OF117,CV016,OF117,0,otro rubro,Otro rubro,,48.9,130,0,0,0,0,,,,0
+CV016-OF118,CV016,OF118,0,otro rubro,Otro rubro,,46.16,170,0,0,0,0,,,,0
+CV016-OF119,CV016,OF119,0,otro rubro,Otro rubro,,45.94,174,0,0,0,0,,,,0
+CV016-OF120,CV016,OF120,0,otro rubro,Otro rubro,,46.3,168,0,0,0,0,,,,0
+CV016-OF121,CV016,OF121,0,otro rubro,Otro rubro,,47.4,156,0,0,0,0,,,,0
+CV016-OF122,CV016,OF122,0,otro rubro,Otro rubro,,51.19,88,0,0,0,0,,,,0
+CV016-OF123,CV016,OF123,0,otro rubro,Otro rubro,,50.93,90,0,0,0,0,,,,0
+CV016-OF124,CV016,OF124,0,otro rubro,Otro rubro,,37.7,196,0,0,0,0,,,,0
+CV016-OF125,CV016,OF125,0,otro rubro,Otro rubro,,44.9,180,0,0,0,0,,,,0
+CV016-OF126,CV016,OF126,0,otro rubro,Otro rubro,,46.12,172,0,0,0,0,,,,0
+CV016-OF127,CV016,OF127,0,otro rubro,Otro rubro,,50.65,92,0,0,0,0,,,,0
+CV016-OF128,CV016,OF128,0,otro rubro,Otro rubro,,48.98,127,0,0,0,0,,,,0
+CV016-OF129,CV016,OF129,0,otro rubro,Otro rubro,,49.09,120,0,0,0,0,,,,0
+CV016-OF130,CV016,OF130,0,otro rubro,Otro rubro,,49.44,113,0,0,0,0,,,,0
+CV016-OF131,CV016,OF131,0,otro rubro,Otro rubro,,52.52,68,0,0,0,0,,,,0
+CV016-OF132,CV016,OF132,0,otro rubro,Otro rubro,,48.91,129,0,0,0,0,,,,0
+CV016-OF133,CV016,OF133,0,otro rubro,Otro rubro,,47.5,151,0,0,0,0,,,,0
+CV016-OF134,CV016,OF134,0,otro rubro,Otro rubro,,57.54,25,0,0,1,1,what_if,20,,0
+CV016-OF135,CV016,OF135,0,otro rubro,Otro rubro,,46.71,165,0,0,0,0,,,,0
+CV016-OF136,CV016,OF136,0,otro rubro,Otro rubro,,47.91,145,0,0,0,0,,,,0
+CV016-OF137,CV016,OF137,0,otro rubro,Otro rubro,,53.09,55,0,0,0,0,,,,0
+CV016-OF138,CV016,OF138,0,otro rubro,Otro rubro,,48.52,136,0,0,0,0,,,,0
+CV016-OF139,CV016,OF139,0,otro rubro,Otro rubro,,59.58,15,0,0,1,0,,,,0
+CV016-OF140,CV016,OF140,0,otro rubro,Otro rubro,,53.99,46,0,0,0,0,,,,0
+CV016-OF141,CV016,OF141,0,otro rubro,Otro rubro,,46.52,166,0,0,0,0,,,,0
+CV016-OF142,CV016,OF142,0,otro rubro,Otro rubro,,53.59,47,0,0,0,0,,,,0
+CV016-OF143,CV016,OF143,0,otro rubro,Otro rubro,,65.26,7,1,1,1,1,produccion,10,10,1
+CV016-OF144,CV016,OF144,0,otro rubro,Otro rubro,,45.45,176,0,0,0,0,,,,0
+CV016-OF145,CV016,OF145,0,otro rubro,Otro rubro,,47.43,154,0,0,0,0,,,,0
+CV016-OF146,CV016,OF146,0,otro rubro,Otro rubro,,50.62,94,0,0,0,0,,,,0
+CV016-OF147,CV016,OF147,0,otro rubro,Otro rubro,,49.81,106,0,0,0,0,,,,0
+CV016-OF148,CV016,OF148,0,otro rubro,Otro rubro,,49.5,112,0,0,0,0,,,,0
+CV016-OF149,CV016,OF149,0,otro rubro,Otro rubro,,49.54,111,0,0,0,0,,,,0
+CV016-OF150,CV016,OF150,0,otro rubro,Otro rubro,,46.14,171,0,0,0,0,,,,0
+CV016-OF151,CV016,OF151,0,otro rubro,Otro rubro,,42.54,188,0,0,0,0,,,,0
+CV016-OF152,CV016,OF152,0,otro rubro,Otro rubro,,46.9,162,0,0,0,0,,,,0
+CV016-OF153,CV016,OF153,0,otro rubro,Otro rubro,,44.06,182,0,0,0,0,,,,0
+CV016-OF154,CV016,OF154,0,otro rubro,Otro rubro,,46.22,169,0,0,0,0,,,,0
+CV016-OF155,CV016,OF155,0,otro rubro,Otro rubro,,56.33,28,0,0,1,0,,,,0
+CV016-OF156,CV016,OF156,0,otro rubro,Otro rubro,,47.84,146,0,0,0,0,,,,0
+CV016-OF157,CV016,OF157,0,otro rubro,Otro rubro,,48.98,128,0,0,0,0,,,,0
+CV016-OF158,CV016,OF158,0,otro rubro,Otro rubro,,50.2,101,0,0,0,0,,,,0
+CV016-OF159,CV016,OF159,0,otro rubro,Otro rubro,,47.32,158,0,0,0,0,,,,0
+CV016-OF160,CV016,OF160,0,otro rubro,Otro rubro,,35.91,199,0,0,0,0,,,,0
+CV016-OF161,CV016,OF161,0,otro rubro,Otro rubro,,43.74,183,0,0,0,0,,,,0
+CV016-OF162,CV016,OF162,0,otro rubro,Otro rubro,,49.77,107,0,0,0,0,,,,0
+CV016-OF163,CV016,OF163,0,otro rubro,Otro rubro,,47.49,153,0,0,0,0,,,,0
+CV016-OF164,CV016,OF164,0,otro rubro,Otro rubro,,50.12,102,0,0,0,0,,,,0
+CV016-OF165,CV016,OF165,0,otro rubro,Otro rubro,,52.86,63,0,0,0,0,,,,0
+CV016-OF166,CV016,OF166,0,otro rubro,Otro rubro,,37.8,195,0,0,0,0,,,,0
+CV016-OF167,CV016,OF167,0,otro rubro,Otro rubro,,51.28,87,0,0,0,0,,,,0
+CV016-OF168,CV016,OF168,0,otro rubro,Otro rubro,,47.53,149,0,0,0,0,,,,0
+CV016-OF169,CV016,OF169,0,otro rubro,Otro rubro,,41.82,190,0,0,0,0,,,,0
+CV016-OF170,CV016,OF170,0,otro rubro,Otro rubro,,48.68,133,0,0,0,0,,,,0
+CV016-OF171,CV016,OF171,0,otro rubro,Otro rubro,,49.18,118,0,0,0,0,,,,0
+CV016-OF172,CV016,OF172,0,otro rubro,Otro rubro,,49.08,121,0,0,0,0,,,,0
+CV016-OF173,CV016,OF173,0,otro rubro,Otro rubro,,50.31,98,0,0,0,0,,,,0
+CV016-OF174,CV016,OF174,0,otro rubro,Otro rubro,,48.51,137,0,0,0,0,,,,0
+CV016-OF175,CV016,OF175,0,otro rubro,Otro rubro,,39.74,193,0,0,0,0,,,,0
+CV016-OF176,CV016,OF176,0,otro rubro,Otro rubro,,50.25,99,0,0,0,0,,,,0
+CV016-OF177,CV016,OF177,0,otro rubro,Otro rubro,,49.67,109,0,0,0,0,,,,0
+CV016-OF178,CV016,OF178,0,otro rubro,Otro rubro,,47.5,152,0,0,0,0,,,,0
+CV016-OF179,CV016,OF179,0,otro rubro,Otro rubro,,51.46,82,0,0,0,0,,,,0
+CV016-OF180,CV016,OF180,0,otro rubro,Otro rubro,,50.06,103,0,0,0,0,,,,0
+CV016-OF181,CV016,OF181,0,otro rubro,Otro rubro,,48.68,134,0,0,0,0,,,,0
+CV016-OF182,CV016,OF182,0,otro rubro,Otro rubro,,55.29,35,0,0,0,0,,,,0
+CV016-OF183,CV016,OF183,0,otro rubro,Otro rubro,,47.77,147,0,0,0,0,,,,0
+CV016-OF184,CV016,OF184,0,otro rubro,Otro rubro,,47.13,161,0,0,0,0,,,,0
+CV016-OF185,CV016,OF185,0,otro rubro,Otro rubro,,53.46,52,0,0,0,0,,,,0
+CV016-OF186,CV016,OF186,0,otro rubro,Otro rubro,,43.14,185,0,0,0,0,,,,0
+CV016-OF187,CV016,OF187,0,otro rubro,Otro rubro,,47.43,155,0,0,0,0,,,,0
+CV016-OF188,CV016,OF188,0,otro rubro,Otro rubro,,54.86,37,0,0,0,0,,,,0
+CV016-OF189,CV016,OF189,0,otro rubro,Otro rubro,,48.28,140,0,0,0,0,,,,0
+CV016-OF190,CV016,OF190,0,otro rubro,Otro rubro,,51.51,81,0,0,0,0,,,,0
+CV016-OF191,CV016,OF191,0,otro rubro,Otro rubro,,54.7,39,0,0,0,0,,,,0
+CV016-OF192,CV016,OF192,0,otro rubro,Otro rubro,,50.21,100,0,0,0,0,,,,0
+CV016-OF193,CV016,OF193,0,otro rubro,Otro rubro,,47.99,144,0,0,0,0,,,,0
+CV016-OF194,CV016,OF194,0,otro rubro,Otro rubro,,48.51,138,0,0,0,0,,,,0
+CV016-OF195,CV016,OF195,0,otro rubro,Otro rubro,,47.57,148,0,0,0,0,,,,0
+CV016-OF196,CV016,OF196,0,otro rubro,Otro rubro,,51.37,83,0,0,0,0,,,,0
+CV016-OF197,CV016,OF197,0,otro rubro,Otro rubro,,49.06,124,0,0,0,0,,,,0
+CV016-OF198,CV016,OF198,0,otro rubro,Otro rubro,,51.98,75,0,0,0,0,,,,0
+CV016-OF199,CV016,OF199,0,otro rubro,Otro rubro,,48.06,142,0,0,0,0,,,,0
+CV016-OF200,CV016,OF200,0,otro rubro,Otro rubro,,53.54,48,0,0,0,0,,,,0
+CV021-OF001,CV021,OF001,0,otro rubro,Otro rubro,,44.61,142,0,0,0,0,,,,0
+CV021-OF002,CV021,OF002,0,otro rubro,Otro rubro,,47.35,96,0,0,0,0,,,,0
+CV021-OF003,CV021,OF003,0,otro rubro,Otro rubro,,44.84,136,0,0,0,0,,,,0
+CV021-OF004,CV021,OF004,0,otro rubro,Otro rubro,,48.29,81,0,0,0,0,,,,0
+CV021-OF005,CV021,OF005,0,otro rubro,Otro rubro,,44.02,152,0,0,0,0,,,,0
+CV021-OF006,CV021,OF006,0,otro rubro,Otro rubro,,43.62,155,0,0,0,0,,,,0
+CV021-OF007,CV021,OF007,0,otro rubro,Otro rubro,,52.71,20,0,0,1,0,,,,0
+CV021-OF008,CV021,OF008,0,otro rubro,Otro rubro,,50.4,45,0,0,0,0,,,,0
+CV021-OF009,CV021,OF009,0,otro rubro,Otro rubro,,50.74,41,0,0,0,0,,,,0
+CV021-OF010,CV021,OF010,0,otro rubro,Otro rubro,,42.48,164,0,0,0,0,,,,0
+CV021-OF011,CV021,OF011,0,otro rubro,Otro rubro,,44.63,141,0,0,0,0,,,,0
+CV021-OF012,CV021,OF012,0,otro rubro,Otro rubro,,41.26,180,0,0,0,0,,,,0
+CV021-OF013,CV021,OF013,0,otro rubro,Otro rubro,,44.06,151,0,0,0,0,,,,0
+CV021-OF014,CV021,OF014,0,otro rubro,Otro rubro,,45.06,134,0,0,0,0,,,,0
+CV021-OF015,CV021,OF015,0,otro rubro,Otro rubro,,48.9,74,0,0,0,0,,,,0
+CV021-OF016,CV021,OF016,0,otro rubro,Otro rubro,,52.1,26,0,0,1,0,,,,0
+CV021-OF017,CV021,OF017,0,otro rubro,Otro rubro,,47.32,98,0,0,0,0,,,,0
+CV021-OF018,CV021,OF018,0,otro rubro,Otro rubro,,49.38,63,0,0,0,0,,,,0
+CV021-OF019,CV021,OF019,0,otro rubro,Otro rubro,,51.01,35,0,0,0,0,,,,0
+CV021-OF020,CV021,OF020,0,otro rubro,Otro rubro,,49.54,62,0,0,0,0,,,,0
+CV021-OF021,CV021,OF021,0,otro rubro,Otro rubro,,43.02,160,0,0,0,0,,,,0
+CV021-OF022,CV021,OF022,0,otro rubro,Otro rubro,,51.41,31,0,0,0,0,,,,0
+CV021-OF023,CV021,OF023,0,otro rubro,Otro rubro,,46.17,116,0,0,0,0,,,,0
+CV021-OF024,CV021,OF024,0,otro rubro,Otro rubro,,49.7,57,0,0,0,0,,,,0
+CV021-OF025,CV021,OF025,0,otro rubro,Otro rubro,,46.7,110,0,0,0,0,,,,0
+CV021-OF026,CV021,OF026,0,otro rubro,Otro rubro,,41.85,173,0,0,0,0,,,,0
+CV021-OF027,CV021,OF027,0,otro rubro,Otro rubro,,41.73,175,0,0,0,0,,,,0
+CV021-OF028,CV021,OF028,0,otro rubro,Otro rubro,,52.44,24,0,0,1,1,what_if,20,,0
+CV021-OF029,CV021,OF029,0,otro rubro,Otro rubro,,44.46,144,0,0,0,0,,,,0
+CV021-OF030,CV021,OF030,0,otro rubro,Otro rubro,,44.66,139,0,0,0,0,,,,0
+CV021-OF031,CV021,OF031,0,otro rubro,Otro rubro,,42.95,163,0,0,0,0,,,,0
+CV021-OF032,CV021,OF032,0,otro rubro,Otro rubro,,49.28,66,0,0,0,0,,,,0
+CV021-OF033,CV021,OF033,0,otro rubro,Otro rubro,,53.63,17,0,0,1,0,,,,0
+CV021-OF034,CV021,OF034,0,otro rubro,Otro rubro,,54.62,11,0,0,1,0,,,,0
+CV021-OF035,CV021,OF035,0,otro rubro,Otro rubro,,45.72,119,0,0,0,0,,,,0
+CV021-OF036,CV021,OF036,0,otro rubro,Otro rubro,,48.51,79,0,0,0,0,,,,0
+CV021-OF037,CV021,OF037,0,otro rubro,Otro rubro,,45.13,133,0,0,0,0,,,,0
+CV021-OF038,CV021,OF038,0,otro rubro,Otro rubro,,44.88,135,0,0,0,0,,,,0
+CV021-OF039,CV021,OF039,0,otro rubro,Otro rubro,,48.62,77,0,0,0,0,,,,0
+CV021-OF040,CV021,OF040,0,otro rubro,Otro rubro,,44.64,140,0,0,0,0,,,,0
+CV021-OF041,CV021,OF041,0,otro rubro,Otro rubro,,47.11,102,0,0,0,0,,,,0
+CV021-OF042,CV021,OF042,0,otro rubro,Otro rubro,,53.97,16,0,0,1,0,,,,0
+CV021-OF043,CV021,OF043,0,otro rubro,Otro rubro,,52.33,25,0,0,1,0,,,,0
+CV021-OF044,CV021,OF044,0,otro rubro,Otro rubro,,48.16,84,0,0,0,0,,,,0
+CV021-OF045,CV021,OF045,0,otro rubro,Otro rubro,,45.41,127,0,0,0,0,,,,0
+CV021-OF046,CV021,OF046,0,otro rubro,Otro rubro,,51.3,32,0,0,0,0,,,,0
+CV021-OF047,CV021,OF047,0,otro rubro,Otro rubro,,46.18,115,0,0,0,0,,,,0
+CV021-OF048,CV021,OF048,0,otro rubro,Otro rubro,,40.03,189,0,0,0,0,,,,0
+CV021-OF049,CV021,OF049,0,otro rubro,Otro rubro,,44.77,137,0,0,0,0,,,,0
+CV021-OF050,CV021,OF050,0,otro rubro,Otro rubro,,48.19,83,0,0,0,0,,,,0
+CV021-OF051,CV021,OF051,0,otro rubro,Otro rubro,,40.49,186,0,0,0,0,,,,0
+CV021-OF052,CV021,OF052,0,otro rubro,Otro rubro,,45.43,126,0,0,0,0,,,,0
+CV021-OF053,CV021,OF053,0,otro rubro,Otro rubro,,45.17,132,0,0,0,0,,,,0
+CV021-OF054,CV021,OF054,0,otro rubro,Otro rubro,,43.81,153,0,0,0,0,,,,0
+CV021-OF055,CV021,OF055,0,otro rubro,Otro rubro,,43.48,156,0,0,0,0,,,,0
+CV021-OF056,CV021,OF056,0,otro rubro,Otro rubro,,50.96,36,0,0,0,0,,,,0
+CV021-OF057,CV021,OF057,0,otro rubro,Otro rubro,,47.09,104,0,0,0,0,,,,0
+CV021-OF058,CV021,OF058,0,otro rubro,Otro rubro,,45.61,121,0,0,0,0,,,,0
+CV021-OF059,CV021,OF059,0,otro rubro,Otro rubro,,51.79,28,0,0,1,0,,,,0
+CV021-OF060,CV021,OF060,0,otro rubro,Otro rubro,,39.8,193,0,0,0,0,,,,0
+CV021-OF061,CV021,OF061,0,otro rubro,Otro rubro,,44.41,145,0,0,0,0,,,,0
+CV021-OF062,CV021,OF062,0,otro rubro,Otro rubro,,50.58,43,0,0,0,0,,,,0
+CV021-OF063,CV021,OF063,0,otro rubro,Otro rubro,,48.02,85,0,0,0,0,,,,0
+CV021-OF064,CV021,OF064,0,otro rubro,Otro rubro,,49.33,64,0,0,0,0,,,,0
+CV021-OF065,CV021,OF065,0,otro rubro,Otro rubro,,50.8,39,0,0,0,0,,,,0
+CV021-OF066,CV021,OF066,0,otro rubro,Otro rubro,,39.26,196,0,0,0,0,,,,0
+CV021-OF067,CV021,OF067,0,otro rubro,Otro rubro,,50.65,42,0,0,0,0,,,,0
+CV021-OF068,CV021,OF068,0,otro rubro,Otro rubro,,46.34,114,0,0,0,0,,,,0
+CV021-OF069,CV021,OF069,0,otro rubro,Otro rubro,,47.06,105,0,0,0,0,,,,0
+CV021-OF070,CV021,OF070,0,otro rubro,Otro rubro,,50.83,38,0,0,0,0,,,,0
+CV021-OF071,CV021,OF071,0,otro rubro,Otro rubro,,43.45,157,0,0,0,0,,,,0
+CV021-OF072,CV021,OF072,0,otro rubro,Otro rubro,,40.97,182,0,0,0,0,,,,0
+CV021-OF073,CV021,OF073,0,otro rubro,Otro rubro,,47.65,89,0,0,0,0,,,,0
+CV021-OF074,CV021,OF074,0,otro rubro,Otro rubro,,44.33,147,0,0,0,0,,,,0
+CV021-OF075,CV021,OF075,0,otro rubro,Otro rubro,,41.53,178,0,0,0,0,,,,0
+CV021-OF076,CV021,OF076,0,otro rubro,Otro rubro,,41.87,172,0,0,0,0,,,,0
+CV021-OF077,CV021,OF077,0,otro rubro,Otro rubro,,47.57,93,0,0,0,0,,,,0
+CV021-OF078,CV021,OF078,0,otro rubro,Otro rubro,,42.11,167,0,0,0,0,,,,0
+CV021-OF079,CV021,OF079,0,otro rubro,Otro rubro,,41.21,181,0,0,0,0,,,,0
+CV021-OF080,CV021,OF080,0,otro rubro,Otro rubro,,42.96,162,0,0,0,0,,,,0
+CV021-OF081,CV021,OF081,0,otro rubro,Otro rubro,,47.1,103,0,0,0,0,,,,0
+CV021-OF082,CV021,OF082,0,otro rubro,Otro rubro,,50.49,44,0,0,0,0,,,,0
+CV021-OF083,CV021,OF083,0,otro rubro,Otro rubro,,41.9,171,0,0,0,0,,,,0
+CV021-OF084,CV021,OF084,0,otro rubro,Otro rubro,,49.81,56,0,0,0,0,,,,0
+CV021-OF085,CV021,OF085,0,otro rubro,Otro rubro,,40.54,185,0,0,0,0,,,,0
+CV021-OF086,CV021,OF086,0,otro rubro,Otro rubro,,49.82,55,0,0,0,0,,,,0
+CV021-OF087,CV021,OF087,0,otro rubro,Otro rubro,,40.78,184,0,0,0,0,,,,0
+CV021-OF088,CV021,OF088,0,otro rubro,Otro rubro,,45.41,128,0,0,0,0,,,,0
+CV021-OF089,CV021,OF089,0,otro rubro,Otro rubro,,50.33,46,0,0,0,0,,,,0
+CV021-OF090,CV021,OF090,0,otro rubro,Otro rubro,,40.25,188,0,0,0,0,,,,0
+CV021-OF091,CV021,OF091,0,otro rubro,Otro rubro,,49.27,67,0,0,0,0,,,,0
+CV021-OF092,CV021,OF092,0,otro rubro,Otro rubro,,43.19,158,0,0,0,0,,,,0
+CV021-OF093,CV021,OF093,0,otro rubro,Otro rubro,,41.8,174,0,0,0,0,,,,0
+CV021-OF094,CV021,OF094,0,otro rubro,Otro rubro,,46.74,109,0,0,0,0,,,,0
+CV021-OF095,CV021,OF095,0,otro rubro,Otro rubro,,43.09,159,0,0,0,0,,,,0
+CV021-OF096,CV021,OF096,0,otro rubro,Otro rubro,,47.23,101,0,0,0,0,,,,0
+CV021-OF097,CV021,OF097,0,otro rubro,Otro rubro,,49.02,71,0,0,0,0,,,,0
+CV021-OF098,CV021,OF098,0,otro rubro,Otro rubro,,50.32,47,0,0,0,0,,,,0
+CV021-OF099,CV021,OF099,0,otro rubro,Otro rubro,,45.62,120,0,0,0,0,,,,0
+CV021-OF100,CV021,OF100,0,otro rubro,Otro rubro,,39.85,191,0,0,0,0,,,,0
+CV021-OF101,CV021,OF101,1,mismo rol pero gap de seniority 2 / cubre 100%,Mismo rol,2,61.21,6,1,1,1,1,produccion,90,7,1
+CV021-OF102,CV021,OF102,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,44.08,150,0,0,0,0,,,,0
+CV021-OF103,CV021,OF103,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,54.17,14,0,0,1,0,,,,0
+CV021-OF104,CV021,OF104,2,"mismo rol, gap de seniority 1, cubre 80%",Mismo rol,1,65.7,3,1,1,1,1,produccion,92,4,1
+CV021-OF105,CV021,OF105,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.25,49,0,0,0,0,,,,0
+CV021-OF106,CV021,OF106,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,45.58,122,0,0,0,0,,,,0
+CV021-OF107,CV021,OF107,3,"mismo rol y seniority, cubre 80%",Mismo rol,0,64.37,4,1,1,1,1,produccion,85,8,1
+CV021-OF108,CV021,OF108,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,47.64,90,0,0,0,0,,,,0
+CV021-OF109,CV021,OF109,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,42.28,166,0,0,0,0,,,,0
+CV021-OF110,CV021,OF110,1,mismo rol pero gap de seniority 2 / cubre 80%,Mismo rol,2,58.43,8,1,1,1,1,produccion,85,9,1
+CV021-OF111,CV021,OF111,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,49.84,54,0,0,0,0,,,,0
+CV021-OF112,CV021,OF112,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,47.37,95,0,0,0,0,,,,0
+CV021-OF113,CV021,OF113,2,"mismo rol, gap de seniority 1, cubre 100%",Mismo rol,1,61.02,7,1,1,1,1,produccion,95,2,1
+CV021-OF114,CV021,OF114,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,37.77,199,0,0,0,0,,,,0
+CV021-OF115,CV021,OF115,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.82,19,0,0,1,0,,,,0
+CV021-OF116,CV021,OF116,3,"mismo rol y seniority, cubre 100%",Mismo rol,0,73.54,1,1,1,1,1,produccion,95,1,1
+CV021-OF117,CV021,OF117,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.07,18,0,0,1,0,,,,0
+CV021-OF118,CV021,OF118,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.1,27,0,0,1,0,,,,0
+CV021-OF119,CV021,OF119,1,mismo rol pero gap de seniority 2 / cubre 75%,Mismo rol,2,63.82,5,1,1,1,1,produccion,90,6,1
+CV021-OF120,CV021,OF120,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,45.52,124,0,0,0,0,,,,0
+CV021-OF121,CV021,OF121,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.09,51,0,0,0,0,,,,0
+CV021-OF122,CV021,OF122,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,58.31,9,1,1,1,1,produccion,95,3,1
+CV021-OF123,CV021,OF123,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,54.2,13,0,0,1,0,,,,0
+CV021-OF124,CV021,OF124,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,66.18,2,1,1,1,1,produccion,90,5,1
+CV021-OF125,CV021,OF125,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.77,29,0,0,1,0,,,,0
+CV021-OF126,CV021,OF126,0,otro rubro,Otro rubro,,47.98,86,0,0,0,0,,,,0
+CV021-OF127,CV021,OF127,0,otro rubro,Otro rubro,,49.31,65,0,0,0,0,,,,0
+CV021-OF128,CV021,OF128,0,otro rubro,Otro rubro,,39.39,195,0,0,0,0,,,,0
+CV021-OF129,CV021,OF129,0,otro rubro,Otro rubro,,49.56,60,0,0,0,0,,,,0
+CV021-OF130,CV021,OF130,0,otro rubro,Otro rubro,,47.58,91,0,0,0,0,,,,0
+CV021-OF131,CV021,OF131,0,otro rubro,Otro rubro,,41.92,170,0,0,0,0,,,,0
+CV021-OF132,CV021,OF132,0,otro rubro,Otro rubro,,41.56,177,0,0,0,0,,,,0
+CV021-OF133,CV021,OF133,0,otro rubro,Otro rubro,,49.55,61,0,0,0,0,,,,0
+CV021-OF134,CV021,OF134,0,otro rubro,Otro rubro,,39.76,194,0,0,0,0,,,,0
+CV021-OF135,CV021,OF135,0,otro rubro,Otro rubro,,47.34,97,0,0,0,0,,,,0
+CV021-OF136,CV021,OF136,0,otro rubro,Otro rubro,,45.57,123,0,0,0,0,,,,0
+CV021-OF137,CV021,OF137,0,otro rubro,Otro rubro,,40.85,183,0,0,0,0,,,,0
+CV021-OF138,CV021,OF138,0,otro rubro,Otro rubro,,48.94,72,0,0,0,0,,,,0
+CV021-OF139,CV021,OF139,0,otro rubro,Otro rubro,,42.45,165,0,0,0,0,,,,0
+CV021-OF140,CV021,OF140,0,otro rubro,Otro rubro,,39.26,197,0,0,0,0,,,,0
+CV021-OF141,CV021,OF141,0,otro rubro,Otro rubro,,46.44,113,0,0,0,0,,,,0
+CV021-OF142,CV021,OF142,0,otro rubro,Otro rubro,,43.68,154,0,0,0,0,,,,0
+CV021-OF143,CV021,OF143,0,otro rubro,Otro rubro,,47.25,100,0,0,0,0,,,,0
+CV021-OF144,CV021,OF144,0,otro rubro,Otro rubro,,40.26,187,0,0,0,0,,,,0
+CV021-OF145,CV021,OF145,0,otro rubro,Otro rubro,,47.48,94,0,0,0,0,,,,0
+CV021-OF146,CV021,OF146,0,otro rubro,Otro rubro,,43.0,161,0,0,0,0,,,,0
+CV021-OF147,CV021,OF147,0,otro rubro,Otro rubro,,48.92,73,0,0,0,0,,,,0
+CV021-OF148,CV021,OF148,0,otro rubro,Otro rubro,,46.66,111,0,0,0,0,,,,0
+CV021-OF149,CV021,OF149,0,otro rubro,Otro rubro,,46.04,117,0,0,0,0,,,,0
+CV021-OF150,CV021,OF150,0,otro rubro,Otro rubro,,40.02,190,0,0,0,0,,,,0
+CV021-OF151,CV021,OF151,0,otro rubro,Otro rubro,,39.83,192,0,0,0,0,,,,0
+CV021-OF152,CV021,OF152,0,otro rubro,Otro rubro,,47.9,87,0,0,0,0,,,,0
+CV021-OF153,CV021,OF153,0,otro rubro,Otro rubro,,45.5,125,0,0,0,0,,,,0
+CV021-OF154,CV021,OF154,0,otro rubro,Otro rubro,,48.82,75,0,0,0,0,,,,0
+CV021-OF155,CV021,OF155,0,otro rubro,Otro rubro,,49.26,68,0,0,0,0,,,,0
+CV021-OF156,CV021,OF156,0,otro rubro,Otro rubro,,45.94,118,0,0,0,0,,,,0
+CV021-OF157,CV021,OF157,0,otro rubro,Otro rubro,,46.88,107,0,0,0,0,,,,0
+CV021-OF158,CV021,OF158,0,otro rubro,Otro rubro,,51.77,30,0,0,1,0,,,,0
+CV021-OF159,CV021,OF159,0,otro rubro,Otro rubro,,49.91,53,0,0,0,0,,,,0
+CV021-OF160,CV021,OF160,0,otro rubro,Otro rubro,,37.97,198,0,0,0,0,,,,0
+CV021-OF161,CV021,OF161,0,otro rubro,Otro rubro,,44.55,143,0,0,0,0,,,,0
+CV021-OF162,CV021,OF162,0,otro rubro,Otro rubro,,42.07,168,0,0,0,0,,,,0
+CV021-OF163,CV021,OF163,0,otro rubro,Otro rubro,,49.11,69,0,0,0,0,,,,0
+CV021-OF164,CV021,OF164,0,otro rubro,Otro rubro,,50.78,40,0,0,0,0,,,,0
+CV021-OF165,CV021,OF165,0,otro rubro,Otro rubro,,47.58,92,0,0,0,0,,,,0
+CV021-OF166,CV021,OF166,0,otro rubro,Otro rubro,,42.05,169,0,0,0,0,,,,0
+CV021-OF167,CV021,OF167,0,otro rubro,Otro rubro,,50.31,48,0,0,0,0,,,,0
+CV021-OF168,CV021,OF168,0,otro rubro,Otro rubro,,49.7,58,0,0,0,0,,,,0
+CV021-OF169,CV021,OF169,0,otro rubro,Otro rubro,,36.22,200,0,0,0,0,,,,0
+CV021-OF170,CV021,OF170,0,otro rubro,Otro rubro,,52.62,22,0,0,1,0,,,,0
+CV021-OF171,CV021,OF171,0,otro rubro,Otro rubro,,44.23,149,0,0,0,0,,,,0
+CV021-OF172,CV021,OF172,0,otro rubro,Otro rubro,,51.23,33,0,0,0,0,,,,0
+CV021-OF173,CV021,OF173,0,otro rubro,Otro rubro,,45.22,130,0,0,0,0,,,,0
+CV021-OF174,CV021,OF174,0,otro rubro,Otro rubro,,46.92,106,0,0,0,0,,,,0
+CV021-OF175,CV021,OF175,0,otro rubro,Otro rubro,,41.65,176,0,0,0,0,,,,0
+CV021-OF176,CV021,OF176,0,otro rubro,Otro rubro,,46.56,112,0,0,0,0,,,,0
+CV021-OF177,CV021,OF177,0,otro rubro,Otro rubro,,48.75,76,0,0,0,0,,,,0
+CV021-OF178,CV021,OF178,0,otro rubro,Otro rubro,,54.12,15,0,0,1,0,,,,0
+CV021-OF179,CV021,OF179,0,otro rubro,Otro rubro,,50.86,37,0,0,0,0,,,,0
+CV021-OF180,CV021,OF180,0,otro rubro,Otro rubro,,50.08,52,0,0,0,0,,,,0
+CV021-OF181,CV021,OF181,0,otro rubro,Otro rubro,,51.05,34,0,0,0,0,,,,0
+CV021-OF182,CV021,OF182,0,otro rubro,Otro rubro,,44.28,148,0,0,0,0,,,,0
+CV021-OF183,CV021,OF183,0,otro rubro,Otro rubro,,48.58,78,0,0,0,0,,,,0
+CV021-OF184,CV021,OF184,0,otro rubro,Otro rubro,,48.45,80,0,0,0,0,,,,0
+CV021-OF185,CV021,OF185,0,otro rubro,Otro rubro,,45.2,131,0,0,0,0,,,,0
+CV021-OF186,CV021,OF186,0,otro rubro,Otro rubro,,47.29,99,0,0,0,0,,,,0
+CV021-OF187,CV021,OF187,0,otro rubro,Otro rubro,,47.81,88,0,0,0,0,,,,0
+CV021-OF188,CV021,OF188,0,otro rubro,Otro rubro,,46.77,108,0,0,0,0,,,,0
+CV021-OF189,CV021,OF189,0,otro rubro,Otro rubro,,48.22,82,0,0,0,0,,,,0
+CV021-OF190,CV021,OF190,0,otro rubro,Otro rubro,,50.1,50,0,0,0,0,,,,0
+CV021-OF191,CV021,OF191,0,otro rubro,Otro rubro,,44.73,138,0,0,0,0,,,,0
+CV021-OF192,CV021,OF192,0,otro rubro,Otro rubro,,54.51,12,0,0,1,0,,,,0
+CV021-OF193,CV021,OF193,0,otro rubro,Otro rubro,,49.03,70,0,0,0,0,,,,0
+CV021-OF194,CV021,OF194,0,otro rubro,Otro rubro,,49.64,59,0,0,0,0,,,,0
+CV021-OF195,CV021,OF195,0,otro rubro,Otro rubro,,54.72,10,1,1,1,1,produccion,20,10,1
+CV021-OF196,CV021,OF196,0,otro rubro,Otro rubro,,52.63,21,0,0,1,0,,,,0
+CV021-OF197,CV021,OF197,0,otro rubro,Otro rubro,,45.29,129,0,0,0,0,,,,0
+CV021-OF198,CV021,OF198,0,otro rubro,Otro rubro,,44.39,146,0,0,0,0,,,,0
+CV021-OF199,CV021,OF199,0,otro rubro,Otro rubro,,52.53,23,0,0,1,0,,,,0
+CV021-OF200,CV021,OF200,0,otro rubro,Otro rubro,,41.46,179,0,0,0,0,,,,0
+CV026-OF001,CV026,OF001,0,otro rubro,Otro rubro,,47.75,162,0,0,0,0,,,,0
+CV026-OF002,CV026,OF002,0,otro rubro,Otro rubro,,48.2,159,0,0,0,0,,,,0
+CV026-OF003,CV026,OF003,0,otro rubro,Otro rubro,,49.34,139,0,0,0,0,,,,0
+CV026-OF004,CV026,OF004,0,otro rubro,Otro rubro,,52.99,98,0,0,0,0,,,,0
+CV026-OF005,CV026,OF005,0,otro rubro,Otro rubro,,49.83,136,0,0,0,0,,,,0
+CV026-OF006,CV026,OF006,0,otro rubro,Otro rubro,,55.81,65,0,0,0,0,,,,0
+CV026-OF007,CV026,OF007,0,otro rubro,Otro rubro,,61.69,17,0,0,1,0,,,,0
+CV026-OF008,CV026,OF008,0,otro rubro,Otro rubro,,56.42,55,0,0,0,0,,,,0
+CV026-OF009,CV026,OF009,0,otro rubro,Otro rubro,,60.84,20,0,0,1,0,,,,0
+CV026-OF010,CV026,OF010,0,otro rubro,Otro rubro,,48.5,155,0,0,0,0,,,,0
+CV026-OF011,CV026,OF011,0,otro rubro,Otro rubro,,43.76,183,0,0,0,0,,,,0
+CV026-OF012,CV026,OF012,0,otro rubro,Otro rubro,,46.53,170,0,0,0,0,,,,0
+CV026-OF013,CV026,OF013,0,otro rubro,Otro rubro,,56.33,57,0,0,0,0,,,,0
+CV026-OF014,CV026,OF014,0,otro rubro,Otro rubro,,48.63,151,0,0,0,0,,,,0
+CV026-OF015,CV026,OF015,0,otro rubro,Otro rubro,,55.22,73,0,0,0,0,,,,0
+CV026-OF016,CV026,OF016,0,otro rubro,Otro rubro,,60.79,22,0,0,1,0,,,,0
+CV026-OF017,CV026,OF017,0,otro rubro,Otro rubro,,49.0,147,0,0,0,0,,,,0
+CV026-OF018,CV026,OF018,0,otro rubro,Otro rubro,,59.16,32,0,0,0,0,,,,0
+CV026-OF019,CV026,OF019,0,otro rubro,Otro rubro,,54.57,76,0,0,0,0,,,,0
+CV026-OF020,CV026,OF020,0,otro rubro,Otro rubro,,52.01,114,0,0,0,0,,,,0
+CV026-OF021,CV026,OF021,0,otro rubro,Otro rubro,,50.76,124,0,0,0,0,,,,0
+CV026-OF022,CV026,OF022,0,otro rubro,Otro rubro,,62.3,16,0,0,1,0,,,,0
+CV026-OF023,CV026,OF023,0,otro rubro,Otro rubro,,45.32,177,0,0,0,0,,,,0
+CV026-OF024,CV026,OF024,0,otro rubro,Otro rubro,,43.25,186,0,0,0,0,,,,0
+CV026-OF025,CV026,OF025,0,otro rubro,Otro rubro,,46.13,174,0,0,0,0,,,,0
+CV026-OF026,CV026,OF026,0,otro rubro,Otro rubro,,49.03,146,0,0,0,0,,,,0
+CV026-OF027,CV026,OF027,0,otro rubro,Otro rubro,,46.2,173,0,0,0,0,,,,0
+CV026-OF028,CV026,OF028,0,otro rubro,Otro rubro,,53.47,89,0,0,0,0,,,,0
+CV026-OF029,CV026,OF029,0,otro rubro,Otro rubro,,56.59,51,0,0,0,0,,,,0
+CV026-OF030,CV026,OF030,0,otro rubro,Otro rubro,,48.62,152,0,0,0,0,,,,0
+CV026-OF031,CV026,OF031,0,otro rubro,Otro rubro,,51.4,119,0,0,0,0,,,,0
+CV026-OF032,CV026,OF032,0,otro rubro,Otro rubro,,59.85,28,0,0,1,0,,,,0
+CV026-OF033,CV026,OF033,0,otro rubro,Otro rubro,,61.5,18,0,0,1,0,,,,0
+CV026-OF034,CV026,OF034,0,otro rubro,Otro rubro,,59.27,31,0,0,0,0,,,,0
+CV026-OF035,CV026,OF035,0,otro rubro,Otro rubro,,46.5,171,0,0,0,0,,,,0
+CV026-OF036,CV026,OF036,0,otro rubro,Otro rubro,,56.36,56,0,0,0,0,,,,0
+CV026-OF037,CV026,OF037,0,otro rubro,Otro rubro,,47.97,161,0,0,0,0,,,,0
+CV026-OF038,CV026,OF038,0,otro rubro,Otro rubro,,56.72,50,0,0,0,0,,,,0
+CV026-OF039,CV026,OF039,0,otro rubro,Otro rubro,,49.23,141,0,0,0,0,,,,0
+CV026-OF040,CV026,OF040,0,otro rubro,Otro rubro,,55.63,68,0,0,0,0,,,,0
+CV026-OF041,CV026,OF041,0,otro rubro,Otro rubro,,55.67,67,0,0,0,0,,,,0
+CV026-OF042,CV026,OF042,0,otro rubro,Otro rubro,,58.16,41,0,0,0,0,,,,0
+CV026-OF043,CV026,OF043,0,otro rubro,Otro rubro,,55.23,72,0,0,0,0,,,,0
+CV026-OF044,CV026,OF044,0,otro rubro,Otro rubro,,53.12,93,0,0,0,0,,,,0
+CV026-OF045,CV026,OF045,0,otro rubro,Otro rubro,,52.28,108,0,0,0,0,,,,0
+CV026-OF046,CV026,OF046,0,otro rubro,Otro rubro,,52.58,102,0,0,0,0,,,,0
+CV026-OF047,CV026,OF047,0,otro rubro,Otro rubro,,48.43,156,0,0,0,0,,,,0
+CV026-OF048,CV026,OF048,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,55.62,69,0,0,0,0,,,,0
+CV026-OF049,CV026,OF049,0,otro rubro,Otro rubro,,47.35,163,0,0,0,0,,,,0
+CV026-OF050,CV026,OF050,0,otro rubro,Otro rubro,,53.49,88,0,0,0,0,,,,0
+CV026-OF051,CV026,OF051,0,otro rubro,Otro rubro,,44.14,180,0,0,0,0,,,,0
+CV026-OF052,CV026,OF052,0,otro rubro,Otro rubro,,53.07,95,0,0,0,0,,,,0
+CV026-OF053,CV026,OF053,0,otro rubro,Otro rubro,,48.9,148,0,0,0,0,,,,0
+CV026-OF054,CV026,OF054,0,otro rubro,Otro rubro,,51.51,117,0,0,0,0,,,,0
+CV026-OF055,CV026,OF055,0,otro rubro,Otro rubro,,54.34,78,0,0,0,0,,,,0
+CV026-OF056,CV026,OF056,0,otro rubro,Otro rubro,,59.66,29,0,0,1,0,,,,0
+CV026-OF057,CV026,OF057,0,otro rubro,Otro rubro,,50.1,131,0,0,0,0,,,,0
+CV026-OF058,CV026,OF058,0,otro rubro,Otro rubro,,54.82,75,0,0,0,0,,,,0
+CV026-OF059,CV026,OF059,0,otro rubro,Otro rubro,,63.0,11,0,0,1,0,,,,0
+CV026-OF060,CV026,OF060,0,otro rubro,Otro rubro,,42.84,189,0,0,0,0,,,,0
+CV026-OF061,CV026,OF061,0,otro rubro,Otro rubro,,51.47,118,0,0,0,0,,,,0
+CV026-OF062,CV026,OF062,0,otro rubro,Otro rubro,,57.01,47,0,0,0,0,,,,0
+CV026-OF063,CV026,OF063,0,otro rubro,Otro rubro,,56.78,49,0,0,0,0,,,,0
+CV026-OF064,CV026,OF064,0,otro rubro,Otro rubro,,65.04,7,1,1,1,1,produccion,20,9,1
+CV026-OF065,CV026,OF065,0,otro rubro,Otro rubro,,60.99,19,0,0,1,0,,,,0
+CV026-OF066,CV026,OF066,0,otro rubro,Otro rubro,,48.31,157,0,0,0,0,,,,0
+CV026-OF067,CV026,OF067,0,otro rubro,Otro rubro,,60.26,24,0,0,1,0,,,,0
+CV026-OF068,CV026,OF068,0,otro rubro,Otro rubro,,58.52,39,0,0,0,0,,,,0
+CV026-OF069,CV026,OF069,0,otro rubro,Otro rubro,,52.13,112,0,0,0,0,,,,0
+CV026-OF070,CV026,OF070,0,otro rubro,Otro rubro,,52.6,101,0,0,0,0,,,,0
+CV026-OF071,CV026,OF071,0,otro rubro,Otro rubro,,50.38,128,0,0,0,0,,,,0
+CV026-OF072,CV026,OF072,0,otro rubro,Otro rubro,,54.11,81,0,0,0,0,,,,0
+CV026-OF073,CV026,OF073,0,otro rubro,Otro rubro,,62.31,15,0,0,1,0,,,,0
+CV026-OF074,CV026,OF074,0,otro rubro,Otro rubro,,55.86,63,0,0,0,0,,,,0
+CV026-OF075,CV026,OF075,0,otro rubro,Otro rubro,,42.88,188,0,0,0,0,,,,0
+CV026-OF076,CV026,OF076,0,otro rubro,Otro rubro,,53.14,92,0,0,0,0,,,,0
+CV026-OF077,CV026,OF077,0,otro rubro,Otro rubro,,53.31,91,0,0,0,0,,,,0
+CV026-OF078,CV026,OF078,0,otro rubro,Otro rubro,,50.97,122,0,0,0,0,,,,0
+CV026-OF079,CV026,OF079,0,otro rubro,Otro rubro,,55.85,64,0,0,0,0,,,,0
+CV026-OF080,CV026,OF080,0,otro rubro,Otro rubro,,50.07,132,0,0,0,0,,,,0
+CV026-OF081,CV026,OF081,0,otro rubro,Otro rubro,,56.03,61,0,0,0,0,,,,0
+CV026-OF082,CV026,OF082,0,otro rubro,Otro rubro,,58.88,35,0,0,0,0,,,,0
+CV026-OF083,CV026,OF083,0,otro rubro,Otro rubro,,49.32,140,0,0,0,0,,,,0
+CV026-OF084,CV026,OF084,0,otro rubro,Otro rubro,,59.07,33,0,0,0,0,,,,0
+CV026-OF085,CV026,OF085,0,otro rubro,Otro rubro,,51.12,120,0,0,0,0,,,,0
+CV026-OF086,CV026,OF086,0,otro rubro,Otro rubro,,56.92,48,0,0,0,0,,,,0
+CV026-OF087,CV026,OF087,0,otro rubro,Otro rubro,,48.9,149,0,0,0,0,,,,0
+CV026-OF088,CV026,OF088,0,otro rubro,Otro rubro,,49.98,134,0,0,0,0,,,,0
+CV026-OF089,CV026,OF089,0,otro rubro,Otro rubro,,60.82,21,0,0,1,0,,,,0
+CV026-OF090,CV026,OF090,0,otro rubro,Otro rubro,,49.58,137,0,0,0,0,,,,0
+CV026-OF091,CV026,OF091,0,otro rubro,Otro rubro,,58.87,36,0,0,0,0,,,,0
+CV026-OF092,CV026,OF092,0,otro rubro,Otro rubro,,50.24,130,0,0,0,0,,,,0
+CV026-OF093,CV026,OF093,0,otro rubro,Otro rubro,,52.54,104,0,0,0,0,,,,0
+CV026-OF094,CV026,OF094,0,otro rubro,Otro rubro,,57.93,42,0,0,0,0,,,,0
+CV026-OF095,CV026,OF095,0,otro rubro,Otro rubro,,49.91,135,0,0,0,0,,,,0
+CV026-OF096,CV026,OF096,0,otro rubro,Otro rubro,,53.08,94,0,0,0,0,,,,0
+CV026-OF097,CV026,OF097,0,otro rubro,Otro rubro,,63.19,10,1,1,1,1,produccion,22,8,1
+CV026-OF098,CV026,OF098,0,otro rubro,Otro rubro,,64.08,8,1,1,1,1,produccion,20,10,1
+CV026-OF099,CV026,OF099,0,otro rubro,Otro rubro,,50.64,126,0,0,0,0,,,,0
+CV026-OF100,CV026,OF100,0,otro rubro,Otro rubro,,54.12,80,0,0,0,0,,,,0
+CV026-OF101,CV026,OF101,0,otro rubro,Otro rubro,,48.56,154,0,0,0,0,,,,0
+CV026-OF102,CV026,OF102,0,otro rubro,Otro rubro,,34.43,200,0,0,0,0,,,,0
+CV026-OF103,CV026,OF103,0,otro rubro,Otro rubro,,46.64,168,0,0,0,0,,,,0
+CV026-OF104,CV026,OF104,0,otro rubro,Otro rubro,,51.54,116,0,0,0,0,,,,0
+CV026-OF105,CV026,OF105,0,otro rubro,Otro rubro,,53.05,96,0,0,0,0,,,,0
+CV026-OF106,CV026,OF106,0,otro rubro,Otro rubro,,44.0,181,0,0,0,0,,,,0
+CV026-OF107,CV026,OF107,0,otro rubro,Otro rubro,,44.37,179,0,0,0,0,,,,0
+CV026-OF108,CV026,OF108,0,otro rubro,Otro rubro,,49.12,144,0,0,0,0,,,,0
+CV026-OF109,CV026,OF109,0,otro rubro,Otro rubro,,38.29,197,0,0,0,0,,,,0
+CV026-OF110,CV026,OF110,0,otro rubro,Otro rubro,,38.57,196,0,0,0,0,,,,0
+CV026-OF111,CV026,OF111,0,otro rubro,Otro rubro,,48.1,160,0,0,0,0,,,,0
+CV026-OF112,CV026,OF112,0,otro rubro,Otro rubro,,46.78,166,0,0,0,0,,,,0
+CV026-OF113,CV026,OF113,0,otro rubro,Otro rubro,,37.51,198,0,0,0,0,,,,0
+CV026-OF114,CV026,OF114,0,otro rubro,Otro rubro,,36.62,199,0,0,0,0,,,,0
+CV026-OF115,CV026,OF115,0,otro rubro,Otro rubro,,56.03,62,0,0,0,0,,,,0
+CV026-OF116,CV026,OF116,0,otro rubro,Otro rubro,,52.07,113,0,0,0,0,,,,0
+CV026-OF117,CV026,OF117,0,otro rubro,Otro rubro,,50.68,125,0,0,0,0,,,,0
+CV026-OF118,CV026,OF118,0,otro rubro,Otro rubro,,50.36,129,0,0,0,0,,,,0
+CV026-OF119,CV026,OF119,0,otro rubro,Otro rubro,,45.49,176,0,0,0,0,,,,0
+CV026-OF120,CV026,OF120,0,otro rubro,Otro rubro,,43.27,185,0,0,0,0,,,,0
+CV026-OF121,CV026,OF121,0,otro rubro,Otro rubro,,49.15,142,0,0,0,0,,,,0
+CV026-OF122,CV026,OF122,0,otro rubro,Otro rubro,,52.91,99,0,0,0,0,,,,0
+CV026-OF123,CV026,OF123,0,otro rubro,Otro rubro,,53.55,87,0,0,0,0,,,,0
+CV026-OF124,CV026,OF124,0,otro rubro,Otro rubro,,41.42,192,0,0,0,0,,,,0
+CV026-OF125,CV026,OF125,0,otro rubro,Otro rubro,,42.43,190,0,0,0,0,,,,0
+CV026-OF126,CV026,OF126,2,"mismo rol, gap de seniority 1, cubre 100%",Mismo rol,1,66.07,6,1,1,1,1,produccion,85,4,1
+CV026-OF127,CV026,OF127,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,62.97,12,0,0,1,0,,,,0
+CV026-OF128,CV026,OF128,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.48,105,0,0,0,0,,,,0
+CV026-OF129,CV026,OF129,3,"mismo rol y seniority, cubre 80%",Mismo rol,0,74.24,1,1,1,1,1,produccion,88,2,1
+CV026-OF130,CV026,OF130,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,59.57,30,0,0,1,1,what_if,55,,0
+CV026-OF131,CV026,OF131,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,60.55,23,0,0,1,0,,,,0
+CV026-OF132,CV026,OF132,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,63.86,9,1,1,1,1,produccion,55,7,1
+CV026-OF133,CV026,OF133,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.97,34,0,0,0,0,,,,0
+CV026-OF134,CV026,OF134,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.54,52,0,0,0,0,,,,0
+CV026-OF135,CV026,OF135,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,70.12,4,1,1,1,1,produccion,70,5,1
+CV026-OF136,CV026,OF136,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.8,83,0,0,0,0,,,,0
+CV026-OF137,CV026,OF137,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.04,121,0,0,0,0,,,,0
+CV026-OF138,CV026,OF138,3,"mismo rol y seniority, cubre 80%",Mismo rol,0,70.65,3,1,1,1,1,produccion,95,1,1
+CV026-OF139,CV026,OF139,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.55,38,0,0,0,0,,,,0
+CV026-OF140,CV026,OF140,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,57.24,45,0,0,0,0,,,,0
+CV026-OF141,CV026,OF141,2,"mismo rol, gap de seniority 1, cubre 80%",Mismo rol,1,69.14,5,1,1,1,1,produccion,55,6,1
+CV026-OF142,CV026,OF142,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.04,60,0,0,0,0,,,,0
+CV026-OF143,CV026,OF143,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,62.77,14,0,0,1,0,,,,0
+CV026-OF144,CV026,OF144,2,"mismo rol, gap de seniority 1, cubre 50%",Mismo rol,1,59.94,26,0,0,1,1,what_if,90,,0
+CV026-OF145,CV026,OF145,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.01,115,0,0,0,0,,,,0
+CV026-OF146,CV026,OF146,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.7,85,0,0,0,0,,,,0
+CV026-OF147,CV026,OF147,3,"mismo rol y seniority, cubre 75%",Mismo rol,0,72.01,2,1,1,1,1,produccion,85,3,1
+CV026-OF148,CV026,OF148,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,60.12,25,0,0,1,0,,,,0
+CV026-OF149,CV026,OF149,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,62.82,13,0,0,1,0,,,,0
+CV026-OF150,CV026,OF150,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.39,107,0,0,0,0,,,,0
+CV026-OF151,CV026,OF151,0,otro rubro,Otro rubro,,39.34,194,0,0,0,0,,,,0
+CV026-OF152,CV026,OF152,0,otro rubro,Otro rubro,,49.13,143,0,0,0,0,,,,0
+CV026-OF153,CV026,OF153,0,otro rubro,Otro rubro,,43.08,187,0,0,0,0,,,,0
+CV026-OF154,CV026,OF154,0,otro rubro,Otro rubro,,52.55,103,0,0,0,0,,,,0
+CV026-OF155,CV026,OF155,0,otro rubro,Otro rubro,,56.14,59,0,0,0,0,,,,0
+CV026-OF156,CV026,OF156,0,otro rubro,Otro rubro,,55.6,70,0,0,0,0,,,,0
+CV026-OF157,CV026,OF157,0,otro rubro,Otro rubro,,50.07,133,0,0,0,0,,,,0
+CV026-OF158,CV026,OF158,0,otro rubro,Otro rubro,,47.07,165,0,0,0,0,,,,0
+CV026-OF159,CV026,OF159,0,otro rubro,Otro rubro,,52.21,110,0,0,0,0,,,,0
+CV026-OF160,CV026,OF160,0,otro rubro,Otro rubro,,39.41,193,0,0,0,0,,,,0
+CV026-OF161,CV026,OF161,0,otro rubro,Otro rubro,,41.76,191,0,0,0,0,,,,0
+CV026-OF162,CV026,OF162,0,otro rubro,Otro rubro,,45.95,175,0,0,0,0,,,,0
+CV026-OF163,CV026,OF163,0,otro rubro,Otro rubro,,57.4,44,0,0,0,0,,,,0
+CV026-OF164,CV026,OF164,0,otro rubro,Otro rubro,,53.77,84,0,0,0,0,,,,0
+CV026-OF165,CV026,OF165,0,otro rubro,Otro rubro,,59.92,27,0,0,1,0,,,,0
+CV026-OF166,CV026,OF166,0,otro rubro,Otro rubro,,45.15,178,0,0,0,0,,,,0
+CV026-OF167,CV026,OF167,0,otro rubro,Otro rubro,,52.24,109,0,0,0,0,,,,0
+CV026-OF168,CV026,OF168,0,otro rubro,Otro rubro,,55.81,66,0,0,0,0,,,,0
+CV026-OF169,CV026,OF169,0,otro rubro,Otro rubro,,39.23,195,0,0,0,0,,,,0
+CV026-OF170,CV026,OF170,0,otro rubro,Otro rubro,,52.43,106,0,0,0,0,,,,0
+CV026-OF171,CV026,OF171,0,otro rubro,Otro rubro,,43.93,182,0,0,0,0,,,,0
+CV026-OF172,CV026,OF172,0,otro rubro,Otro rubro,,56.54,53,0,0,0,0,,,,0
+CV026-OF173,CV026,OF173,0,otro rubro,Otro rubro,,52.17,111,0,0,0,0,,,,0
+CV026-OF174,CV026,OF174,0,otro rubro,Otro rubro,,54.18,79,0,0,0,0,,,,0
+CV026-OF175,CV026,OF175,0,otro rubro,Otro rubro,,46.41,172,0,0,0,0,,,,0
+CV026-OF176,CV026,OF176,0,otro rubro,Otro rubro,,48.57,153,0,0,0,0,,,,0
+CV026-OF177,CV026,OF177,0,otro rubro,Otro rubro,,46.55,169,0,0,0,0,,,,0
+CV026-OF178,CV026,OF178,0,otro rubro,Otro rubro,,56.54,54,0,0,0,0,,,,0
+CV026-OF179,CV026,OF179,0,otro rubro,Otro rubro,,57.77,43,0,0,0,0,,,,0
+CV026-OF180,CV026,OF180,0,otro rubro,Otro rubro,,52.86,100,0,0,0,0,,,,0
+CV026-OF181,CV026,OF181,0,otro rubro,Otro rubro,,56.16,58,0,0,0,0,,,,0
+CV026-OF182,CV026,OF182,0,otro rubro,Otro rubro,,53.69,86,0,0,0,0,,,,0
+CV026-OF183,CV026,OF183,0,otro rubro,Otro rubro,,50.85,123,0,0,0,0,,,,0
+CV026-OF184,CV026,OF184,0,otro rubro,Otro rubro,,48.21,158,0,0,0,0,,,,0
+CV026-OF185,CV026,OF185,0,otro rubro,Otro rubro,,46.76,167,0,0,0,0,,,,0
+CV026-OF186,CV026,OF186,0,otro rubro,Otro rubro,,47.09,164,0,0,0,0,,,,0
+CV026-OF187,CV026,OF187,0,otro rubro,Otro rubro,,48.72,150,0,0,0,0,,,,0
+CV026-OF188,CV026,OF188,0,otro rubro,Otro rubro,,58.18,40,0,0,0,0,,,,0
+CV026-OF189,CV026,OF189,0,otro rubro,Otro rubro,,53.43,90,0,0,0,0,,,,0
+CV026-OF190,CV026,OF190,0,otro rubro,Otro rubro,,58.6,37,0,0,0,0,,,,0
+CV026-OF191,CV026,OF191,0,otro rubro,Otro rubro,,50.55,127,0,0,0,0,,,,0
+CV026-OF192,CV026,OF192,0,otro rubro,Otro rubro,,55.39,71,0,0,0,0,,,,0
+CV026-OF193,CV026,OF193,0,otro rubro,Otro rubro,,53.01,97,0,0,0,0,,,,0
+CV026-OF194,CV026,OF194,0,otro rubro,Otro rubro,,53.81,82,0,0,0,0,,,,0
+CV026-OF195,CV026,OF195,0,otro rubro,Otro rubro,,49.41,138,0,0,0,0,,,,0
+CV026-OF196,CV026,OF196,0,otro rubro,Otro rubro,,54.38,77,0,0,0,0,,,,0
+CV026-OF197,CV026,OF197,0,otro rubro,Otro rubro,,55.19,74,0,0,0,0,,,,0
+CV026-OF198,CV026,OF198,0,otro rubro,Otro rubro,,43.39,184,0,0,0,0,,,,0
+CV026-OF199,CV026,OF199,0,otro rubro,Otro rubro,,49.08,145,0,0,0,0,,,,0
+CV026-OF200,CV026,OF200,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,57.08,46,0,0,0,0,,,,0
+CV031-OF001,CV031,OF001,0,otro rubro,Otro rubro,,50.29,57,0,0,0,0,,,,0
+CV031-OF002,CV031,OF002,0,otro rubro,Otro rubro,,54.18,29,0,0,1,0,,,,0
+CV031-OF003,CV031,OF003,0,otro rubro,Otro rubro,,53.03,37,0,0,0,0,,,,0
+CV031-OF004,CV031,OF004,0,otro rubro,Otro rubro,,50.18,58,0,0,0,0,,,,0
+CV031-OF005,CV031,OF005,0,otro rubro,Otro rubro,,48.38,85,0,0,0,0,,,,0
+CV031-OF006,CV031,OF006,0,otro rubro,Otro rubro,,53.11,36,0,0,0,0,,,,0
+CV031-OF007,CV031,OF007,0,otro rubro,Otro rubro,,47.74,91,0,0,0,0,,,,0
+CV031-OF008,CV031,OF008,0,otro rubro,Otro rubro,,52.42,42,0,0,0,0,,,,0
+CV031-OF009,CV031,OF009,0,otro rubro,Otro rubro,,47.3,99,0,0,0,0,,,,0
+CV031-OF010,CV031,OF010,0,otro rubro,Otro rubro,,48.79,75,0,0,0,0,,,,0
+CV031-OF011,CV031,OF011,0,otro rubro,Otro rubro,,53.33,34,0,0,0,0,,,,0
+CV031-OF012,CV031,OF012,0,otro rubro,Otro rubro,,48.71,76,0,0,0,0,,,,0
+CV031-OF013,CV031,OF013,0,otro rubro,Otro rubro,,47.24,101,0,0,0,0,,,,0
+CV031-OF014,CV031,OF014,0,otro rubro,Otro rubro,,55.35,24,0,0,1,0,,,,0
+CV031-OF015,CV031,OF015,0,otro rubro,Otro rubro,,49.48,65,0,0,0,0,,,,0
+CV031-OF016,CV031,OF016,0,otro rubro,Otro rubro,,49.08,69,0,0,0,0,,,,0
+CV031-OF017,CV031,OF017,0,otro rubro,Otro rubro,,55.97,21,0,0,1,0,,,,0
+CV031-OF018,CV031,OF018,0,otro rubro,Otro rubro,,53.76,31,0,0,0,0,,,,0
+CV031-OF019,CV031,OF019,0,otro rubro,Otro rubro,,48.8,74,0,0,0,0,,,,0
+CV031-OF020,CV031,OF020,0,otro rubro,Otro rubro,,52.83,38,0,0,0,0,,,,0
+CV031-OF021,CV031,OF021,0,otro rubro,Otro rubro,,48.57,79,0,0,0,0,,,,0
+CV031-OF022,CV031,OF022,0,otro rubro,Otro rubro,,48.53,81,0,0,0,0,,,,0
+CV031-OF023,CV031,OF023,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,54.45,28,0,0,1,0,,,,0
+CV031-OF024,CV031,OF024,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,62.45,2,1,1,1,1,produccion,15,9,1
+CV031-OF025,CV031,OF025,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,56.51,17,0,0,1,0,,,,0
+CV031-OF026,CV031,OF026,0,otro rubro,Otro rubro,,49.33,66,0,0,0,0,,,,0
+CV031-OF027,CV031,OF027,0,otro rubro,Otro rubro,,52.43,41,0,0,0,0,,,,0
+CV031-OF028,CV031,OF028,0,otro rubro,Otro rubro,,48.18,87,0,0,0,0,,,,0
+CV031-OF029,CV031,OF029,0,otro rubro,Otro rubro,,41.35,195,0,0,0,0,,,,0
+CV031-OF030,CV031,OF030,0,otro rubro,Otro rubro,,45.63,133,0,0,0,0,,,,0
+CV031-OF031,CV031,OF031,0,otro rubro,Otro rubro,,49.87,59,0,0,0,0,,,,0
+CV031-OF032,CV031,OF032,0,otro rubro,Otro rubro,,40.5,197,0,0,0,0,,,,0
+CV031-OF033,CV031,OF033,0,otro rubro,Otro rubro,,44.94,141,0,0,0,0,,,,0
+CV031-OF034,CV031,OF034,0,otro rubro,Otro rubro,,41.98,188,0,0,0,0,,,,0
+CV031-OF035,CV031,OF035,0,otro rubro,Otro rubro,,44.76,143,0,0,0,0,,,,0
+CV031-OF036,CV031,OF036,0,otro rubro,Otro rubro,,46.34,117,0,0,0,0,,,,0
+CV031-OF037,CV031,OF037,0,otro rubro,Otro rubro,,51.25,49,0,0,0,0,,,,0
+CV031-OF038,CV031,OF038,0,otro rubro,Otro rubro,,42.17,184,0,0,0,0,,,,0
+CV031-OF039,CV031,OF039,0,otro rubro,Otro rubro,,44.69,146,0,0,0,0,,,,0
+CV031-OF040,CV031,OF040,0,otro rubro,Otro rubro,,43.8,163,0,0,0,0,,,,0
+CV031-OF041,CV031,OF041,0,otro rubro,Otro rubro,,44.44,151,0,0,0,0,,,,0
+CV031-OF042,CV031,OF042,0,otro rubro,Otro rubro,,47.79,90,0,0,0,0,,,,0
+CV031-OF043,CV031,OF043,0,otro rubro,Otro rubro,,46.53,112,0,0,0,0,,,,0
+CV031-OF044,CV031,OF044,0,otro rubro,Otro rubro,,43.76,164,0,0,0,0,,,,0
+CV031-OF045,CV031,OF045,0,otro rubro,Otro rubro,,42.0,186,0,0,0,0,,,,0
+CV031-OF046,CV031,OF046,0,otro rubro,Otro rubro,,50.93,52,0,0,0,0,,,,0
+CV031-OF047,CV031,OF047,0,otro rubro,Otro rubro,,44.35,153,0,0,0,0,,,,0
+CV031-OF048,CV031,OF048,0,otro rubro,Otro rubro,,47.16,102,0,0,0,0,,,,0
+CV031-OF049,CV031,OF049,0,otro rubro,Otro rubro,,51.14,50,0,0,0,0,,,,0
+CV031-OF050,CV031,OF050,0,otro rubro,Otro rubro,,44.39,152,0,0,0,0,,,,0
+CV031-OF051,CV031,OF051,0,otro rubro,Otro rubro,,55.04,25,0,0,1,0,,,,0
+CV031-OF052,CV031,OF052,0,otro rubro,Otro rubro,,47.73,92,0,0,0,0,,,,0
+CV031-OF053,CV031,OF053,0,otro rubro,Otro rubro,,57.1,13,0,0,1,0,,,,0
+CV031-OF054,CV031,OF054,0,otro rubro,Otro rubro,,43.41,168,0,0,0,0,,,,0
+CV031-OF055,CV031,OF055,0,otro rubro,Otro rubro,,46.12,124,0,0,0,0,,,,0
+CV031-OF056,CV031,OF056,0,otro rubro,Otro rubro,,51.64,46,0,0,0,0,,,,0
+CV031-OF057,CV031,OF057,0,otro rubro,Otro rubro,,44.72,144,0,0,0,0,,,,0
+CV031-OF058,CV031,OF058,0,otro rubro,Otro rubro,,48.91,72,0,0,0,0,,,,0
+CV031-OF059,CV031,OF059,0,otro rubro,Otro rubro,,47.98,89,0,0,0,0,,,,0
+CV031-OF060,CV031,OF060,0,otro rubro,Otro rubro,,43.14,172,0,0,0,0,,,,0
+CV031-OF061,CV031,OF061,0,otro rubro,Otro rubro,,52.17,44,0,0,0,0,,,,0
+CV031-OF062,CV031,OF062,0,otro rubro,Otro rubro,,45.7,131,0,0,0,0,,,,0
+CV031-OF063,CV031,OF063,0,otro rubro,Otro rubro,,41.99,187,0,0,0,0,,,,0
+CV031-OF064,CV031,OF064,0,otro rubro,Otro rubro,,44.55,149,0,0,0,0,,,,0
+CV031-OF065,CV031,OF065,0,otro rubro,Otro rubro,,45.09,139,0,0,0,0,,,,0
+CV031-OF066,CV031,OF066,0,otro rubro,Otro rubro,,49.52,64,0,0,0,0,,,,0
+CV031-OF067,CV031,OF067,0,otro rubro,Otro rubro,,46.81,106,0,0,0,0,,,,0
+CV031-OF068,CV031,OF068,0,otro rubro,Otro rubro,,47.4,97,0,0,0,0,,,,0
+CV031-OF069,CV031,OF069,0,otro rubro,Otro rubro,,44.3,154,0,0,0,0,,,,0
+CV031-OF070,CV031,OF070,0,otro rubro,Otro rubro,,46.3,118,0,0,0,0,,,,0
+CV031-OF071,CV031,OF071,0,otro rubro,Otro rubro,,46.64,108,0,0,0,0,,,,0
+CV031-OF072,CV031,OF072,0,otro rubro,Otro rubro,,43.08,173,0,0,0,0,,,,0
+CV031-OF073,CV031,OF073,0,otro rubro,Otro rubro,,47.06,104,0,0,0,0,,,,0
+CV031-OF074,CV031,OF074,0,otro rubro,Otro rubro,,44.46,150,0,0,0,0,,,,0
+CV031-OF075,CV031,OF075,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,45.07,140,0,0,0,0,,,,0
+CV031-OF076,CV031,OF076,0,otro rubro,Otro rubro,,45.46,135,0,0,0,0,,,,0
+CV031-OF077,CV031,OF077,0,otro rubro,Otro rubro,,42.76,176,0,0,0,0,,,,0
+CV031-OF078,CV031,OF078,1,rol afín de otro rubro,Rol afín,,59.58,5,1,1,1,1,produccion,60,2,1
+CV031-OF079,CV031,OF079,0,otro rubro,Otro rubro,,46.5,114,0,0,0,0,,,,0
+CV031-OF080,CV031,OF080,0,otro rubro,Otro rubro,,44.7,145,0,0,0,0,,,,0
+CV031-OF081,CV031,OF081,1,rol afín de otro rubro,Rol afín,,57.33,10,1,1,1,1,produccion,40,6,1
+CV031-OF082,CV031,OF082,0,otro rubro,Otro rubro,,46.16,122,0,0,0,0,,,,0
+CV031-OF083,CV031,OF083,0,otro rubro,Otro rubro,,43.85,161,0,0,0,0,,,,0
+CV031-OF084,CV031,OF084,1,rol afín de otro rubro,Rol afín,,46.54,110,0,0,0,0,,,,0
+CV031-OF085,CV031,OF085,0,otro rubro,Otro rubro,,45.83,129,0,0,0,0,,,,0
+CV031-OF086,CV031,OF086,0,otro rubro,Otro rubro,,42.21,182,0,0,0,0,,,,0
+CV031-OF087,CV031,OF087,1,rol afín de otro rubro,Rol afín,,57.22,11,0,0,1,0,,,,0
+CV031-OF088,CV031,OF088,0,otro rubro,Otro rubro,,47.67,94,0,0,0,0,,,,0
+CV031-OF089,CV031,OF089,0,otro rubro,Otro rubro,,42.03,185,0,0,0,0,,,,0
+CV031-OF090,CV031,OF090,1,rol afín de otro rubro,Rol afín,,56.63,14,0,0,1,0,,,,0
+CV031-OF091,CV031,OF091,0,otro rubro,Otro rubro,,51.38,48,0,0,0,0,,,,0
+CV031-OF092,CV031,OF092,0,otro rubro,Otro rubro,,42.55,179,0,0,0,0,,,,0
+CV031-OF093,CV031,OF093,1,rol afín de otro rubro,Rol afín,,60.94,4,1,1,1,1,produccion,20,8,1
+CV031-OF094,CV031,OF094,0,otro rubro,Otro rubro,,47.51,96,0,0,0,0,,,,0
+CV031-OF095,CV031,OF095,0,otro rubro,Otro rubro,,49.8,61,0,0,0,0,,,,0
+CV031-OF096,CV031,OF096,1,rol afín de otro rubro,Rol afín,,57.93,9,1,1,1,1,produccion,55,5,1
+CV031-OF097,CV031,OF097,0,otro rubro,Otro rubro,,43.37,170,0,0,0,0,,,,0
+CV031-OF098,CV031,OF098,0,otro rubro,Otro rubro,,41.92,190,0,0,0,0,,,,0
+CV031-OF099,CV031,OF099,0,otro rubro,Otro rubro,,39.09,198,0,0,0,0,,,,0
+CV031-OF100,CV031,OF100,0,otro rubro,Otro rubro,,41.77,192,0,0,0,0,,,,0
+CV031-OF101,CV031,OF101,0,otro rubro,Otro rubro,,44.28,156,0,0,0,0,,,,0
+CV031-OF102,CV031,OF102,0,otro rubro,Otro rubro,,43.6,167,0,0,0,0,,,,0
+CV031-OF103,CV031,OF103,1,rol afín de otro rubro,Rol afín,,54.7,27,0,0,1,0,,,,0
+CV031-OF104,CV031,OF104,0,otro rubro,Otro rubro,,43.38,169,0,0,0,0,,,,0
+CV031-OF105,CV031,OF105,0,otro rubro,Otro rubro,,46.54,111,0,0,0,0,,,,0
+CV031-OF106,CV031,OF106,1,rol afín de otro rubro,Rol afín,,49.26,67,0,0,0,0,,,,0
+CV031-OF107,CV031,OF107,0,otro rubro,Otro rubro,,51.02,51,0,0,0,0,,,,0
+CV031-OF108,CV031,OF108,0,otro rubro,Otro rubro,,45.96,127,0,0,0,0,,,,0
+CV031-OF109,CV031,OF109,1,rol afín de otro rubro,Rol afín,,50.33,56,0,0,0,0,,,,0
+CV031-OF110,CV031,OF110,0,otro rubro,Otro rubro,,36.09,200,0,0,0,0,,,,0
+CV031-OF111,CV031,OF111,0,otro rubro,Otro rubro,,44.25,158,0,0,0,0,,,,0
+CV031-OF112,CV031,OF112,1,rol afín de otro rubro,Rol afín,,56.34,18,0,0,1,0,,,,0
+CV031-OF113,CV031,OF113,0,otro rubro,Otro rubro,,41.9,191,0,0,0,0,,,,0
+CV031-OF114,CV031,OF114,0,otro rubro,Otro rubro,,38.96,199,0,0,0,0,,,,0
+CV031-OF115,CV031,OF115,1,rol afín de otro rubro,Rol afín,,49.86,60,0,0,0,0,,,,0
+CV031-OF116,CV031,OF116,0,otro rubro,Otro rubro,,41.57,193,0,0,0,0,,,,0
+CV031-OF117,CV031,OF117,0,otro rubro,Otro rubro,,48.55,80,0,0,0,0,,,,0
+CV031-OF118,CV031,OF118,1,rol afín de otro rubro,Rol afín,,57.11,12,0,0,1,0,,,,0
+CV031-OF119,CV031,OF119,0,otro rubro,Otro rubro,,43.36,171,0,0,0,0,,,,0
+CV031-OF120,CV031,OF120,0,otro rubro,Otro rubro,,46.52,113,0,0,0,0,,,,0
+CV031-OF121,CV031,OF121,1,rol afín de otro rubro,Rol afín,,56.13,20,0,0,1,0,,,,0
+CV031-OF122,CV031,OF122,0,otro rubro,Otro rubro,,45.92,128,0,0,0,0,,,,0
+CV031-OF123,CV031,OF123,0,otro rubro,Otro rubro,,46.21,120,0,0,0,0,,,,0
+CV031-OF124,CV031,OF124,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,40.87,196,0,0,0,0,,,,0
+CV031-OF125,CV031,OF125,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,52.37,43,0,0,0,0,,,,0
+CV031-OF126,CV031,OF126,0,otro rubro,Otro rubro,,42.97,174,0,0,0,0,,,,0
+CV031-OF127,CV031,OF127,0,otro rubro,Otro rubro,,45.24,136,0,0,0,0,,,,0
+CV031-OF128,CV031,OF128,0,otro rubro,Otro rubro,,47.06,105,0,0,0,0,,,,0
+CV031-OF129,CV031,OF129,0,otro rubro,Otro rubro,,42.82,175,0,0,0,0,,,,0
+CV031-OF130,CV031,OF130,0,otro rubro,Otro rubro,,44.28,157,0,0,0,0,,,,0
+CV031-OF131,CV031,OF131,0,otro rubro,Otro rubro,,53.41,33,0,0,0,0,,,,0
+CV031-OF132,CV031,OF132,0,otro rubro,Otro rubro,,52.62,39,0,0,0,0,,,,0
+CV031-OF133,CV031,OF133,0,otro rubro,Otro rubro,,43.66,166,0,0,0,0,,,,0
+CV031-OF134,CV031,OF134,0,otro rubro,Otro rubro,,48.44,84,0,0,0,0,,,,0
+CV031-OF135,CV031,OF135,0,otro rubro,Otro rubro,,42.61,178,0,0,0,0,,,,0
+CV031-OF136,CV031,OF136,0,otro rubro,Otro rubro,,42.4,180,0,0,0,0,,,,0
+CV031-OF137,CV031,OF137,0,otro rubro,Otro rubro,,45.2,137,0,0,0,0,,,,0
+CV031-OF138,CV031,OF138,0,otro rubro,Otro rubro,,50.79,55,0,0,0,0,,,,0
+CV031-OF139,CV031,OF139,0,otro rubro,Otro rubro,,46.47,116,0,0,0,0,,,,0
+CV031-OF140,CV031,OF140,0,otro rubro,Otro rubro,,49.09,68,0,0,0,0,,,,0
+CV031-OF141,CV031,OF141,0,otro rubro,Otro rubro,,44.29,155,0,0,0,0,,,,0
+CV031-OF142,CV031,OF142,0,otro rubro,Otro rubro,,44.93,142,0,0,0,0,,,,0
+CV031-OF143,CV031,OF143,0,otro rubro,Otro rubro,,49.8,62,0,0,0,0,,,,0
+CV031-OF144,CV031,OF144,0,otro rubro,Otro rubro,,42.32,181,0,0,0,0,,,,0
+CV031-OF145,CV031,OF145,0,otro rubro,Otro rubro,,42.2,183,0,0,0,0,,,,0
+CV031-OF146,CV031,OF146,0,otro rubro,Otro rubro,,49.79,63,0,0,0,0,,,,0
+CV031-OF147,CV031,OF147,0,otro rubro,Otro rubro,,48.49,83,0,0,0,0,,,,0
+CV031-OF148,CV031,OF148,0,otro rubro,Otro rubro,,41.45,194,0,0,0,0,,,,0
+CV031-OF149,CV031,OF149,0,otro rubro,Otro rubro,,43.89,160,0,0,0,0,,,,0
+CV031-OF150,CV031,OF150,0,otro rubro,Otro rubro,,43.84,162,0,0,0,0,,,,0
+CV031-OF151,CV031,OF151,3,"mismo rol y seniority, cubre 75%",Mismo rol,0,56.56,16,0,0,1,0,,,,0
+CV031-OF152,CV031,OF152,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,48.86,73,0,0,0,0,,,,0
+CV031-OF153,CV031,OF153,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.46,47,0,0,0,0,,,,0
+CV031-OF154,CV031,OF154,2,"mismo rol, gap de seniority 1, cubre 50%",Mismo rol,1,65.41,1,1,1,1,1,produccion,58,4,1
+CV031-OF155,CV031,OF155,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,47.71,93,0,0,0,0,,,,0
+CV031-OF156,CV031,OF156,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,43.92,159,0,0,0,0,,,,0
+CV031-OF157,CV031,OF157,1,mismo rol pero gap de seniority 2 / cubre 50%,Mismo rol,2,62.01,3,1,1,1,1,produccion,30,7,1
+CV031-OF158,CV031,OF158,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,58.31,8,1,1,1,1,produccion,15,10,1
+CV031-OF159,CV031,OF159,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,46.8,107,0,0,0,0,,,,0
+CV031-OF160,CV031,OF160,2,"mismo rol, gap de seniority 0, cubre 50%",Mismo rol,0,55.4,23,0,0,1,0,,,,0
+CV031-OF161,CV031,OF161,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,47.12,103,0,0,0,0,,,,0
+CV031-OF162,CV031,OF162,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,47.34,98,0,0,0,0,,,,0
+CV031-OF163,CV031,OF163,2,"mismo rol, gap de seniority 1, cubre 40%",Mismo rol,1,59.23,6,1,1,1,1,produccion,60,3,1
+CV031-OF164,CV031,OF164,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.78,45,0,0,0,0,,,,0
+CV031-OF165,CV031,OF165,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,45.47,134,0,0,0,0,,,,0
+CV031-OF166,CV031,OF166,1,mismo rol pero gap de seniority 2 / cubre 50%,Mismo rol,2,54.07,30,0,0,1,0,,,,0
+CV031-OF167,CV031,OF167,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.54,40,0,0,0,0,,,,0
+CV031-OF168,CV031,OF168,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,46.18,121,0,0,0,0,,,,0
+CV031-OF169,CV031,OF169,3,"mismo rol y seniority, cubre 80%",Mismo rol,0,54.78,26,0,0,1,0,,,,0
+CV031-OF170,CV031,OF170,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,48.22,86,0,0,0,0,,,,0
+CV031-OF171,CV031,OF171,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,48.5,82,0,0,0,0,,,,0
+CV031-OF172,CV031,OF172,2,"mismo rol, gap de seniority 1, cubre 40%",Mismo rol,1,58.99,7,1,1,1,1,produccion,65,1,1
+CV031-OF173,CV031,OF173,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.89,53,0,0,0,0,,,,0
+CV031-OF174,CV031,OF174,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,48.67,77,0,0,0,0,,,,0
+CV031-OF175,CV031,OF175,1,mismo rol pero gap de seniority 2 / cubre 60%,Mismo rol,2,56.58,15,0,0,1,0,,,,0
+CV031-OF176,CV031,OF176,0,otro rubro,Otro rubro,,50.89,54,0,0,0,0,,,,0
+CV031-OF177,CV031,OF177,0,otro rubro,Otro rubro,,46.49,115,0,0,0,0,,,,0
+CV031-OF178,CV031,OF178,0,otro rubro,Otro rubro,,44.67,147,0,0,0,0,,,,0
+CV031-OF179,CV031,OF179,0,otro rubro,Otro rubro,,53.66,32,0,0,0,0,,,,0
+CV031-OF180,CV031,OF180,0,otro rubro,Otro rubro,,46.16,123,0,0,0,0,,,,0
+CV031-OF181,CV031,OF181,0,otro rubro,Otro rubro,,45.67,132,0,0,0,0,,,,0
+CV031-OF182,CV031,OF182,0,otro rubro,Otro rubro,,47.25,100,0,0,0,0,,,,0
+CV031-OF183,CV031,OF183,0,otro rubro,Otro rubro,,56.22,19,0,0,1,0,,,,0
+CV031-OF184,CV031,OF184,0,otro rubro,Otro rubro,,46.12,125,0,0,0,0,,,,0
+CV031-OF185,CV031,OF185,0,otro rubro,Otro rubro,,55.49,22,0,0,1,0,,,,0
+CV031-OF186,CV031,OF186,0,otro rubro,Otro rubro,,49.06,70,0,0,0,0,,,,0
+CV031-OF187,CV031,OF187,0,otro rubro,Otro rubro,,42.75,177,0,0,0,0,,,,0
+CV031-OF188,CV031,OF188,0,otro rubro,Otro rubro,,41.96,189,0,0,0,0,,,,0
+CV031-OF189,CV031,OF189,0,otro rubro,Otro rubro,,43.74,165,0,0,0,0,,,,0
+CV031-OF190,CV031,OF190,0,otro rubro,Otro rubro,,46.09,126,0,0,0,0,,,,0
+CV031-OF191,CV031,OF191,0,otro rubro,Otro rubro,,47.99,88,0,0,0,0,,,,0
+CV031-OF192,CV031,OF192,0,otro rubro,Otro rubro,,47.63,95,0,0,0,0,,,,0
+CV031-OF193,CV031,OF193,0,otro rubro,Otro rubro,,46.27,119,0,0,0,0,,,,0
+CV031-OF194,CV031,OF194,0,otro rubro,Otro rubro,,45.81,130,0,0,0,0,,,,0
+CV031-OF195,CV031,OF195,0,otro rubro,Otro rubro,,48.64,78,0,0,0,0,,,,0
+CV031-OF196,CV031,OF196,0,otro rubro,Otro rubro,,48.98,71,0,0,0,0,,,,0
+CV031-OF197,CV031,OF197,0,otro rubro,Otro rubro,,46.56,109,0,0,0,0,,,,0
+CV031-OF198,CV031,OF198,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,53.21,35,0,0,0,0,,,,0
+CV031-OF199,CV031,OF199,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,45.15,138,0,0,0,0,,,,0
+CV031-OF200,CV031,OF200,0,otro rubro,Otro rubro,,44.59,148,0,0,0,0,,,,0
+CV036-OF001,CV036,OF001,0,otro rubro,Otro rubro,,44.03,181,0,0,0,0,,,,0
+CV036-OF002,CV036,OF002,0,otro rubro,Otro rubro,,47.09,137,0,0,0,0,,,,0
+CV036-OF003,CV036,OF003,0,otro rubro,Otro rubro,,44.54,177,0,0,0,0,,,,0
+CV036-OF004,CV036,OF004,0,otro rubro,Otro rubro,,45.77,155,0,0,0,0,,,,0
+CV036-OF005,CV036,OF005,0,otro rubro,Otro rubro,,51.41,76,0,0,0,0,,,,0
+CV036-OF006,CV036,OF006,0,otro rubro,Otro rubro,,51.18,83,0,0,0,0,,,,0
+CV036-OF007,CV036,OF007,0,otro rubro,Otro rubro,,55.81,29,0,0,1,0,,,,0
+CV036-OF008,CV036,OF008,0,otro rubro,Otro rubro,,53.28,56,0,0,0,0,,,,0
+CV036-OF009,CV036,OF009,0,otro rubro,Otro rubro,,55.48,32,0,0,0,0,,,,0
+CV036-OF010,CV036,OF010,0,otro rubro,Otro rubro,,48.64,113,0,0,0,0,,,,0
+CV036-OF011,CV036,OF011,0,otro rubro,Otro rubro,,46.92,140,0,0,0,0,,,,0
+CV036-OF012,CV036,OF012,0,otro rubro,Otro rubro,,45.39,160,0,0,0,0,,,,0
+CV036-OF013,CV036,OF013,0,otro rubro,Otro rubro,,51.37,77,0,0,0,0,,,,0
+CV036-OF014,CV036,OF014,0,otro rubro,Otro rubro,,48.56,115,0,0,0,0,,,,0
+CV036-OF015,CV036,OF015,0,otro rubro,Otro rubro,,52.5,62,0,0,0,0,,,,0
+CV036-OF016,CV036,OF016,0,otro rubro,Otro rubro,,52.15,69,0,0,0,0,,,,0
+CV036-OF017,CV036,OF017,0,otro rubro,Otro rubro,,50.59,91,0,0,0,0,,,,0
+CV036-OF018,CV036,OF018,0,otro rubro,Otro rubro,,53.57,51,0,0,0,0,,,,0
+CV036-OF019,CV036,OF019,0,otro rubro,Otro rubro,,48.92,106,0,0,0,0,,,,0
+CV036-OF020,CV036,OF020,0,otro rubro,Otro rubro,,48.16,120,0,0,0,0,,,,0
+CV036-OF021,CV036,OF021,0,otro rubro,Otro rubro,,48.87,108,0,0,0,0,,,,0
+CV036-OF022,CV036,OF022,0,otro rubro,Otro rubro,,53.73,50,0,0,0,0,,,,0
+CV036-OF023,CV036,OF023,0,otro rubro,Otro rubro,,43.43,183,0,0,0,0,,,,0
+CV036-OF024,CV036,OF024,0,otro rubro,Otro rubro,,45.78,154,0,0,0,0,,,,0
+CV036-OF025,CV036,OF025,0,otro rubro,Otro rubro,,45.51,158,0,0,0,0,,,,0
+CV036-OF026,CV036,OF026,0,otro rubro,Otro rubro,,55.0,35,0,0,0,0,,,,0
+CV036-OF027,CV036,OF027,1,rol afín de otro rubro,Rol afín,,61.28,10,1,1,1,1,produccion,65,7,1
+CV036-OF028,CV036,OF028,0,otro rubro,Otro rubro,,53.95,48,0,0,0,0,,,,0
+CV036-OF029,CV036,OF029,0,otro rubro,Otro rubro,,50.71,88,0,0,0,0,,,,0
+CV036-OF030,CV036,OF030,1,rol afín de otro rubro,Rol afín,,59.12,13,0,0,1,0,,,,0
+CV036-OF031,CV036,OF031,0,otro rubro,Otro rubro,,59.88,11,0,0,1,0,,,,0
+CV036-OF032,CV036,OF032,0,otro rubro,Otro rubro,,51.99,70,0,0,0,0,,,,0
+CV036-OF033,CV036,OF033,1,rol afín de otro rubro,Rol afín,,62.06,8,1,1,1,1,produccion,58,8,1
+CV036-OF034,CV036,OF034,0,otro rubro,Otro rubro,,56.56,22,0,0,1,0,,,,0
+CV036-OF035,CV036,OF035,0,otro rubro,Otro rubro,,44.59,176,0,0,0,0,,,,0
+CV036-OF036,CV036,OF036,1,rol afín de otro rubro,Rol afín,,62.97,5,1,1,1,1,produccion,70,5,1
+CV036-OF037,CV036,OF037,0,otro rubro,Otro rubro,,50.54,93,0,0,0,0,,,,0
+CV036-OF038,CV036,OF038,0,otro rubro,Otro rubro,,50.86,84,0,0,0,0,,,,0
+CV036-OF039,CV036,OF039,1,rol afín de otro rubro,Rol afín,,49.93,95,0,0,0,0,,,,0
+CV036-OF040,CV036,OF040,0,otro rubro,Otro rubro,,53.33,55,0,0,0,0,,,,0
+CV036-OF041,CV036,OF041,0,otro rubro,Otro rubro,,51.28,81,0,0,0,0,,,,0
+CV036-OF042,CV036,OF042,1,rol afín de otro rubro,Rol afín,,63.97,3,1,1,1,1,produccion,55,9,1
+CV036-OF043,CV036,OF043,0,otro rubro,Otro rubro,,56.3,25,0,0,1,0,,,,0
+CV036-OF044,CV036,OF044,0,otro rubro,Otro rubro,,46.65,142,0,0,0,0,,,,0
+CV036-OF045,CV036,OF045,1,rol afín de otro rubro,Rol afín,,52.25,65,0,0,0,0,,,,0
+CV036-OF046,CV036,OF046,0,otro rubro,Otro rubro,,54.44,43,0,0,0,0,,,,0
+CV036-OF047,CV036,OF047,0,otro rubro,Otro rubro,,46.88,141,0,0,0,0,,,,0
+CV036-OF048,CV036,OF048,0,otro rubro,Otro rubro,,52.64,61,0,0,0,0,,,,0
+CV036-OF049,CV036,OF049,1,rol afín de otro rubro,Trampa de vocabulario,,62.5,6,1,1,1,1,produccion,65,6,1
+CV036-OF050,CV036,OF050,0,"trampa: vocabulario de tu rubro, puesto de otro",Trampa de vocabulario,,54.83,37,0,0,0,0,,,,0
+CV036-OF051,CV036,OF051,0,otro rubro,Otro rubro,,48.65,111,0,0,0,0,,,,0
+CV036-OF052,CV036,OF052,0,otro rubro,Otro rubro,,50.85,86,0,0,0,0,,,,0
+CV036-OF053,CV036,OF053,0,otro rubro,Otro rubro,,44.69,175,0,0,0,0,,,,0
+CV036-OF054,CV036,OF054,0,otro rubro,Otro rubro,,48.85,110,0,0,0,0,,,,0
+CV036-OF055,CV036,OF055,0,otro rubro,Otro rubro,,48.24,119,0,0,0,0,,,,0
+CV036-OF056,CV036,OF056,0,otro rubro,Otro rubro,,54.88,36,0,0,0,0,,,,0
+CV036-OF057,CV036,OF057,0,otro rubro,Otro rubro,,46.47,146,0,0,0,0,,,,0
+CV036-OF058,CV036,OF058,0,otro rubro,Otro rubro,,50.56,92,0,0,0,0,,,,0
+CV036-OF059,CV036,OF059,0,otro rubro,Otro rubro,,56.67,20,0,0,1,0,,,,0
+CV036-OF060,CV036,OF060,0,otro rubro,Otro rubro,,45.95,152,0,0,0,0,,,,0
+CV036-OF061,CV036,OF061,0,otro rubro,Otro rubro,,53.39,54,0,0,0,0,,,,0
+CV036-OF062,CV036,OF062,0,otro rubro,Otro rubro,,49.4,101,0,0,0,0,,,,0
+CV036-OF063,CV036,OF063,0,otro rubro,Otro rubro,,47.66,128,0,0,0,0,,,,0
+CV036-OF064,CV036,OF064,0,otro rubro,Otro rubro,,56.03,27,0,0,1,0,,,,0
+CV036-OF065,CV036,OF065,0,otro rubro,Otro rubro,,55.61,31,0,0,0,0,,,,0
+CV036-OF066,CV036,OF066,0,otro rubro,Otro rubro,,54.83,38,0,0,0,0,,,,0
+CV036-OF067,CV036,OF067,0,otro rubro,Otro rubro,,54.73,41,0,0,0,0,,,,0
+CV036-OF068,CV036,OF068,0,otro rubro,Otro rubro,,55.73,30,0,0,1,0,,,,0
+CV036-OF069,CV036,OF069,0,otro rubro,Otro rubro,,49.66,100,0,0,0,0,,,,0
+CV036-OF070,CV036,OF070,0,otro rubro,Otro rubro,,49.78,98,0,0,0,0,,,,0
+CV036-OF071,CV036,OF071,0,otro rubro,Otro rubro,,47.35,129,0,0,0,0,,,,0
+CV036-OF072,CV036,OF072,0,otro rubro,Otro rubro,,49.03,105,0,0,0,0,,,,0
+CV036-OF073,CV036,OF073,0,otro rubro,Otro rubro,,56.62,21,0,0,1,0,,,,0
+CV036-OF074,CV036,OF074,0,otro rubro,Otro rubro,,52.72,59,0,0,0,0,,,,0
+CV036-OF075,CV036,OF075,0,otro rubro,Otro rubro,,41.5,187,0,0,0,0,,,,0
+CV036-OF076,CV036,OF076,0,otro rubro,Otro rubro,,47.87,125,0,0,0,0,,,,0
+CV036-OF077,CV036,OF077,0,otro rubro,Otro rubro,,46.49,145,0,0,0,0,,,,0
+CV036-OF078,CV036,OF078,0,otro rubro,Otro rubro,,53.47,53,0,0,0,0,,,,0
+CV036-OF079,CV036,OF079,0,otro rubro,Otro rubro,,53.92,49,0,0,0,0,,,,0
+CV036-OF080,CV036,OF080,0,otro rubro,Otro rubro,,44.74,174,0,0,0,0,,,,0
+CV036-OF081,CV036,OF081,0,otro rubro,Otro rubro,,49.13,103,0,0,0,0,,,,0
+CV036-OF082,CV036,OF082,0,otro rubro,Otro rubro,,55.12,34,0,0,0,0,,,,0
+CV036-OF083,CV036,OF083,0,otro rubro,Otro rubro,,46.33,148,0,0,0,0,,,,0
+CV036-OF084,CV036,OF084,0,otro rubro,Otro rubro,,54.42,44,0,0,0,0,,,,0
+CV036-OF085,CV036,OF085,0,otro rubro,Otro rubro,,51.71,73,0,0,0,0,,,,0
+CV036-OF086,CV036,OF086,0,otro rubro,Otro rubro,,45.3,161,0,0,0,0,,,,0
+CV036-OF087,CV036,OF087,0,otro rubro,Otro rubro,,47.92,124,0,0,0,0,,,,0
+CV036-OF088,CV036,OF088,0,otro rubro,Otro rubro,,47.0,138,0,0,0,0,,,,0
+CV036-OF089,CV036,OF089,0,otro rubro,Otro rubro,,51.65,74,0,0,0,0,,,,0
+CV036-OF090,CV036,OF090,0,otro rubro,Otro rubro,,47.14,135,0,0,0,0,,,,0
+CV036-OF091,CV036,OF091,0,otro rubro,Otro rubro,,54.79,39,0,0,0,0,,,,0
+CV036-OF092,CV036,OF092,0,otro rubro,Otro rubro,,48.27,118,0,0,0,0,,,,0
+CV036-OF093,CV036,OF093,0,otro rubro,Otro rubro,,56.91,19,0,0,1,0,,,,0
+CV036-OF094,CV036,OF094,0,otro rubro,Otro rubro,,51.26,82,0,0,0,0,,,,0
+CV036-OF095,CV036,OF095,0,otro rubro,Otro rubro,,48.63,114,0,0,0,0,,,,0
+CV036-OF096,CV036,OF096,0,otro rubro,Otro rubro,,49.9,96,0,0,0,0,,,,0
+CV036-OF097,CV036,OF097,0,otro rubro,Otro rubro,,55.97,28,0,0,1,0,,,,0
+CV036-OF098,CV036,OF098,0,otro rubro,Otro rubro,,54.38,45,0,0,0,0,,,,0
+CV036-OF099,CV036,OF099,0,otro rubro,Otro rubro,,44.88,171,0,0,0,0,,,,0
+CV036-OF100,CV036,OF100,0,otro rubro,Otro rubro,,45.23,162,0,0,0,0,,,,0
+CV036-OF101,CV036,OF101,0,otro rubro,Otro rubro,,44.83,173,0,0,0,0,,,,0
+CV036-OF102,CV036,OF102,0,otro rubro,Otro rubro,,40.17,195,0,0,0,0,,,,0
+CV036-OF103,CV036,OF103,0,otro rubro,Otro rubro,,44.99,166,0,0,0,0,,,,0
+CV036-OF104,CV036,OF104,0,otro rubro,Otro rubro,,49.05,104,0,0,0,0,,,,0
+CV036-OF105,CV036,OF105,0,otro rubro,Otro rubro,,46.65,143,0,0,0,0,,,,0
+CV036-OF106,CV036,OF106,0,otro rubro,Otro rubro,,44.92,170,0,0,0,0,,,,0
+CV036-OF107,CV036,OF107,0,otro rubro,Otro rubro,,51.35,79,0,0,0,0,,,,0
+CV036-OF108,CV036,OF108,0,otro rubro,Otro rubro,,47.35,130,0,0,0,0,,,,0
+CV036-OF109,CV036,OF109,0,otro rubro,Otro rubro,,41.06,191,0,0,0,0,,,,0
+CV036-OF110,CV036,OF110,0,otro rubro,Otro rubro,,40.92,192,0,0,0,0,,,,0
+CV036-OF111,CV036,OF111,0,otro rubro,Otro rubro,,44.38,179,0,0,0,0,,,,0
+CV036-OF112,CV036,OF112,0,otro rubro,Otro rubro,,45.5,159,0,0,0,0,,,,0
+CV036-OF113,CV036,OF113,0,otro rubro,Otro rubro,,38.91,197,0,0,0,0,,,,0
+CV036-OF114,CV036,OF114,0,otro rubro,Otro rubro,,37.45,200,0,0,0,0,,,,0
+CV036-OF115,CV036,OF115,0,otro rubro,Otro rubro,,50.66,89,0,0,0,0,,,,0
+CV036-OF116,CV036,OF116,0,otro rubro,Otro rubro,,44.87,172,0,0,0,0,,,,0
+CV036-OF117,CV036,OF117,0,otro rubro,Otro rubro,,53.57,52,0,0,0,0,,,,0
+CV036-OF118,CV036,OF118,0,otro rubro,Otro rubro,,44.98,167,0,0,0,0,,,,0
+CV036-OF119,CV036,OF119,0,otro rubro,Otro rubro,,45.21,163,0,0,0,0,,,,0
+CV036-OF120,CV036,OF120,0,otro rubro,Otro rubro,,47.8,126,0,0,0,0,,,,0
+CV036-OF121,CV036,OF121,0,otro rubro,Otro rubro,,45.01,165,0,0,0,0,,,,0
+CV036-OF122,CV036,OF122,0,otro rubro,Otro rubro,,52.3,64,0,0,0,0,,,,0
+CV036-OF123,CV036,OF123,0,otro rubro,Otro rubro,,52.67,60,0,0,0,0,,,,0
+CV036-OF124,CV036,OF124,0,otro rubro,Otro rubro,,38.13,198,0,0,0,0,,,,0
+CV036-OF125,CV036,OF125,0,otro rubro,Otro rubro,,46.55,144,0,0,0,0,,,,0
+CV036-OF126,CV036,OF126,0,otro rubro,Otro rubro,,44.97,168,0,0,0,0,,,,0
+CV036-OF127,CV036,OF127,0,otro rubro,Otro rubro,,47.21,133,0,0,0,0,,,,0
+CV036-OF128,CV036,OF128,0,otro rubro,Otro rubro,,41.14,190,0,0,0,0,,,,0
+CV036-OF129,CV036,OF129,0,otro rubro,Otro rubro,,50.65,90,0,0,0,0,,,,0
+CV036-OF130,CV036,OF130,0,otro rubro,Otro rubro,,45.8,153,0,0,0,0,,,,0
+CV036-OF131,CV036,OF131,0,otro rubro,Otro rubro,,56.47,23,0,0,1,0,,,,0
+CV036-OF132,CV036,OF132,0,otro rubro,Otro rubro,,54.57,42,0,0,0,0,,,,0
+CV036-OF133,CV036,OF133,0,otro rubro,Otro rubro,,54.76,40,0,0,0,0,,,,0
+CV036-OF134,CV036,OF134,0,otro rubro,Otro rubro,,48.65,112,0,0,0,0,,,,0
+CV036-OF135,CV036,OF135,0,otro rubro,Otro rubro,,48.03,122,0,0,0,0,,,,0
+CV036-OF136,CV036,OF136,0,otro rubro,Otro rubro,,49.89,97,0,0,0,0,,,,0
+CV036-OF137,CV036,OF137,0,otro rubro,Otro rubro,,40.38,194,0,0,0,0,,,,0
+CV036-OF138,CV036,OF138,0,otro rubro,Otro rubro,,53.12,58,0,0,0,0,,,,0
+CV036-OF139,CV036,OF139,0,otro rubro,Otro rubro,,47.31,131,0,0,0,0,,,,0
+CV036-OF140,CV036,OF140,0,otro rubro,Otro rubro,,47.22,132,0,0,0,0,,,,0
+CV036-OF141,CV036,OF141,0,otro rubro,Otro rubro,,52.16,67,0,0,0,0,,,,0
+CV036-OF142,CV036,OF142,0,otro rubro,Otro rubro,,48.14,121,0,0,0,0,,,,0
+CV036-OF143,CV036,OF143,0,otro rubro,Otro rubro,,54.06,47,0,0,0,0,,,,0
+CV036-OF144,CV036,OF144,0,otro rubro,Otro rubro,,42.78,185,0,0,0,0,,,,0
+CV036-OF145,CV036,OF145,0,otro rubro,Otro rubro,,48.32,117,0,0,0,0,,,,0
+CV036-OF146,CV036,OF146,0,otro rubro,Otro rubro,,44.95,169,0,0,0,0,,,,0
+CV036-OF147,CV036,OF147,0,otro rubro,Otro rubro,,52.17,66,0,0,0,0,,,,0
+CV036-OF148,CV036,OF148,0,otro rubro,Otro rubro,,55.2,33,0,0,0,0,,,,0
+CV036-OF149,CV036,OF149,0,otro rubro,Otro rubro,,46.99,139,0,0,0,0,,,,0
+CV036-OF150,CV036,OF150,0,otro rubro,Otro rubro,,43.39,184,0,0,0,0,,,,0
+CV036-OF151,CV036,OF151,0,otro rubro,Otro rubro,,37.7,199,0,0,0,0,,,,0
+CV036-OF152,CV036,OF152,0,otro rubro,Otro rubro,,42.59,186,0,0,0,0,,,,0
+CV036-OF153,CV036,OF153,0,otro rubro,Otro rubro,,39.56,196,0,0,0,0,,,,0
+CV036-OF154,CV036,OF154,0,otro rubro,Otro rubro,,49.28,102,0,0,0,0,,,,0
+CV036-OF155,CV036,OF155,0,otro rubro,Otro rubro,,47.11,136,0,0,0,0,,,,0
+CV036-OF156,CV036,OF156,0,otro rubro,Otro rubro,,50.84,87,0,0,0,0,,,,0
+CV036-OF157,CV036,OF157,0,otro rubro,Otro rubro,,47.16,134,0,0,0,0,,,,0
+CV036-OF158,CV036,OF158,0,otro rubro,Otro rubro,,45.59,157,0,0,0,0,,,,0
+CV036-OF159,CV036,OF159,0,otro rubro,Otro rubro,,46.23,149,0,0,0,0,,,,0
+CV036-OF160,CV036,OF160,0,otro rubro,Otro rubro,,41.17,189,0,0,0,0,,,,0
+CV036-OF161,CV036,OF161,0,otro rubro,Otro rubro,,40.59,193,0,0,0,0,,,,0
+CV036-OF162,CV036,OF162,0,otro rubro,Otro rubro,,43.96,182,0,0,0,0,,,,0
+CV036-OF163,CV036,OF163,0,otro rubro,Otro rubro,,48.87,109,0,0,0,0,,,,0
+CV036-OF164,CV036,OF164,0,otro rubro,Otro rubro,,48.91,107,0,0,0,0,,,,0
+CV036-OF165,CV036,OF165,0,otro rubro,Otro rubro,,52.5,63,0,0,0,0,,,,0
+CV036-OF166,CV036,OF166,0,otro rubro,Otro rubro,,45.62,156,0,0,0,0,,,,0
+CV036-OF167,CV036,OF167,0,otro rubro,Otro rubro,,45.03,164,0,0,0,0,,,,0
+CV036-OF168,CV036,OF168,0,otro rubro,Otro rubro,,51.36,78,0,0,0,0,,,,0
+CV036-OF169,CV036,OF169,0,otro rubro,Otro rubro,,41.45,188,0,0,0,0,,,,0
+CV036-OF170,CV036,OF170,0,otro rubro,Otro rubro,,44.51,178,0,0,0,0,,,,0
+CV036-OF171,CV036,OF171,0,otro rubro,Otro rubro,,46.2,150,0,0,0,0,,,,0
+CV036-OF172,CV036,OF172,0,otro rubro,Otro rubro,,48.54,116,0,0,0,0,,,,0
+CV036-OF173,CV036,OF173,0,otro rubro,Otro rubro,,46.44,147,0,0,0,0,,,,0
+CV036-OF174,CV036,OF174,0,otro rubro,Otro rubro,,51.32,80,0,0,0,0,,,,0
+CV036-OF175,CV036,OF175,0,otro rubro,Otro rubro,,44.28,180,0,0,0,0,,,,0
+CV036-OF176,CV036,OF176,1,mismo rol pero gap de seniority 2 / cubre 83%,Mismo rol,2,56.44,24,0,0,1,0,,,,0
+CV036-OF177,CV036,OF177,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,47.95,123,0,0,0,0,,,,0
+CV036-OF178,CV036,OF178,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.59,75,0,0,0,0,,,,0
+CV036-OF179,CV036,OF179,2,"mismo rol, gap de seniority 1, cubre 100%",Mismo rol,1,65.25,2,1,1,1,1,produccion,92,2,1
+CV036-OF180,CV036,OF180,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.99,17,0,0,1,0,,,,0
+CV036-OF181,CV036,OF181,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.28,26,0,0,1,0,,,,0
+CV036-OF182,CV036,OF182,3,"mismo rol y seniority, cubre 83%",Mismo rol,0,63.85,4,1,1,1,1,produccion,90,3,1
+CV036-OF183,CV036,OF183,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,61.47,9,1,1,1,1,produccion,30,10,1
+CV036-OF184,CV036,OF184,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.49,94,0,0,0,0,,,,0
+CV036-OF185,CV036,OF185,1,mismo rol pero gap de seniority 2 / cubre 100%,Mismo rol,2,57.31,16,0,0,1,0,,,,0
+CV036-OF186,CV036,OF186,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,56.97,18,0,0,1,0,,,,0
+CV036-OF187,CV036,OF187,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,47.77,127,0,0,0,0,,,,0
+CV036-OF188,CV036,OF188,2,"mismo rol, gap de seniority 1, cubre 75%",Mismo rol,1,67.37,1,1,1,1,1,produccion,92,1,1
+CV036-OF189,CV036,OF189,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,52.16,68,0,0,0,0,,,,0
+CV036-OF190,CV036,OF190,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,54.31,46,0,0,0,0,,,,0
+CV036-OF191,CV036,OF191,3,"mismo rol y seniority, cubre 100%",Mismo rol,0,57.45,15,0,0,1,0,,,,0
+CV036-OF192,CV036,OF192,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,53.24,57,0,0,0,0,,,,0
+CV036-OF193,CV036,OF193,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.94,71,0,0,0,0,,,,0
+CV036-OF194,CV036,OF194,1,mismo rol pero gap de seniority 2 / cubre 80%,Mismo rol,2,62.11,7,1,1,1,1,produccion,85,4,1
+CV036-OF195,CV036,OF195,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,49.76,99,0,0,0,0,,,,0
+CV036-OF196,CV036,OF196,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,51.89,72,0,0,0,0,,,,0
+CV036-OF197,CV036,OF197,2,"mismo rol, gap de seniority 1, cubre 80%",Mismo rol,1,58.98,14,0,0,1,0,,,,0
+CV036-OF198,CV036,OF198,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,50.86,85,0,0,0,0,,,,0
+CV036-OF199,CV036,OF199,1,"mismo rubro, otro rol","Mismo rubro, otro rol",,45.97,151,0,0,0,0,,,,0
+CV036-OF200,CV036,OF200,3,"mismo rol y seniority, cubre 75%",Mismo rol,0,59.58,12,0,0,1,0,,,,0

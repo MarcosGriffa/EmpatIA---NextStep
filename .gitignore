@@ -48,3 +48,8 @@ job_scraping_fase1_v1.1.zip
 # repo solo va el material reproducible: SQL de las vistas, el generador
 # de datos de demo y una captura final del dashboard. Ver bi/README.md.
 *.pbix
+
+# Evals: la salida simulada (--mock) no se versiona
+evals/salida_mock/
+# Evals: el cache de embeddings es grande y se regenera solo
+evals/salida*/cache_embeddings.json

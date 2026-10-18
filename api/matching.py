@@ -10,7 +10,8 @@ OJO: esto NO reemplaza ni modifica pipeline.py/cv_profile.py/semantic_match.py
   2. Le pone un job_id estable a cada oferta encontrada.
   3. Excluye las ofertas que el usuario ya marcó como "aplicado" en una
      corrida anterior, ANTES de gastar la etapa 2 (la que usa el modelo
-     grande de Groq) — no tiene sentido volver a explicar un match que la
+     grande de Groq: lee EXPLAIN_TOP_N finalistas y devuelve las SHOW_TOP_N
+     mejores) — no tiene sentido volver a explicar un match que la
      persona ya aplicó.
   4. Guarda el resultado con storage.save_match_results en vez del
      json/csv que usa pipeline.py por consola.
@@ -23,7 +24,7 @@ from __future__ import annotations
 
 import geo
 from cv_profile import extract_cv_text, classify_cv
-from pipeline import collect_jobs, EMBEDDING_TOP_K, EXPLAIN_TOP_N
+from pipeline import collect_jobs, EMBEDDING_TOP_K, EXPLAIN_TOP_N, SHOW_TOP_N
 from semantic_match import rank_and_explain
 
 from . import storage
@@ -69,6 +70,7 @@ def run_full_pipeline(user_id: str, cv_path: str, filename: str, zona: str = "")
         results = rank_and_explain(
             cv_text, jobs,
             embedding_top_k=EMBEDDING_TOP_K, explain_top_n=EXPLAIN_TOP_N,
+            show_top_n=SHOW_TOP_N,
             cand_location=cand_location,
         )
     else:

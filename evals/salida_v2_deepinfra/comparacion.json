@@ -1,0 +1,102 @@
+{
+  "antes": {
+    "carpeta": "evals\\salida_v2",
+    "config": "LLM lee 30, muestra 10, temperature 0, razonamiento low, 6 en paralelo",
+    "fecha": "2026-10-16 09:34"
+  },
+  "despues": {
+    "carpeta": "evals\\salida_v2_deepinfra",
+    "config": "LLM lee 30, muestra 10, temperature 0, razonamiento low, 6 en paralelo",
+    "fecha": "2026-10-18 17:01"
+  },
+  "filas": [
+    {
+      "metrica": "Relevantes que llegan al top 10 final (%)",
+      "clave": "recall10_final",
+      "antes": 100.0,
+      "despues": 100.0,
+      "delta": 0.0,
+      "mejora": null
+    },
+    {
+      "metrica": "nDCG@10 del resultado final (%)",
+      "clave": "ndcg10_final",
+      "antes": 93.5,
+      "despues": 91.4,
+      "delta": -2.1,
+      "mejora": false
+    },
+    {
+      "metrica": "Precisión@5 (%)",
+      "clave": "p5_final",
+      "antes": 97.5,
+      "despues": 100.0,
+      "delta": 2.5,
+      "mejora": true
+    },
+    {
+      "metrica": "Precisión@10 (%)",
+      "clave": "p10_final",
+      "antes": 66.2,
+      "despues": 66.2,
+      "delta": 0.0,
+      "mejora": null
+    },
+    {
+      "metrica": "MRR (primera relevante)",
+      "clave": "mrr_final",
+      "antes": 1.0,
+      "despues": 1.0,
+      "delta": 0.0,
+      "mejora": null
+    },
+    {
+      "metrica": "Relevantes que el LLM nunca lee",
+      "clave": "relevantes_no_leidas",
+      "antes": 0,
+      "despues": 0,
+      "delta": 0,
+      "mejora": null
+    },
+    {
+      "metrica": "Correlación score ↔ relevancia",
+      "clave": "spearman",
+      "antes": 0.782,
+      "despues": 0.818,
+      "delta": 0.036,
+      "mejora": true
+    },
+    {
+      "metrica": "Variación del score al repetir (pts)",
+      "clave": "delta_promedio",
+      "antes": 2.6,
+      "despues": 0,
+      "delta": -2.6,
+      "mejora": true
+    },
+    {
+      "metrica": "Repeticiones con 10+ pts de diferencia (%)",
+      "clave": "pct_delta_10_o_mas",
+      "antes": 12.5,
+      "despues": 0.0,
+      "delta": -12.5,
+      "mejora": true
+    },
+    {
+      "metrica": "Costo por búsqueda (USD)",
+      "clave": "costo_por_busqueda_usd",
+      "antes": 0.0083,
+      "despues": 0.00871,
+      "delta": 0.0004,
+      "mejora": false
+    },
+    {
+      "metrica": "Tiempo por búsqueda (ms)",
+      "clave": "latencia_busqueda_ms_promedio",
+      "antes": 147382,
+      "despues": 27993,
+      "delta": -119389,
+      "mejora": true
+    }
+  ]
+}

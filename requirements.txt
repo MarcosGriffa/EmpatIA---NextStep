@@ -7,6 +7,7 @@ PyMuPDF>=1.27
 python-dotenv>=1.2
 requests>=2.34
 feedparser>=6.0
+openai>=1.50  # opcional: LLM de la etapa 2 en otro proveedor (ver LLM_BASE_URL en semantic_match.py)
 cohere>=5.13  # filtro semantico (etapa 1) — reemplazo a sentence-transformers
 # sentence-transformers y torch se sacaron el 17/08/2026: arrastraban ~800 MB
 # de librerias y llevaban el motor a 768 MB de RAM, con lo cual no entraba en

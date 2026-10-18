@@ -29,7 +29,7 @@ Supabase tiene 3 tablas relevantes para este análisis (ver
 - **`cv_profiles`** — un CV subido por fila. `profile` es un jsonb con
   `area`, `is_tech`, `seniority`, `skills[]`.
 - **`match_results`** — una corrida de matching por fila. `results` es un
-  jsonb con un **array de hasta 10 ofertas evaluadas** (`EXPLAIN_TOP_N` en
+  jsonb con un **array de hasta 10 ofertas evaluadas** (`SHOW_TOP_N` en
   `pipeline.py`), cada una con `job_id`, `title`, `company`, `location`,
   `source`, `similarity` (filtro por embeddings), `score` (veredicto del
   LLM, 0-100), `matches[]`, `gaps[]`.
