@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NextStep Evals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: una columna de lectura (~68ch) con figuras que se abren a 980px; el embudo de la búsqueda es el hilo conductor. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --ink: #14171c; --ink-2: #4a505b; --ink-3: #7b818c;
+  --line: #e1e4ea; --grid: #eceef2; --accent: #2a78d6; --accent-soft: #e3eefb;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+  --good: #0ca30c; --warn: #fab219; --crit: #d03b3b; --warn-bg: #fff4dc; --warn-ink: #6b4a00;
+  --seq-0: #86b6ef; --seq-1: #3987e5; --seq-2: #256abf; --seq-3: #104281;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111317; --surface: #191c21; --ink: #eef0f3; --ink-2: #b9bec8; --ink-3: #8a909b;
+  --line: #2b3038; --grid: #23272e; --accent: #3987e5; --accent-soft: #1b2b40;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --warn-bg: #3a2d0c; --warn-ink: #ffd88a;
+  --seq-0: #184f95; --seq-1: #256abf; --seq-2: #3987e5; --seq-3: #86b6ef; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111317; --surface: #191c21; --ink: #eef0f3; --ink-2: #b9bec8; --ink-3: #8a909b;
+  --line: #2b3038; --grid: #23272e; --accent: #3987e5; --accent-soft: #1b2b40;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --warn-bg: #3a2d0c; --warn-ink: #ffd88a;
+  --seq-0: #184f95; --seq-1: #256abf; --seq-2: #3987e5; --seq-3: #86b6ef; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 80px; }
+.prose { max-width: 68ch; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.12; margin: 0; }
+h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.45rem, 3vw, 1.9rem); font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.1rem; font-weight: 500; }
+p { margin: 0; color: var(--ink-2); }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.mono, .num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+section > *, header > * { min-width: 0; }
+section { display: grid; gap: 18px; padding-block: 44px 8px; border-top: 1px solid var(--line); }
+header { display: grid; gap: 18px; padding-bottom: 36px; }
+.lede { font-size: 1.12rem; color: var(--ink-2); max-width: 64ch; }
+.banner { overflow-wrap: anywhere; display: block; background: var(--warn-bg); color: var(--warn-ink); border-radius: 8px; padding: 12px 14px; font-size: 14px; }
+.banner b { color: inherit; } .banner > div, .banner { min-width: 0; }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 4px; align-content: start; }
+.tile .k { font-size: 13px; color: var(--ink-2); }
+.tile .v { font-family: var(--f-display); font-size: 2.3rem; font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.tile .v small { font-size: 1rem; font-weight: 500; color: var(--ink-3); }
+.tile .d { font-size: 12.5px; color: var(--ink-3); }
+figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 12px; min-width: 0; }
+figcaption { font-size: 13.5px; color: var(--ink-3); }
+.fig-title { font-weight: 600; font-size: 15px; color: var(--ink); }
+.chart { width: 100%; overflow-x: auto; }
+.chart svg { display: block; width: 100%; height: auto; min-width: 520px; }
+.two .chart svg { min-width: 0; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.callout { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; color: var(--ink); font-size: 15.5px; max-width: 68ch; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .facts { grid-template-columns: 1fr; } }
+.fact { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.fact .big { font-family: var(--f-display); font-size: 1.7rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.fact p { font-size: 14px; }
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .cases { grid-template-columns: 1fr; } }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; font-size: 14px; }
+.pill { display: inline-block; font-family: var(--f-mono); font-size: 11.5px; padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--ink); }
+.pill.bad { background: color-mix(in srgb, var(--crit) 18%, transparent); }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-weight: 600; color: var(--ink-2); font-size: 12.5px; }
+td { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.tablewrap { overflow-x: auto; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+summary { cursor: pointer; font-weight: 600; font-size: 14.5px; }
+summary:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+ol.method { margin: 0; padding-left: 1.2em; color: var(--ink-2); display: grid; gap: 8px; max-width: 68ch; }
+.tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12.5px; padding: 7px 9px; border-radius: 6px; max-width: 260px; line-height: 1.4; z-index: 10; }
+.foot { font-size: 13px; color: var(--ink-3); padding-top: 32px; }
+svg text { font-family: var(--f-body); }
+</style>
+
+</head><body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">EmpatÍA | NextStep · evaluación del motor de matching</div>
+    <h1>¿El ranking de NextStep encuentra las ofertas correctas?</h1>
+    <p class="lede" id="lede"></p>
+    <div class="banner" id="banner"></div>
+    <div class="tiles" id="tiles"></div>
+  </header>
+
+  <section>
+    <div class="eyebrow">1 · El embudo</div>
+    <h2>Dónde se pierden las ofertas buenas</h2>
+    <p class="prose" id="funnel-text"></p>
+    <figure>
+      <div class="fig-title">Ofertas relevantes que sobreviven cada etapa (todas las búsquedas)</div>
+      <div class="chart" id="funnel"></div>
+      <figcaption id="funnel-cap"></figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <div class="eyebrow">2 · Etapa 1 vs etapa 2</div>
+    <h2>¿Cuánto aporta el LLM al orden?</h2>
+    <p class="prose" id="stage-text"></p>
+    <div class="two">
+      <figure>
+        <div class="fig-title">nDCG@10 por etapa (%)</div>
+        <div class="chart" id="stages"></div>
+        <figcaption>nDCG compara el orden contra el mejor orden posible: 100% es perfecto. Ganancia 2<sup>relevancia</sup>−1.</figcaption>
+      </figure>
+      <figure>
+        <div class="fig-title">Orden de las mismas 10 finalistas (%)</div>
+        <div class="chart" id="internal"></div>
+        <figcaption>Aísla al LLM: compara su orden con el de los embeddings sobre exactamente las mismas 10 ofertas.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">3 · Calibración</div>
+    <h2>¿Un score de 80 significa un buen match?</h2>
+    <p class="prose" id="calib-text"></p>
+    <figure>
+      <div class="fig-title">Score del LLM según la relevancia real del par</div>
+      <div class="chart" id="strip"></div>
+      <figcaption>Cada punto es una oferta evaluada por el LLM; la raya es el promedio. Pasá el mouse para ver el detalle.</figcaption>
+    </figure>
+    <figure>
+      <div class="fig-title">Si se mostraran sólo las ofertas con score ≥ umbral</div>
+      <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>Precisión: de lo mostrado, cuánto es relevante</span><span><i class="sw" style="background:var(--s2)"></i>Recall: de lo relevante evaluado, cuánto se muestra</span></div>
+      <div class="chart" id="thresh"></div>
+    </figure>
+  </section>
+
+  <section>
+    <div class="eyebrow">4 · Por rubro</div>
+    <h2>NextStep promete servir para cualquier rubro</h2>
+    <p class="prose" id="rubro-text"></p>
+    <figure>
+      <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>Recall@10 etapa 1</span><span><i class="sw" style="background:var(--s2)"></i>nDCG@10 final</span></div>
+      <div class="chart" id="rubros"></div>
+      <figcaption>5 CVs por rubro. Con muestras chicas, diferencias de pocos puntos no son concluyentes.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <div class="eyebrow">5 · Casos difíciles</div>
+    <h2>Trampas, idioma y seniority</h2>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">6 · Robustez y costo</div>
+    <h2>Lo que cuesta cada búsqueda</h2>
+    <div class="facts" id="cost"></div>
+    <p class="prose" id="cost-text"></p>
+  </section>
+
+  <section>
+    <div class="eyebrow">7 · Errores para mirar de cerca</div>
+    <h2>Donde el LLM y la etiqueta no coinciden</h2>
+    <p class="prose">No todos son errores del modelo: algunos muestran límites de las reglas de etiquetado. Leerlos es la forma de decidir qué arreglar.</p>
+    <div class="cases" id="cases"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Metodología</div>
+    <h2>Cómo se hizo</h2>
+    <ol class="method" id="method"></ol>
+    <details><summary>Ver métricas por CV</summary><div class="tablewrap" id="percv"></div></details>
+  </section>
+  <p class="foot" id="foot"></p>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const D = {"meta": {"modo": "real", "motor": "evals\\motor_v1", "embedding_model": "embed-multilingual-v3.0", "explain_model": "openai/gpt-oss-120b", "embedding_top_k": 30, "explain_top_n": 10, "show_top_n": 10, "temperature": 0.3, "reasoning_effort": "medium (default)", "llm_paralelo": 1, "n_cvs": 8, "n_ofertas": 200, "fecha": "2026-10-16 09:34"}, "dataset": {"n_cvs": 8, "n_ofertas": 200, "n_pares": 1600, "n_trampas": 16, "n_ingles": 11, "distribucion_relevancia": {"Match fuerte": 18, "Match parcial": 35, "Relacionado": 169, "No relevante": 1378}, "llamadas_llm": 98}, "global": {"recall10_emb": 81.8, "recall30_emb": 100.0, "ndcg10_emb": 74.6, "ndcg10_final": 77.5, "ndcg10_interno": 91.1, "ndcg10_interno_emb": 87.3, "p5_final": 87.5, "p10_final": 55.0, "mrr_final": 1.0, "relevantes_total": 53, "relevantes_no_leidas": 9, "relevantes_en_final": 44, "recall_leidas": 81.8, "recall10_final": 81.8, "relevantes_fuera_30": 0, "cvs_con_top1_relevante": 8}, "calibracion": {"por_relevancia": {"0": {"n": 14, "promedio": 23.1, "mediana": 20.0, "min": 10, "max": 55}, "1": {"n": 28, "promedio": 54.1, "mediana": 55.0, "min": 15, "max": 90}, "2": {"n": 33, "promedio": 80.1, "mediana": 85, "min": 55, "max": 98}, "3": {"n": 14, "promedio": 87.8, "mediana": 88.0, "min": 75, "max": 95}}, "spearman": 0.741, "umbrales": [{"umbral": 40, "precision": 69.1, "recall": 100.0, "n_sobre_umbral": 68}, {"umbral": 45, "precision": 71.2, "recall": 100.0, "n_sobre_umbral": 66}, {"umbral": 50, "precision": 73.4, "recall": 100.0, "n_sobre_umbral": 64}, {"umbral": 55, "precision": 73.4, "recall": 100.0, "n_sobre_umbral": 64}, {"umbral": 60, "precision": 79.6, "recall": 91.5, "n_sobre_umbral": 54}, {"umbral": 65, "precision": 80.8, "recall": 89.4, "n_sobre_umbral": 52}, {"umbral": 70, "precision": 83.7, "recall": 87.2, "n_sobre_umbral": 49}, {"umbral": 75, "precision": 83.3, "recall": 74.5, "n_sobre_umbral": 42}, {"umbral": 80, "precision": 82.5, "recall": 70.2, "n_sobre_umbral": 40}, {"umbral": 85, "precision": 82.1, "recall": 68.1, "n_sobre_umbral": 39}, {"umbral": 90, "precision": 90.0, "recall": 38.3, "n_sobre_umbral": 20}]}, "consistencia": {"n": 9, "delta_promedio": 4.1, "delta_max": 15, "pct_delta_10_o_mas": 11.1}, "json_errores": {"n": 0, "de": 98}, "what_if": {"llamadas": 9, "relevantes_evaluadas": 3, "rescatables": 3}, "trampas": {"n_pares": 16, "en_top30": 6, "en_top10": 2, "score_llm_promedio": 40, "rank_emb_promedio": 57.6}, "idioma": {"es": {"n_pares_relevantes": 49, "recall10_emb": 87.8, "rank_emb_promedio": 5.6, "similarity_promedio": 64.8}, "en": {"n_pares_relevantes": 4, "recall10_emb": 25.0, "rank_emb_promedio": 18, "similarity_promedio": 56.9}}, "seniority_llm": {"0": {"n": 18, "score_promedio": 85.8}, "1": {"n": 29, "score_promedio": 80.3}, "2": {"n": 12, "score_promedio": 65.7}}, "por_rubro": {"tecnologia": {"label": "Tecnología", "n_cvs": 1, "recall10_emb": 50.0, "recall30_emb": 100.0, "ndcg10_final": 45.9, "p5_final": 60.0, "ndcg10_emb": 41.2}, "ventas": {"label": "Ventas y atención", "n_cvs": 1, "recall10_emb": 50.0, "recall30_emb": 100.0, "ndcg10_final": 54.9, "p5_final": 60.0, "ndcg10_emb": 52.8}, "salud": {"label": "Salud", "n_cvs": 1, "recall10_emb": 87.5, "recall30_emb": 100.0, "ndcg10_final": 92.7, "p5_final": 100.0, "ndcg10_emb": 92.2}, "logistica": {"label": "Logística", "n_cvs": 1, "recall10_emb": 83.3, "recall30_emb": 100.0, "ndcg10_final": 85.1, "p5_final": 100.0, "ndcg10_emb": 81.5}, "administracion": {"label": "Administración", "n_cvs": 1, "recall10_emb": 83.3, "recall30_emb": 100.0, "ndcg10_final": 83.5, "p5_final": 100.0, "ndcg10_emb": 73.5}, "gastronomia": {"label": "Gastronomía", "n_cvs": 1, "recall10_emb": 100.0, "recall30_emb": 100.0, "ndcg10_final": 81.8, "p5_final": 80.0, "ndcg10_emb": 84.5}, "marketing": {"label": "Marketing", "n_cvs": 1, "recall10_emb": 100.0, "recall30_emb": 100.0, "ndcg10_final": 90.8, "p5_final": 100.0, "ndcg10_emb": 92.6}, "industria": {"label": "Industria", "n_cvs": 1, "recall10_emb": 100.0, "recall30_emb": 100.0, "ndcg10_final": 85.4, "p5_final": 100.0, "ndcg10_emb": 78.7}}, "por_seniority": {"jr": {"n_cvs": 3, "recall10_emb": 72.2, "recall30_emb": 100.0, "ndcg10_final": 71.5, "p5_final": 86.7, "ndcg10_emb": 65.4}, "ssr": {"n_cvs": 2, "recall10_emb": 93.8, "recall30_emb": 100.0, "ndcg10_final": 89.0, "p5_final": 100.0, "ndcg10_emb": 85.4}, "sr": {"n_cvs": 3, "recall10_emb": 83.3, "recall30_emb": 100.0, "ndcg10_final": 75.8, "p5_final": 80.0, "ndcg10_emb": 76.6}}, "por_seccion_skills": {"con_seccion_skills": {"n_cvs": 3, "recall10_emb": 77.8, "recall30_emb": 100.0, "ndcg10_final": 73.9, "p5_final": 86.7, "ndcg10_emb": 71.8}, "sin_seccion_skills": {"n_cvs": 5, "recall10_emb": 84.2, "recall30_emb": 100.0, "ndcg10_final": 79.7, "p5_final": 88.0, "ndcg10_emb": 76.3}}, "costo": {"precios_usd_por_millon": {"llm_in": 0.15, "llm_out": 0.6, "embed": 0.1}, "tokens_llm_in_promedio": 557, "tokens_llm_out_promedio": 365, "costo_por_busqueda_usd": 0.00541, "costo_si_todo_al_llm_usd": 0.0605, "ahorro_pct": 91.1, "latencia_etapa1_ms_promedio": 3444, "latencia_llm_ms_promedio": 2274, "latencia_llm_ms_p95": 4604, "latencia_busqueda_ms_promedio": 32469}, "por_cv": [{"cv_id": "CV001", "n_relevantes": 6, "recall10_emb": 0.8333, "recall_leidas": 0.8333, "recall10_final": 0.8333, "recall30_emb": 1.0, "ndcg10_emb": 0.7351, "ndcg10_final": 0.8347, "ndcg10_interno": 0.8938, "ndcg10_interno_emb": 0.7872, "p5_final": 1.0, "p10_final": 0.5, "mrr_final": 1.0, "relevantes_no_leidas": 1, "relevantes_en_final": 5, "relevantes_fuera_30": 0, "trampas_en_top10": 0, "latencia_etapa1_ms": 4097, "latencia_etapa2_ms": 15484, "tokens_embed": 23818, "tokens_llm_in": 4985, "tokens_llm_out": 2889, "costo_usd": 0.004863}, {"cv_id": "CV006", "n_relevantes": 6, "recall10_emb": 1.0, "recall_leidas": 1.0, "recall10_final": 1.0, "recall30_emb": 1.0, "ndcg10_emb": 0.8447, "ndcg10_final": 0.8183, "ndcg10_interno": 0.8183, "ndcg10_interno_emb": 0.8447, "p5_final": 0.8, "p10_final": 0.6, "mrr_final": 1.0, "relevantes_no_leidas": 0, "relevantes_en_final": 6, "relevantes_fuera_30": 0, "trampas_en_top10": 0, "latencia_etapa1_ms": 3180, "latencia_etapa2_ms": 29975, "tokens_embed": 23897, "tokens_llm_in": 5911, "tokens_llm_out": 3905, "costo_usd": 0.005619}, {"cv_id": "CV011", "n_relevantes": 9, "recall10_emb": 1.0, "recall_leidas": 1.0, "recall10_final": 1.0, "recall30_emb": 1.0, "ndcg10_emb": 0.7868, "ndcg10_final": 0.8537, "ndcg10_interno": 0.8644, "ndcg10_interno_emb": 0.7967, "p5_final": 1.0, "p10_final": 0.9, "mrr_final": 1.0, "relevantes_no_leidas": 0, "relevantes_en_final": 9, "relevantes_fuera_30": 0, "trampas_en_top10": 0, "latencia_etapa1_ms": 4315, "latencia_etapa2_ms": 13718, "tokens_embed": 23863, "tokens_llm_in": 5533, "tokens_llm_out": 3582, "costo_usd": 0.005365}, {"cv_id": "CV016", "n_relevantes": 6, "recall10_emb": 0.8333, "recall_leidas": 0.8333, "recall10_final": 0.8333, "recall30_emb": 1.0, "ndcg10_emb": 0.8155, "ndcg10_final": 0.8513, "ndcg10_interno": 0.9957, "ndcg10_interno_emb": 0.9539, "p5_final": 1.0, "p10_final": 0.5, "mrr_final": 1.0, "relevantes_no_leidas": 1, "relevantes_en_final": 5, "relevantes_fuera_30": 0, "trampas_en_top10": 0, "latencia_etapa1_ms": 3195, "latencia_etapa2_ms": 30428, "tokens_embed": 23861, "tokens_llm_in": 5513, "tokens_llm_out": 4002, "costo_usd": 0.005614}, {"cv_id": "CV021", "n_relevantes": 6, "recall10_emb": 1.0, "recall_leidas": 1.0, "recall10_final": 1.0, "recall30_emb": 1.0, "ndcg10_emb": 0.926, "ndcg10_final": 0.9077, "ndcg10_interno": 0.9227, "ndcg10_interno_emb": 0.9414, "p5_final": 1.0, "p10_final": 0.6, "mrr_final": 1.0, "relevantes_no_leidas": 0, "relevantes_en_final": 6, "relevantes_fuera_30": 0, "trampas_en_top10": 0, "latencia_etapa1_ms": 3174, "latencia_etapa2_ms": 33676, "tokens_embed": 23910, "tokens_llm_in": 5811, "tokens_llm_out": 3956, "costo_usd": 0.005636}, {"cv_id": "CV026", "n_relevantes": 8, "recall10_emb": 0.875, "recall_leidas": 0.875, "recall10_final": 0.875, "recall30_emb": 1.0, "ndcg10_emb": 0.9221, "ndcg10_final": 0.9267, "ndcg10_interno": 1.0, "ndcg10_interno_emb": 0.995, "p5_final": 1.0, "p10_final": 0.7, "mrr_final": 1.0, "relevantes_no_leidas": 1, "relevantes_en_final": 7, "relevantes_fuera_30": 0, "trampas_en_top10": 0, "latencia_etapa1_ms": 3201, "latencia_etapa2_ms": 27199, "tokens_embed": 23863, "tokens_llm_in": 5555, "tokens_llm_out": 3421, "costo_usd": 0.005272}, {"cv_id": "CV031", "n_relevantes": 6, "recall10_emb": 0.5, "recall_leidas": 0.5, "recall10_final": 0.5, "recall30_emb": 1.0, "ndcg10_emb": 0.4125, "ndcg10_final": 0.4585, "ndcg10_interno": 0.9516, "ndcg10_interno_emb": 0.8562, "p5_final": 0.6, "p10_final": 0.3, "mrr_final": 1.0, "relevantes_no_leidas": 3, "relevantes_en_final": 3, "relevantes_fuera_30": 0, "trampas_en_top10": 1, "latencia_etapa1_ms": 3191, "latencia_etapa2_ms": 38197, "tokens_embed": 23837, "tokens_llm_in": 5304, "tokens_llm_out": 3104, "costo_usd": 0.005042}, {"cv_id": "CV036", "n_relevantes": 6, "recall10_emb": 0.5, "recall_leidas": 0.5, "recall10_final": 0.5, "recall30_emb": 1.0, "ndcg10_emb": 0.528, "ndcg10_final": 0.5492, "ndcg10_interno": 0.8438, "ndcg10_interno_emb": 0.8113, "p5_final": 0.6, "p10_final": 0.3, "mrr_final": 1.0, "relevantes_no_leidas": 3, "relevantes_en_final": 3, "relevantes_fuera_30": 0, "trampas_en_top10": 1, "latencia_etapa1_ms": 3198, "latencia_etapa2_ms": 43523, "tokens_embed": 23899, "tokens_llm_in": 5962, "tokens_llm_out": 4330, "costo_usd": 0.005882}], "scored": [[2, 85, "Asistente Administrativo/a (jr) → Administrativo/a"], [2, 70, "Asistente Administrativo/a (jr) → Asistente Administrativo/a Semi Senior"], [1, 45, "Asistente Administrativo/a (jr) → Administrativo/a Senior"], [2, 70, "Asistente Administrativo/a (jr) → Administrativo/a"], [2, 70, "Asistente Administrativo/a (jr) → Administrativo/a Semi Senior"], [1, 30, "Asistente Administrativo/a (jr) → Auxiliar Administrativo Senior"], [3, 75, "Asistente Administrativo/a (jr) → Asistente Administrativo/a Junior"], [1, 30, "Asistente Administrativo/a (jr) → Administrativo/a para Software Factory"], [0, 40, "Asistente Administrativo/a (jr) → Administrativo/a de Clínica"], [1, 55, "Asistente Administrativo/a (jr) → Asistente de RRHH - Liquidación Junior"], [2, 70, "Asistente Administrativo/a (jr) → Asistente de Oficina Junior"], [1, 15, "Asistente Administrativo/a (jr) → Asistente de RRHH - Liquidación Senior"], [2, 95, "Cocinero/a (sr) → Cocinero/a para Restaurante"], [3, 95, "Cocinero/a (sr) → Cocinero/a para Restaurante Senior"], [3, 90, "Cocinero/a (sr) → Cocinero de Línea Senior"], [1, 88, "Cocinero/a (sr) → Ayudante de Cocina"], [2, 88, "Cocinero/a (sr) → Ayudante de Cocina Semi Senior"], [2, 98, "Cocinero/a (sr) → Cocinero/a Semi Senior"], [1, 85, "Cocinero/a (sr) → Cocinero/a Junior"], [1, 35, "Cocinero/a (sr) → Mozo/a Senior"], [3, 88, "Cocinero/a (sr) → Cocinero/a para Clínica (servicio de alimentación)"], [1, 85, "Cocinero/a (sr) → Cocinero de Línea Junior"], [0, 12, "Cocinero/a (sr) → Analista de Supply Chain Senior"], [2, 90, "Técnico/a de Mantenimiento (ssr) → Técnico de Mantenimiento Industrial Junior"], [2, 70, "Técnico/a de Mantenimiento (ssr) → Técnico/a de Mantenimiento"], [2, 58, "Técnico/a de Mantenimiento (ssr) → Electromecánico/a Senior"], [2, 88, "Técnico/a de Mantenimiento (ssr) → Mecánico de Mantenimiento"], [3, 90, "Técnico/a de Mantenimiento (ssr) → Técnico/a de Mantenimiento Semi Senior"], [3, 88, "Técnico/a de Mantenimiento (ssr) → Técnico/a de Mantenimiento Semi Senior"], [3, 80, "Técnico/a de Mantenimiento (ssr) → Técnico/a de Mantenimiento para Data Center"], [3, 85, "Técnico/a de Mantenimiento (ssr) → Mecánico de Mantenimiento Semi Senior"], [2, 85, "Técnico/a de Mantenimiento (ssr) → Mecánico de Mantenimiento Junior"], [0, 20, "Técnico/a de Mantenimiento (ssr) → Soporte Técnico IT"], [0, 30, "Técnico/a de Mantenimiento (ssr) → Técnico de Soporte Senior"], [2, 90, "Operario/a de Depósito (jr) → Operario/a de Depósito"], [2, 90, "Operario/a de Depósito (jr) → Operario de Depósito en Planta Industrial"], [2, 75, "Operario/a de Depósito (jr) → Operario/a de Depósito Semi Senior"], [0, 55, "Operario/a de Depósito (jr) → Operario/a Industrial"], [1, 45, "Operario/a de Depósito (jr) → Operario de Almacén"], [2, 88, "Operario/a de Depósito (jr) → Preparador/a de Pedidos"], [0, 10, "Operario/a de Depósito (jr) → Extraccionista Senior"], [2, 85, "Operario/a de Depósito (jr) → Operario de Almacén Semi Senior"], [1, 35, "Operario/a de Depósito (jr) → Conductor/a de Utilitario"], [0, 20, "Operario/a de Depósito (jr) → Personal de Salón"], [2, 85, "Operario/a de Depósito (jr) → Operario de Almacén Junior"], [0, 20, "Operario/a de Depósito (jr) → Técnico/a de Laboratorio Senior"], [3, 95, "Community Manager (sr) → Community Manager"], [2, 90, "Community Manager (sr) → Community Manager para Startup de IA"], [2, 92, "Community Manager (sr) → Community Manager Semi Senior"], [3, 85, "Community Manager (sr) → Social Media Manager"], [1, 90, "Community Manager (sr) → Content Creator Junior"], [1, 90, "Community Manager (sr) → Content Creator Junior"], [2, 95, "Community Manager (sr) → Community Manager Mid-level"], [1, 85, "Community Manager (sr) → Content Creator"], [2, 95, "Community Manager (sr) → Responsable de Redes Sociales Semi Senior"], [0, 20, "Community Manager (sr) → Key Account Junior"], [0, 20, "Community Manager (sr) → Gerente de Local Junior"], [3, 88, "Enfermero/a (ssr) → Enfermero/a Semi Senior"], [3, 85, "Enfermero/a (ssr) → Licenciado/a en Enfermería Semi Senior"], [3, 95, "Enfermero/a (ssr) → Enfermero/a Semi Senior"], [2, 70, "Enfermero/a (ssr) → Enfermero/a para Guardia"], [2, 55, "Enfermero/a (ssr) → Enfermero/a para Guardia Senior"], [2, 85, "Enfermero/a (ssr) → Enfermero/a para Guardia Junior"], [0, 20, "Enfermero/a (ssr) → Operario de Línea Semi Senior"], [0, 20, "Enfermero/a (ssr) → Repartidor/a con Vehículo Semi Senior"], [2, 55, "Enfermero/a (ssr) → Licenciado/a en Enfermería"], [0, 22, "Enfermero/a (ssr) → Operario de Almacén Semi Senior"], [2, 90, "Enfermero/a (ssr) → Licenciado/a en Enfermería Junior"], [1, 55, "Enfermero/a (ssr) → Administrativo/a de Clínica"], [2, 58, "Analista de Datos (jr) → Analista de Business Intelligence Semi Senior"], [0, 15, "Analista de Datos (jr) → Analista Contable para empresa de tecnología"], [1, 30, "Analista de Datos (jr) → Analista BI Senior"], [1, 20, "Analista de Datos (jr) → Analista de Supply Chain Senior"], [1, 60, "Analista de Datos (jr) → Analista de Logística Junior"], [2, 60, "Analista de Datos (jr) → Analista BI Semi Senior"], [2, 65, "Analista de Datos (jr) → Analista BI"], [1, 15, "Analista de Datos (jr) → Backend Developer"], [1, 55, "Analista de Datos (jr) → Analista de Supply Chain Junior"], [1, 40, "Analista de Datos (jr) → Analista de Logística"], [2, 92, "Vendedor/a de Salón (sr) → Vendedora para local de indumentaria Semi Senior"], [2, 92, "Vendedor/a de Salón (sr) → Asesor/a de Ventas Semi Senior"], [1, 55, "Vendedor/a de Salón (sr) → Mozo/a Senior"], [3, 90, "Vendedor/a de Salón (sr) → Vendedor/a de Mostrador Senior"], [1, 70, "Vendedor/a de Salón (sr) → Personal de Salón"], [1, 65, "Vendedor/a de Salón (sr) → Mozo/a con orientación comercial (objetivos de venta)"], [1, 85, "Vendedor/a de Salón (sr) → Vendedor/a de Mostrador Junior"], [1, 58, "Vendedor/a de Salón (sr) → Mozo/a Senior"], [1, 30, "Vendedor/a de Salón (sr) → Key Account Senior"], [1, 65, "Vendedor/a de Salón (sr) → Personal de Salón Junior"]], "cv_labels": {"CV001": "Asistente Administrativo/a jr", "CV002": "Analista Contable sr", "CV003": "Liquidador/a de Sueldos ssr", "CV004": "Asistente Administrativo/a jr", "CV005": "Analista Contable sr", "CV006": "Cocinero/a sr", "CV007": "Mozo/a ssr", "CV008": "Encargado/a de Local Gastronómico jr", "CV009": "Cocinero/a sr", "CV010": "Mozo/a ssr", "CV011": "Técnico/a de Mantenimiento ssr", "CV012": "Operario/a de Producción jr", "CV013": "Supervisor/a de Calidad sr", "CV014": "Técnico/a de Mantenimiento ssr", "CV015": "Operario/a de Producción jr", "CV016": "Operario/a de Depósito jr", "CV017": "Chofer de Reparto sr", "CV018": "Analista de Logística ssr", "CV019": "Operario/a de Depósito jr", "CV020": "Chofer de Reparto sr", "CV021": "Community Manager sr", "CV022": "Diseñador/a Gráfico/a ssr", "CV023": "Analista de Marketing Digital jr", "CV024": "Community Manager sr", "CV025": "Diseñador/a Gráfico/a ssr", "CV026": "Enfermero/a ssr", "CV027": "Recepcionista / Administrativo/a de Salud jr", "CV028": "Técnico/a de Laboratorio sr", "CV029": "Enfermero/a ssr", "CV030": "Recepcionista / Administrativo/a de Salud jr", "CV031": "Analista de Datos jr", "CV032": "Desarrollador/a Backend sr", "CV033": "Soporte IT ssr", "CV034": "Analista de Datos jr", "CV035": "Desarrollador/a Backend sr", "CV036": "Vendedor/a de Salón sr", "CV037": "Ejecutivo/a Comercial ssr", "CV038": "Representante de Atención al Cliente jr", "CV039": "Vendedor/a de Salón sr", "CV040": "Ejecutivo/a Comercial ssr"}, "ejemplos_error": []};
+const $ = (id) => document.getElementById(id);
+const fmt = (v, d = 1) => (v === null || v === undefined) ? "—" : Number(v).toLocaleString("es-AR", { maximumFractionDigits: d, minimumFractionDigits: 0 });
+const g = D.global, c = D.costo, m = D.meta;
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs = {}, parent) { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function svg(w, h, host) { const s = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img" }); host.appendChild(s); return s; }
+function txt(p, x, y, t, a = {}) { const e = el("text", { x, y, fill: "var(--ink-2)", "font-size": 12, ...a }, p); e.textContent = t; return e; }
+const tip = $("tip");
+function hover(node, html) {
+  node.style.cursor = "default";
+  node.addEventListener("mousemove", (e) => { tip.innerHTML = html; tip.hidden = false; tip.style.left = Math.min(e.clientX + 12, innerWidth - 270) + "px"; tip.style.top = (e.clientY + 12) + "px"; });
+  node.addEventListener("mouseleave", () => { tip.hidden = true; });
+}
+function bar(p, x, y, w, h, fill) { // extremo redondeado hacia afuera, anclado a la base
+  const r = Math.min(4, w / 2, h);
+  if (w <= 0) return el("rect", { x, y, width: 0, height: h, fill }, p);
+  return el("path", { d: `M${x},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h - r}Q${x + w},${y + h} ${x + w - r},${y + h}H${x}Z`, fill }, p);
+}
+
+// ── Hero ──
+const real = m.modo === "real";
+$("lede").textContent = `Evaluación del motor de matching real de NextStep (embeddings de Cohere + ${m.explain_model} en Groq) contra ${D.dataset.n_cvs} CVs y ${D.dataset.n_ofertas} ofertas sintéticas de 8 rubros: ${fmt(D.dataset.n_pares, 0)} pares con la respuesta correcta definida de antemano.`;
+$("banner").innerHTML = real
+  ? `<b>Datos sintéticos.</b>&nbsp;Los CVs y las ofertas son inventados y la relevancia de cada par se calculó con reglas (rol, seniority y skills), no con un LLM. Los scores, tokens y latencias son los de las APIs reales, medidos el ${m.fecha}.`
+  : `<b>Modo simulado.</b>&nbsp;Este reporte usa APIs falsas para probar el circuito. Los números no describen a NextStep; correr <span class="mono">python evals/run_evals.py</span> sin <span class="mono">--mock</span> para la versión real.`;
+const tiles = [
+  ["Recall@10 · etapa 1", g.recall10_emb, "%", "de las ofertas relevantes llegan al LLM"],
+  ["nDCG@10 · resultado final", g.ndcg10_final, "%", "calidad del top 10 que ve el usuario"],
+  ["Precisión@5", g.p5_final, "%", "de las 5 primeras son relevantes"],
+  ["Costo por búsqueda", c.costo_por_busqueda_usd * 1000, "", `USD por mil búsquedas · ${fmt(c.ahorro_pct, 0)}% menos que mandar todo al LLM`],
+];
+$("tiles").innerHTML = tiles.map(([k, v, u, d], i) => `<div class="tile"><div class="k">${k}</div><div class="v">${i === 3 ? "$" + fmt(v, 2) : fmt(v, 1)}<small>${u}</small></div><div class="d">${d}</div></div>`).join("");
+
+// ── Embudo ──
+(function () {
+  const tot = g.relevantes_total, leidas = tot - g.relevantes_no_leidas, enFinal = g.relevantes_en_final;
+  const top5 = Math.round(D.por_cv.reduce((a, r) => a + (r.p5_final || 0) * 5, 0));
+  const showN = m.show_top_n ?? m.explain_top_n;
+  const rows = [
+    ["Ofertas relevantes en el pool", tot, `${D.dataset.n_ofertas} ofertas por búsqueda, todas pasan por embeddings`],
+    [`Entre las ${m.explain_top_n} que lee el LLM`, leidas, "EXPLAIN_TOP_N"],
+    [`En las ${showN} que ve el usuario`, enFinal, showN === m.explain_top_n ? "mismas que lee el LLM" : "SHOW_TOP_N, las mejores según el LLM"],
+    ["Entre las 5 primeras del resultado", top5, "lo que el usuario mira primero"],
+  ];
+  const W = 860, H = 40 + rows.length * 54, L = 250, R = 80, s = svg(W, H, $("funnel"));
+  const x = (v) => L + (W - L - R) * v / tot;
+  rows.forEach(([lab, v, sub], i) => {
+    const y = 18 + i * 54;
+    txt(s, 0, y + 16, lab, { fill: "var(--ink)", "font-size": 13.5 });
+    txt(s, 0, y + 33, sub, { fill: "var(--ink-3)", "font-size": 11.5, "font-family": "var(--f-mono)" });
+    el("rect", { x: L, y: y + 4, width: W - L - R, height: 26, fill: "var(--grid)", rx: 4 }, s);
+    const b = bar(s, L, y + 4, x(v) - L, 26, "var(--s1)");
+    txt(s, x(v) + 8, y + 22, `${fmt(v, 0)} · ${fmt(100 * v / tot, 0)}%`, { fill: "var(--ink)", "font-size": 12.5, "font-family": "var(--f-mono)" });
+    hover(b, `<b>${lab}</b><br>${fmt(v, 0)} de ${fmt(tot, 0)} relevantes`);
+  });
+  $("funnel-text").textContent = m.explain_top_n === showN
+    ? `Relevante = match fuerte o parcial según las reglas. Los embeddings ordenan todas las ofertas, pero el LLM sólo lee las ${m.explain_top_n} primeras: lo que queda más abajo, el usuario nunca lo ve, aunque sea una oferta buena con un título escrito distinto.`
+    : `Relevante = match fuerte o parcial según las reglas. Los embeddings ordenan todas las ofertas, el LLM lee las ${m.explain_top_n} primeras y el usuario ve las ${showN} con mejor score. Una oferta buena que los embeddings dejaron en el puesto 20 puede terminar arriba si el LLM la reconoce.`;
+  const wi = D.what_if;
+  $("funnel-cap").textContent = `Quedaron ${fmt(g.relevantes_no_leidas, 0)} relevantes fuera de las ${m.explain_top_n} que lee el LLM. Se mandaron ${fmt(wi.relevantes_evaluadas, 0)} de ellas (de los puestos ${m.explain_top_n + 1} a ${m.explain_top_n + 20}) al LLM como prueba: ${fmt(wi.rescatables, 0)} habrían entrado al top ${showN}.`;
+})();
+
+// ── Etapas ──
+(function () {
+  function hbars(host, rows, max = 100) {
+    const W = 460, H = 26 + rows.length * 44, L = 150, s = svg(W, H, host);
+    const x = (v) => L + (W - L - 50) * v / max;
+    [0, 25, 50, 75, 100].forEach((t) => { el("line", { x1: x(t), x2: x(t), y1: 6, y2: H - 18, stroke: "var(--grid)" }, s); txt(s, x(t), H - 4, t, { "text-anchor": "middle", "font-size": 11, fill: "var(--ink-3)" }); });
+    rows.forEach(([lab, v, col, tipTxt], i) => {
+      const y = 10 + i * 44;
+      txt(s, 0, y + 19, lab, { fill: "var(--ink)", "font-size": 13 });
+      const b = bar(s, L, y + 4, x(v) - L, 22, col);
+      txt(s, x(v) + 6, y + 20, fmt(v, 1), { fill: "var(--ink)", "font-family": "var(--f-mono)" });
+      hover(b, tipTxt);
+    });
+  }
+  hbars($("stages"), [
+    ["Sólo embeddings", g.ndcg10_emb, "var(--s1)", "Orden por similitud coseno (etapa 1)"],
+    ["Con LLM (final)", g.ndcg10_final, "var(--s2)", "Top 10 reordenado por el score del LLM"],
+  ]);
+  hbars($("internal"), [
+    ["Orden embeddings", g.ndcg10_interno_emb, "var(--s1)", "Las 10 finalistas en orden de similitud"],
+    ["Orden LLM", g.ndcg10_interno, "var(--s2)", "Las mismas 10 ordenadas por score del LLM"],
+  ]);
+  const dif = g.ndcg10_final - g.ndcg10_emb;
+  $("stage-text").textContent = dif >= 0
+    ? `Pasar las 10 finalistas por el LLM sube el nDCG@10 de ${fmt(g.ndcg10_emb)}% a ${fmt(g.ndcg10_final)}% (${fmt(dif)} puntos). Además de reordenar, el LLM genera la explicación que ve el usuario. En ${g.cvs_con_top1_relevante} de ${D.dataset.n_cvs} búsquedas la primera oferta es relevante (MRR ${fmt(g.mrr_final, 2)}).`
+    : `El LLM no mejora el orden: el nDCG@10 pasa de ${fmt(g.ndcg10_emb)}% con embeddings a ${fmt(g.ndcg10_final)}% después del LLM. Su aporte hoy es la explicación, no el ranking. En ${g.cvs_con_top1_relevante} de ${D.dataset.n_cvs} búsquedas la primera oferta es relevante.`;
+})();
+
+// ── Calibración ──
+(function () {
+  const W = 860, H = 300, L = 46, R = 16, T = 14, B = 40, s = svg(W, H, $("strip"));
+  const labels = ["No relevante (0)", "Relacionado (1)", "Match parcial (2)", "Match fuerte (3)"];
+  const bw = (W - L - R) / 4, y = (v) => T + (H - T - B) * (1 - v / 100);
+  [0, 20, 40, 60, 80, 100].forEach((t) => { el("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), stroke: "var(--grid)" }, s); txt(s, L - 8, y(t) + 4, t, { "text-anchor": "end", "font-size": 11, fill: "var(--ink-3)" }); });
+  const cols = ["var(--seq-0)", "var(--seq-1)", "var(--seq-2)", "var(--seq-3)"];
+  let seed = 3; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  D.scored.forEach(([rel, sc, lab]) => {
+    const cx = L + bw * rel + bw / 2 + (rnd() - 0.5) * bw * 0.55;
+    const d = el("circle", { cx, cy: y(sc), r: 4.2, fill: cols[rel], "fill-opacity": 0.85, stroke: "var(--surface)", "stroke-width": 1 }, s);
+    hover(d, `${lab}<br>Relevancia ${rel} · score ${sc}`);
+  });
+  [0, 1, 2, 3].forEach((rel) => {
+    const st = D.calibracion.por_relevancia[rel];
+    txt(s, L + bw * rel + bw / 2, H - 14, labels[rel], { "text-anchor": "middle", fill: "var(--ink)", "font-size": 12.5 });
+    if (st.promedio !== null) {
+      const cx = L + bw * rel + bw / 2;
+      el("line", { x1: cx - bw * 0.32, x2: cx + bw * 0.32, y1: y(st.promedio), y2: y(st.promedio), stroke: "var(--ink)", "stroke-width": 2.5 }, s);
+      txt(s, cx, y(st.promedio) - 8, `prom. ${fmt(st.promedio)} · n=${st.n}`, { "text-anchor": "middle", fill: "var(--ink)", "font-family": "var(--f-mono)", "font-size": 11.5, "font-weight": 600, stroke: "var(--surface)", "stroke-width": 4, "paint-order": "stroke" });
+    }
+  });
+  const pr = D.calibracion.por_relevancia;
+  $("calib-text").textContent = `El score promedio es ${fmt(pr[3].promedio)} para los matches fuertes, ${fmt(pr[2].promedio)} para los parciales, ${fmt(pr[1].promedio)} para los relacionados y ${fmt(pr[0].promedio)} para los no relevantes. Correlación de Spearman entre score y relevancia: ${fmt(D.calibracion.spearman, 2)}. Sólo se evalúan las ofertas que llegan al LLM, así que los no relevantes que aparecen acá son justamente los que confundieron a los embeddings.`;
+
+  const W2 = 860, H2 = 260, s2 = svg(W2, H2, $("thresh"));
+  const us = D.calibracion.umbrales, x = (u) => L + (W2 - L - R) * (u - 40) / 50, y2 = (v) => T + (H2 - T - B) * (1 - v / 100);
+  [0, 25, 50, 75, 100].forEach((t) => { el("line", { x1: L, x2: W2 - R, y1: y2(t), y2: y2(t), stroke: "var(--grid)" }, s2); txt(s2, L - 8, y2(t) + 4, t, { "text-anchor": "end", "font-size": 11, fill: "var(--ink-3)" }); });
+  us.forEach((u) => txt(s2, x(u.umbral), H2 - 16, u.umbral, { "text-anchor": "middle", "font-size": 11, fill: "var(--ink-3)" }));
+  txt(s2, (W2) / 2, H2 - 1, "umbral de score", { "text-anchor": "middle", "font-size": 11, fill: "var(--ink-3)" });
+  [["precision", "var(--s1)"], ["recall", "var(--s2)"]].forEach(([k, col]) => {
+    const pts = us.filter((u) => u[k] !== null);
+    el("path", { d: pts.map((u, i) => `${i ? "L" : "M"}${x(u.umbral)},${y2(u[k])}`).join(""), fill: "none", stroke: col, "stroke-width": 2 }, s2);
+    pts.forEach((u) => { const d = el("circle", { cx: x(u.umbral), cy: y2(u[k]), r: 4.5, fill: col, stroke: "var(--surface)", "stroke-width": 2 }, s2); hover(d, `Umbral ${u.umbral}<br>Precisión ${fmt(u.precision)}% · Recall ${fmt(u.recall)}%<br>${u.n_sobre_umbral} ofertas sobre el umbral`); });
+    const last = pts[pts.length - 1]; if (last) txt(s2, x(last.umbral) - 4, y2(last[k]) - 10, k === "precision" ? "Precisión" : "Recall", { "text-anchor": "end", fill: "var(--ink)", "font-size": 12 });
+  });
+})();
+
+// ── Rubros ──
+(function () {
+  const rs = Object.values(D.por_rubro).sort((a, b) => (b.ndcg10_final ?? 0) - (a.ndcg10_final ?? 0));
+  const W = 860, rowH = 40, L = 150, R = 60, H = 24 + rs.length * rowH, s = svg(W, H, $("rubros"));
+  const x = (v) => L + (W - L - R) * v / 100;
+  [0, 25, 50, 75, 100].forEach((t) => { el("line", { x1: x(t), x2: x(t), y1: 4, y2: H - 18, stroke: "var(--grid)" }, s); txt(s, x(t), H - 4, t, { "text-anchor": "middle", "font-size": 11, fill: "var(--ink-3)" }); });
+  rs.forEach((r, i) => {
+    const y = 6 + i * rowH;
+    txt(s, 0, y + 20, r.label, { fill: "var(--ink)", "font-size": 13 });
+    [["recall10_emb", "var(--s1)", 0], ["ndcg10_final", "var(--s2)", 15]].forEach(([k, col, dy]) => {
+      const b = bar(s, L, y + 4 + dy, x(r[k] ?? 0) - L, 13, col);
+      txt(s, x(r[k] ?? 0) + 5, y + 15 + dy, fmt(r[k]), { "font-family": "var(--f-mono)", "font-size": 11, fill: "var(--ink-2)" });
+      hover(b, `<b>${r.label}</b> (${r.n_cvs} CVs)<br>Recall@10 etapa 1: ${fmt(r.recall10_emb)}%<br>nDCG@10 final: ${fmt(r.ndcg10_final)}%<br>Precisión@5: ${fmt(r.p5_final)}%`);
+    });
+  });
+  const best = rs[0], worst = rs[rs.length - 1];
+  $("rubro-text").textContent = `El mejor rubro es ${best.label} (nDCG@10 ${fmt(best.ndcg10_final)}%) y el más flojo es ${worst.label} (${fmt(worst.ndcg10_final)}%). Los CVs que no tienen sección de skills explícita dan un nDCG@10 final de ${fmt(D.por_seccion_skills.sin_seccion_skills.ndcg10_final)}%, contra ${fmt(D.por_seccion_skills.con_seccion_skills.ndcg10_final)}% de los que sí la tienen.`;
+})();
+
+// ── Casos difíciles ──
+(function () {
+  const t = D.trampas, id = D.idioma, sn = D.seniority_llm;
+  $("facts").innerHTML = [
+    [`${fmt(t.en_top10, 0)} de ${fmt(t.n_pares, 0)}`, "trampas llegaron al top 10", `Ofertas de otro rubro escritas con el vocabulario del CV (por ejemplo, "vendedor de software" con SQL y Python). ${t.score_llm_promedio !== null ? `Las que llegaron al LLM sacaron ${fmt(t.score_llm_promedio)} de score promedio.` : ""} Puesto promedio en la etapa 1: ${fmt(t.rank_emb_promedio)}.`],
+    [`${fmt(id.en.recall10_emb)}% vs ${fmt(id.es.recall10_emb)}%`, "recall@10 de ofertas en inglés vs español", `Las fuentes remotas (RemoteOK, Himalayas) publican en inglés. Puesto promedio de una oferta relevante: ${fmt(id.en.rank_emb_promedio)} en inglés contra ${fmt(id.es.rank_emb_promedio)} en español (${id.en.n_pares_relevantes} pares relevantes en inglés).`],
+    [`${fmt(sn["0"].score_promedio)} → ${fmt(sn["1"].score_promedio)} → ${fmt(sn["2"].score_promedio)}`, "score con gap de seniority 0, 1 y 2", `Mismo rol, distinta experiencia. Si el LLM castiga el desajuste de seniority, el score tiene que bajar de izquierda a derecha.`],
+  ].map(([big, k, p]) => `<div class="fact"><div class="big">${big}</div><div class="fig-title">${k}</div><p>${p}</p></div>`).join("");
+})();
+
+// ── Costo ──
+(function () {
+  const cs = D.consistencia, je = D.json_errores;
+  $("cost").innerHTML = [
+    [`${fmt(c.latencia_busqueda_ms_promedio / 1000)} s`, "por búsqueda", `Etapa 1: ${fmt(c.latencia_etapa1_ms_promedio / 1000)} s. LLM: ${fmt(c.latencia_llm_ms_promedio / 1000)} s por oferta (p95 ${fmt(c.latencia_llm_ms_p95 / 1000)} s), en serie.`],
+    [`±${fmt(cs.delta_promedio)}`, "puntos de diferencia al repetir", `Mismo CV y misma oferta, dos veces (temperature 0.3). En el ${fmt(cs.pct_delta_10_o_mas)}% de los ${cs.n} pares la diferencia fue de 10 puntos o más; la máxima fue ${fmt(cs.delta_max, 0)}.`],
+    [`${je.n} de ${je.de}`, "respuestas con JSON inválido", `Cuando el LLM no devuelve JSON válido, el código usa la similitud como score de respaldo.`],
+  ].map(([big, k, p]) => `<div class="fact"><div class="big">${big}</div><div class="fig-title">${k}</div><p>${p}</p></div>`).join("");
+  $("cost-text").textContent = `Con ~${fmt(c.tokens_llm_in_promedio, 0)} tokens de entrada y ~${fmt(c.tokens_llm_out_promedio, 0)} de salida por oferta, una búsqueda cuesta US$ ${fmt(c.costo_por_busqueda_usd, 4)}. Mandar las ${D.dataset.n_ofertas} ofertas directo al LLM costaría US$ ${fmt(c.costo_si_todo_al_llm_usd, 4)}: el filtro por embeddings ahorra un ${fmt(c.ahorro_pct, 0)}%. Precios de referencia por millón de tokens: LLM US$ ${fmt(c.precios_usd_por_millon.llm_in, 2)} entrada / ${fmt(c.precios_usd_por_millon.llm_out, 2)} salida, embeddings US$ ${fmt(c.precios_usd_por_millon.embed, 2)}.`;
+})();
+
+// ── Ejemplos ──
+$("cases").innerHTML = D.ejemplos_error.length ? D.ejemplos_error.map((e) => `<div class="case"><div><span class="pill ${e.relevancia === 0 ? "bad" : ""}">${e.tipo}</span></div><div><b>CV:</b> ${e.cv}<br><b>Oferta:</b> ${e.oferta}</div><div class="mono">Etiqueta ${e.relevancia} (${e.motivo}) · score LLM ${e.score}</div><p>${e.explicacion ? "“" + e.explicacion + "”" : ""}</p></div>`).join("") : `<p>No hubo desacuerdos grandes (match fuerte con score bajo 50 ni no relevante con score de 60 o más).</p>`;
+
+// ── Metodología ──
+const dist = D.dataset.distribucion_relevancia;
+$("method").innerHTML = [
+  `<b>Dataset sintético:</b> ${D.dataset.n_cvs} CVs (5 por rubro, seniority junior / semi senior / senior) y ${D.dataset.n_ofertas} ofertas en 8 rubros, con ${D.dataset.n_trampas} trampas de vocabulario y ${D.dataset.n_ingles} ofertas en inglés. La mitad de los CVs no tiene sección de skills, que quedan mencionadas sólo dentro de las tareas.`,
+  `<b>Etiquetas por reglas, no por LLM:</b> 3 = mismo rol, mismo seniority y cubre ≥60% de los requisitos; 2 = mismo rol, seniority a un paso y cubre ≥40%; 1 = relacionado; 0 = otro rubro. Distribución: ${Object.entries(dist).map(([k, v]) => `${k} ${fmt(v, 0)}`).join(" · ")}.`,
+  `<b>Motor real:</b> se llaman las funciones de producción <span class="mono">prefilter_by_embeddings</span> y <span class="mono">explain_match</span> sin modificarlas (${m.embedding_model} y ${m.explain_model}). Sólo se agregó instrumentación para medir tokens y latencia.`,
+  `<b>Llamadas extra:</b> ${fmt(D.dataset.llamadas_llm, 0)} llamadas al LLM en total: las ${m.explain_top_n} finalistas de cada búsqueda, algunas ofertas de los puestos ${m.explain_top_n + 1}-${m.embedding_top_k} (para el análisis de qué se pierde) y ${D.consistencia.n} repeticiones para medir consistencia.`,
+  `<b>Límites:</b> el texto sintético es más prolijo que el real, así que probablemente los números de la etapa 1 sean optimistas. Las reglas de etiquetado son una simplificación de cómo decide un reclutador. Sirve para comparar versiones del motor entre sí, no como medida absoluta de calidad en producción.`,
+].map((x) => `<li>${x}</li>`).join("");
+
+// ── Tabla por CV ──
+const cols = [["cv_id", "CV"], ["n_relevantes", "Relevantes"], ["recall10_emb", "Recall@10"], ["ndcg10_emb", "nDCG emb."], ["ndcg10_final", "nDCG final"], ["p5_final", "P@5"], ["mrr_final", "MRR"], ["trampas_en_top10", "Trampas top10"]];
+$("percv").innerHTML = `<table><thead><tr>${cols.map(([, h]) => `<th>${h}</th>`).join("")}</tr></thead><tbody>${D.por_cv.map((r) => `<tr>${cols.map(([k]) => { const v = r[k]; const isPct = ["recall10_emb", "ndcg10_emb", "ndcg10_final", "p5_final"].includes(k); return `<td>${k === "cv_id" ? `${v} · ${D.cv_labels[v]}` : isPct ? fmt(v === null ? null : v * 100) : fmt(v, 2)}</td>`; }).join("")}</tr>`).join("")}</tbody></table>`;
+$("foot").textContent = `Generado por evals/reporte_html.py · modo ${m.modo} · ${m.fecha} · código en github.com/MarcosGriffa/job_scraping`;
+</script>
+
+</body></html>

@@ -1,0 +1,15 @@
+{
+  "modo": "real",
+  "motor": "evals\\motor_v1",
+  "embedding_model": "embed-multilingual-v3.0",
+  "explain_model": "openai/gpt-oss-120b",
+  "embedding_top_k": 30,
+  "explain_top_n": 10,
+  "show_top_n": 10,
+  "temperature": 0.3,
+  "reasoning_effort": "medium (default)",
+  "llm_paralelo": 1,
+  "n_cvs": 8,
+  "n_ofertas": 200,
+  "fecha": "2026-10-16 09:34"
+}

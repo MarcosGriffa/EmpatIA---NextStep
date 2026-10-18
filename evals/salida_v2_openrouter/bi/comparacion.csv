@@ -1,0 +1,12 @@
+﻿metrica,clave,antes,despues,delta,mejora
+Relevantes que llegan al top 10 final (%),recall10_final,100.0,97.2,-2.8,False
+nDCG@10 del resultado final (%),ndcg10_final,93.5,89.5,-4.0,False
+Precisión@5 (%),p5_final,97.5,95.0,-2.5,False
+Precisión@10 (%),p10_final,66.2,63.7,-2.5,False
+MRR (primera relevante),mrr_final,1.0,1.0,0.0,
+Relevantes que el LLM nunca lee,relevantes_no_leidas,0,0,0,
+Correlación score ↔ relevancia,spearman,0.782,0.784,0.002,True
+Variación del score al repetir (pts),delta_promedio,2.6,4.8,2.2,False
+Repeticiones con 10+ pts de diferencia (%),pct_delta_10_o_mas,12.5,25.0,12.5,False
+Costo por búsqueda (USD),costo_por_busqueda_usd,0.0083,0.0087,0.0004,False
+Tiempo por búsqueda (ms),latencia_busqueda_ms_promedio,147382,28881,-118501,True

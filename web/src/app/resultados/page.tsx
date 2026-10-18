@@ -8,7 +8,7 @@ import { JobCard } from "@/components/JobCard";
 import { NotificationToggle } from "@/components/NotificationToggle";
 
 // Cuántas ofertas se muestran. El motor ya devuelve exactamente esta
-// cantidad (ver EXPLAIN_TOP_N en pipeline.py), pero recortamos también acá
+// cantidad (ver SHOW_TOP_N en pipeline.py), pero recortamos también acá
 // para que las corridas viejas —guardadas cuando el motor devolvía 15— se
 // vean igual que las nuevas.
 const MAX_OFERTAS = 10;

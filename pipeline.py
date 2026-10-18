@@ -16,6 +16,7 @@ lo imprime lindo en la consola.
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -56,11 +57,15 @@ TECH_SOURCES = [RemoteOKSource(), JobicySource(), HimalayasSource(), WeWorkRemot
 
 MAX_RESULTS_PER_QUERY = 25
 EMBEDDING_TOP_K = 30
-# Cuántas ofertas finalistas se explican con IA (y por lo tanto, cuántas se
-# muestran al usuario). Bajado de 15 a 10 el 17/08/2026 a pedido de Marcos:
-# además de ser lo que se quiere mostrar, ahorra 5 llamadas al modelo grande
-# de Groq por cada CV.
-EXPLAIN_TOP_N = 10
+# Cuántas finalistas LEE el LLM. Hasta el 13/10/2026 era 10 y coincidía con
+# lo que se muestra; las evals (evals/) mostraron que ~13% de las ofertas
+# relevantes quedaban entre los puestos 11 y 30 de los embeddings — sobre
+# todo títulos escritos distinto ("Personal de Salón" para un CV de mozo) —
+# y que el LLM las reconocía (88-92 de score) cuando las leía. Ahora lee
+# las 30 en paralelo (ver LLM_MAX_PARALLEL en semantic_match.py).
+EXPLAIN_TOP_N = int(os.getenv("EXPLAIN_TOP_N", "30"))
+# Cuántas se muestran al usuario: las mejores según el LLM.
+SHOW_TOP_N = 10
 
 
 def _normalize_key(title: str, company: str) -> str | None:
@@ -172,7 +177,7 @@ def run(cv_path: str):
 
     results = rank_and_explain(
         cv_text, jobs, embedding_top_k=EMBEDDING_TOP_K, explain_top_n=EXPLAIN_TOP_N,
-        cand_location=cand_location,
+        show_top_n=SHOW_TOP_N, cand_location=cand_location,
     )
 
     # ── Guardar resultados ──

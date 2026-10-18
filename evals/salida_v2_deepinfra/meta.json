@@ -1,0 +1,16 @@
+{
+  "modo": "real",
+  "motor": "actual",
+  "proveedor_llm": "https://openrouter.ai/api/v1",
+  "embedding_model": "embed-multilingual-v3.0",
+  "explain_model": "openai/gpt-oss-120b",
+  "embedding_top_k": 30,
+  "explain_top_n": 30,
+  "show_top_n": 10,
+  "temperature": 0,
+  "reasoning_effort": "low",
+  "llm_paralelo": 6,
+  "n_cvs": 8,
+  "n_ofertas": 200,
+  "fecha": "2026-10-18 17:01"
+}

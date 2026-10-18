@@ -1,0 +1,108 @@
+// medidas.dax — Medidas del tablero de evals de NextStep.
+// Crear una tabla vacía "_Medidas" (Inicio → Especificar datos → Cargar)
+// y pegar cada medida con "Nueva medida". Todas respetan los filtros de
+// dim_cv (rubro, seniority) y dim_oferta (idioma, trampa).
+
+// ── Etapa 1: embeddings ─────────────────────────────────────────
+Relevantes =
+CALCULATE ( COUNTROWS ( fact_pares ), dim_relevancia[es_relevante] = 1 )
+
+Relevantes en top 10 =
+CALCULATE ( [Relevantes], fact_pares[en_top10_emb] = 1 )
+
+Relevantes en top 30 =
+CALCULATE ( [Relevantes], fact_pares[en_top30_emb] = 1 )
+
+Recall@10 =
+DIVIDE ( [Relevantes en top 10], [Relevantes] )
+
+Recall@30 =
+DIVIDE ( [Relevantes en top 30], [Relevantes] )
+
+Relevantes perdidas 11-30 =
+CALCULATE ( [Relevantes], fact_pares[en_top30_emb] = 1, fact_pares[en_top10_emb] = 0 )
+
+// ── Etapa 2: resultado final (promedio por CV) ──────────────────
+nDCG@10 embeddings = AVERAGE ( fact_metricas_cv[ndcg10_emb] )
+
+nDCG@10 final = AVERAGE ( fact_metricas_cv[ndcg10_final] )
+
+Aporte del LLM (pts) = ( [nDCG@10 final] - [nDCG@10 embeddings] ) * 100
+
+Precisión@5 = AVERAGE ( fact_metricas_cv[p5_final] )
+
+Precisión@10 = AVERAGE ( fact_metricas_cv[p10_final] )
+
+MRR = AVERAGE ( fact_metricas_cv[mrr_final] )
+
+// ── Calibración del score del LLM ───────────────────────────────
+Score LLM promedio =
+CALCULATE ( AVERAGE ( fact_llm_llamadas[score] ), fact_llm_llamadas[repeticion] = 0 )
+
+Llamadas evaluadas =
+CALCULATE ( COUNTROWS ( fact_llm_llamadas ), fact_llm_llamadas[repeticion] = 0 )
+
+// Requiere el parámetro "Umbral" (Modelado → Nuevo parámetro → Rango
+// numérico, de 40 a 95, incremento 5). Power BI crea la medida
+// [Valor Umbral] automáticamente.
+Precisión sobre umbral =
+VAR u = [Valor Umbral]
+RETURN
+    DIVIDE (
+        CALCULATE ( COUNTROWS ( fact_llm_llamadas ), fact_llm_llamadas[repeticion] = 0,
+            fact_llm_llamadas[score] >= u, fact_llm_llamadas[relevancia] >= 2 ),
+        CALCULATE ( COUNTROWS ( fact_llm_llamadas ), fact_llm_llamadas[repeticion] = 0,
+            fact_llm_llamadas[score] >= u )
+    )
+
+Recall sobre umbral =
+VAR u = [Valor Umbral]
+RETURN
+    DIVIDE (
+        CALCULATE ( COUNTROWS ( fact_llm_llamadas ), fact_llm_llamadas[repeticion] = 0,
+            fact_llm_llamadas[score] >= u, fact_llm_llamadas[relevancia] >= 2 ),
+        CALCULATE ( COUNTROWS ( fact_llm_llamadas ), fact_llm_llamadas[repeticion] = 0,
+            fact_llm_llamadas[relevancia] >= 2 )
+    )
+
+// Diferencia promedio de score al repetir la misma llamada
+Δ consistencia =
+AVERAGEX (
+    FILTER ( fact_llm_llamadas, fact_llm_llamadas[repeticion] = 1 ),
+    VAR par = fact_llm_llamadas[par_id]
+    VAR base =
+        CALCULATE ( MAX ( fact_llm_llamadas[score] ), ALL ( fact_llm_llamadas ),
+            fact_llm_llamadas[par_id] = par, fact_llm_llamadas[repeticion] = 0 )
+    RETURN ABS ( fact_llm_llamadas[score] - base )
+)
+
+// ── Casos difíciles ─────────────────────────────────────────────
+Trampas en top 10 =
+CALCULATE ( COUNTROWS ( fact_pares ),
+    fact_pares[tipo_par] = "Trampa de vocabulario", fact_pares[en_top10_emb] = 1 )
+
+Trampas totales =
+CALCULATE ( COUNTROWS ( fact_pares ), fact_pares[tipo_par] = "Trampa de vocabulario" )
+
+% trampas que pasan =
+DIVIDE ( [Trampas en top 10], [Trampas totales] )
+
+Puesto promedio etapa 1 = AVERAGE ( fact_pares[rank_emb] )
+
+// ── Costo y latencia ────────────────────────────────────────────
+Costo por búsqueda (USD) = AVERAGE ( fact_metricas_cv[costo_usd] )
+
+Costo cada 1.000 búsquedas (USD) = [Costo por búsqueda (USD)] * 1000
+
+Latencia LLM p95 (s) =
+PERCENTILEX.INC (
+    FILTER ( fact_llm_llamadas, fact_llm_llamadas[proposito] = "produccion" ),
+    fact_llm_llamadas[latencia_ms], 0.95
+) / 1000
+
+Latencia búsqueda (s) =
+AVERAGEX ( fact_metricas_cv,
+    ( fact_metricas_cv[latencia_etapa1_ms] + fact_metricas_cv[latencia_etapa2_ms] ) / 1000 )
+
+Tokens LLM por búsqueda =
+AVERAGEX ( fact_metricas_cv, fact_metricas_cv[tokens_llm_in] + fact_metricas_cv[tokens_llm_out] )

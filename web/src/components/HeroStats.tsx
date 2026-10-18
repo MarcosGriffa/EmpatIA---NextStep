@@ -18,7 +18,7 @@ import { IconNetwork, IconMatch, IconCheckCircle, IconGlobe } from "./illustrati
  *   - +150 avisos -> corridas reales medidas: 179, 221 y 241 avisos únicos.
  *                    Se usa 150 como piso conservador, no un promedio
  *                    inflado.
- *   - 10 matches  -> EXPLAIN_TOP_N en pipeline.py
+ *   - 10 matches  -> SHOW_TOP_N en pipeline.py (el LLM lee EXPLAIN_TOP_N = 30)
  *   - Todos       -> el motor no tiene lista de rubros; clasifica el CV
  *                    que le den. Es la promesa del título del hero.
  */

@@ -1,0 +1,9 @@
+﻿cv_id,rubro,rol,seniority,orden_seniority,anios_experiencia,n_skills,seccion_skills
+CV001,Administración,Asistente Administrativo/a,jr,0,2,5,Sin sección de skills
+CV006,Gastronomía,Cocinero/a,sr,2,9,8,Sin sección de skills
+CV011,Industria,Técnico/a de Mantenimiento,ssr,1,4,6,Sin sección de skills
+CV016,Logística,Operario/a de Depósito,jr,0,2,5,Con sección de skills
+CV021,Marketing,Community Manager,sr,2,7,8,Con sección de skills
+CV026,Salud,Enfermero/a,ssr,1,4,6,Sin sección de skills
+CV031,Tecnología,Analista de Datos,jr,0,2,5,Con sección de skills
+CV036,Ventas y atención,Vendedor/a de Salón,sr,2,8,8,Sin sección de skills
