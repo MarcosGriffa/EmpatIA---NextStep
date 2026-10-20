@@ -35,6 +35,12 @@ jobs:
           # poder usar Jooble ni por error (ver el docstring del script).
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+          
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL || 'openai/gpt-oss-120b' }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+          LLM_MAX_PARALLEL: "3"
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}

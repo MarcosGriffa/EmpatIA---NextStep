@@ -6,7 +6,8 @@ dedicás, busca en seis portales de empleo a la vez y te devuelve las
 ofertas rankeadas con una explicación real de por qué encajás (o por qué
 no).
 
-🔗 **[empatianextstep.com](https://www.empatianextstep.com)** · [Dashboard de
+🔗 **[empatianextstep.com](https://www.empatianextstep.com)** · [Evals del
+ranking](#evals-cómo-medí-y-mejoré-el-ranking) · [Dashboard de
 Power BI](#dashboard-de-power-bi-modelo-de-datos-y-analítica) · [Cómo está
 armado](#arquitectura)
 
@@ -52,9 +53,10 @@ y arma sus propias búsquedas.
    └──────────┬───────────┘  aunque no compartan una sola palabra
               ▼
    ┌──────────────────────┐
-   │ 4. Explicación       │  LLM grande (Groq) lee CV + aviso completos
-   │    (etapa cara)      │  y devuelve score 0-100, por qué matcheás,
-   └──────────┬───────────┘  qué te falta, y un veredicto en castellano
+   │ 4. Explicación       │  LLM grande (gpt-oss-120b) lee las 30
+   │    (etapa cara)      │  finalistas en paralelo y devuelve score
+   └──────────┬───────────┘  0-100, por qué matcheás y qué te falta.
+              │              Se muestran las 10 mejores.
               ▼
    Ranking explicado + CV adaptado a cada oferta (.docx)
 ```
@@ -62,9 +64,64 @@ y arma sus propias búsquedas.
 **La decisión de diseño central son las dos etapas.** Pasar cada aviso por
 un LLM grande sería lento y caro; filtrar solo por palabra clave sería
 pobre. La etapa 3 usa embeddings (prácticamente gratis) para descartar el
-grueso del ruido, y la etapa 4 gasta el modelo caro solo en el puñado de
+grueso del ruido, y la etapa 4 gasta el modelo caro solo en las 30
 finalistas. Resultado: entendimiento real por centavos de dólar por
 búsqueda.
+
+---
+
+## Evals: cómo medí y mejoré el ranking
+
+¿El ranking encuentra las ofertas correctas? Para responderlo con números
+armé una evaluación offline en [`evals/`](evals/).
+
+**El set de prueba.** 40 CVs y 200 ofertas sintéticas de 8 rubros (8.000
+pares CV × oferta), con trampas a propósito: avisos de un rubro escritos con
+el vocabulario de otro, ofertas en inglés y CVs sin sección de skills. La
+relevancia de cada par (0 a 3) se calcula **con reglas** (rol, seniority,
+cobertura de requisitos) y no con un LLM: si la "respuesta correcta" la
+pusiera un modelo, el sistema se estaría corrigiendo a sí mismo.
+
+**Lo que encontré.** Los embeddings ordenaban todas las ofertas, pero el LLM
+sólo leía las 10 primeras, que eran también las que se mostraban. El 18% de
+las ofertas relevantes quedaba entre los puestos 11 y 30, casi siempre por
+títulos escritos distinto ("Personal de Salón" para un CV de mozo). Cuando
+el LLM las leía, las reconocía con 88-92 de score.
+
+**Qué cambié.** El LLM lee 30 finalistas en paralelo y se muestran las 10
+mejores; `temperature` 0; razonamiento corto (`reasoning_effort="low"`,
+menos tokens por llamada); prompt con criterios explícitos de puesto
+equivalente y seniority; y el proveedor del modelo pasó a ser configurable,
+porque en el plan gratuito de Groq leer 30 ofertas tardaba 2,5 minutos por
+los límites por minuto.
+
+**Resultados** (mismas 8 búsquedas, una por rubro, motor real):
+
+| | Antes | Después |
+|---|---|---|
+| Ofertas relevantes que llegan al top 10 | 82% | **100%** |
+| nDCG@10 | 77,5% | **91,4%** |
+| Precisión@5 | 87,5% | **100%** |
+| Variación del score al repetir la misma consulta | ±4,1 pts | **0** |
+| Costo por búsqueda | US$ 0,005 | US$ 0,009 |
+| Tiempo de la etapa de matching | 32 s | 28 s |
+
+Antes de elegir 30 simulé, con los scores ya obtenidos, cuántas finalistas
+convenía leer: 10 → nDCG 81%, 15 → 87%, 20 → 89%, 30 → 93%. Con un proveedor
+sin límites por minuto, 30 cuesta casi lo mismo y no agrega espera.
+
+**Límites.** El texto sintético es más prolijo que el real y la comparación
+final es sobre 8 búsquedas: sirve para comparar versiones del motor entre
+sí, no como medida absoluta de calidad en producción.
+
+```bash
+python evals/generar_dataset.py                       # dataset + etiquetas
+python evals/run_evals.py --por-rubro 1               # corre el motor real
+python evals/comparar.py evals/salida evals/salida_v2 # antes vs después
+```
+
+Detalle completo, métricas y modelo para Power BI en
+[`evals/README.md`](evals/README.md).
 
 ---
 
@@ -144,7 +201,9 @@ Motor de matching (Python)          Supabase (Postgres)
 | **Frontend** | Next.js 16, React 19, Tailwind v4 (Vercel) |
 | **Backend** | Python 3.13, FastAPI (Render) |
 | **Base de datos** | Supabase / PostgreSQL — RLS activo, `jsonb` |
-| **IA — clasificación y explicación** | Groq (`gpt-oss-20b` / `gpt-oss-120b`) |
+| **IA — clasificación** | Groq (`gpt-oss-20b`) |
+| **IA — explicación del match** | `gpt-oss-120b` vía OpenRouter → DeepInfra (proveedor configurable) |
+| **Evaluación** | Set sintético propio + métricas de ranking (`evals/`) |
 | **IA — filtro semántico** | Cohere `embed-multilingual-v3.0` |
 | **Analítica / BI** | Power BI Desktop, DAX, vistas SQL |
 | **Scraping** | `requests` + `BeautifulSoup4`, 6 fuentes |
