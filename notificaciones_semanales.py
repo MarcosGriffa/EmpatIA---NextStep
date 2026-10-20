@@ -52,13 +52,16 @@ import geo
 from pipeline import collect_jobs, EMBEDDING_TOP_K
 from semantic_match import rank_and_explain
 from sources.computrabajo import ComputrabajoSource
+from sources.getonboard import GetOnBoardSource
+from sources.careerjet import CareerjetSource
 
 from api import storage
 from api.emailer import enviar_resumen_semanal
 from api.job_utils import make_job_id
 
-# Sin Jooble a propósito — ver el docstring de arriba.
-FUENTES_AUTOMATICAS = [ComputrabajoSource()]
+# Sin Jooble a propósito — ver el docstring de arriba. Get on Board no tiene
+# cupo y Careerjet no tiene tope de por vida, así que sí van.
+FUENTES_AUTOMATICAS = [ComputrabajoSource(), GetOnBoardSource(), CareerjetSource()]
 
 # Cuántas ofertas nuevas, como máximo, se le explican con IA a una persona
 # en una corrida — protege contra un caso raro donde de golpe aparecen

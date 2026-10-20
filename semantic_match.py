@@ -293,14 +293,21 @@ def rank_and_explain(
     a ofertas presenciales/híbridas con ubicación conocida de ambos lados
     (nunca a remotas, ni a modalidad/ubicación desconocida). Ver geo.py.
     """
+    import time as _time
+    from collections import Counter
+
+    t0 = _time.perf_counter()
     finalists = prefilter_by_embeddings(cv_text, jobs, top_k=embedding_top_k)
-    print(f"Prefiltro por embeddings: {len(jobs)} → {len(finalists)} finalistas")
+    t_emb = _time.perf_counter() - t0
+    print(f"Prefiltro por embeddings: {len(jobs)} → {len(finalists)} finalistas ({t_emb:.1f}s)")
 
     to_explain = finalists[:explain_top_n]
     print(f"Analizando con IA {len(to_explain)} ofertas finalistas "
           f"({min(LLM_MAX_PARALLEL, max(1, len(to_explain)))} en paralelo)...")
 
+    t0 = _time.perf_counter()
     veredictos = explain_many(cv_text, to_explain)
+    print(f"[LLM] {len(to_explain)} ofertas en {_time.perf_counter() - t0:.1f}s")
     results = []
     for job, verdict in zip(to_explain, veredictos):
         job.update(verdict)
@@ -314,4 +321,8 @@ def rank_and_explain(
         results.sort(key=geo.sort_key_score_final, reverse=True)
     else:
         results.sort(key=lambda j: j.get("score", 0), reverse=True)
-    return results[:show_top_n] if show_top_n else results
+    final = results[:show_top_n] if show_top_n else results
+    # De qué portales salen las ofertas que se muestran (diagnóstico en logs)
+    print("[fuentes del resultado] " + ", ".join(f"{k} {v}" for k, v in Counter(j.get("source", "?") for j in final).most_common())
+          + f" | sin descripción: {sum(1 for j in final if not j.get('description'))}")
+    return final
