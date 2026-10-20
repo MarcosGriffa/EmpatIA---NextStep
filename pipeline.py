@@ -32,6 +32,8 @@ from semantic_match import rank_and_explain
 
 from sources.computrabajo import ComputrabajoSource
 from sources.jooble import JoobleSource
+from sources.getonboard import GetOnBoardSource
+from sources.careerjet import CareerjetSource
 # from sources.multitrabajos import MultitrabajosSource  # DESACTIVADO: es de Ecuador, no Argentina
 # from sources.konzerta import KonzertaSource             # DESACTIVADO: es de Panamá, no Argentina
 from sources.remoteok import RemoteOKSource
@@ -52,7 +54,12 @@ from sources.weworkremotely import WeWorkRemotelySource
 # dominio argentino (ar.jooble.org). Fuente general — trae de cualquier
 # rubro, no solo tech. OJO con el cupo: el plan gratuito son 500 requests
 # EN TOTAL de por vida (~1 por query, ~5 por CV) — ver sources/jooble.py.
-GENERAL_SOURCES = [ComputrabajoSource(), JoobleSource()]
+# Get on Board y Careerjet sumados el 20/10/2026: con Jooble agotado (cupo
+# de por vida), los CVs que no son tech quedaban con Computrabajo solo.
+# Get on Board: API pública, sin key, LATAM (fuerte en tech, pero también
+# marketing, diseño, ventas, producto). Careerjet: metabuscador de cualquier
+# rubro, API oficial con key gratis (sin key se saltea sola).
+GENERAL_SOURCES = [ComputrabajoSource(), JoobleSource(), GetOnBoardSource(), CareerjetSource()]
 
 # Fuentes verticales tech (inglés): se activan solo si el CV es de área IT,
 # y se consultan con las queries en inglés (search_queries_en).
@@ -62,7 +69,7 @@ MAX_RESULTS_PER_QUERY = 25
 # Pedidos simultáneos por fuente en collect_jobs. Computrabajo se scrapea
 # (HTML) y tiene pausas entre páginas: va con 2 para no parecer un bot.
 # Las demás son APIs/feeds.
-_MAX_POR_FUENTE = {"computrabajo": 2, "jooble": 3}
+_MAX_POR_FUENTE = {"computrabajo": 2, "jooble": 3, "getonboard": 2, "careerjet": 3}
 EMBEDDING_TOP_K = 30
 # Cuántas finalistas LEE el LLM. Hasta el 13/10/2026 era 10 y coincidía con
 # lo que se muestra; las evals (evals/) mostraron que ~13% de las ofertas
@@ -143,21 +150,30 @@ def collect_jobs(
     print(f"[fuentes] {len(tareas)} búsquedas en {time.perf_counter() - t0:.1f} s")
     all_jobs = [job for jobs in resultados for job in jobs]
 
-    seen_urls = set()
-    seen_keys = set()
+    # Deduplicación. Jooble (y Careerjet) son metabuscadores: muchas de sus
+    # ofertas son las MISMAS de Computrabajo. Antes se quedaba siempre la
+    # primera que aparecía (la de Computrabajo, que viene SIN descripción) y
+    # se tiraba la otra, que sí traía un resumen. Ahora, ante un duplicado,
+    # se conserva la versión con la descripción más larga — así la IA lee
+    # más que el título — y se anota en qué portales apareció.
+    por_url: dict[str, dict] = {}
+    por_key: dict[str, dict] = {}
     unique_jobs = []
     for job in all_jobs:
         url = job.get("url", "")
         key = _normalize_key(job.get("title", ""), job.get("company", ""))
-        if url and url in seen_urls:
+        previo = (por_url.get(url) if url else None) or (por_key.get(key) if key is not None else None)
+        if previo is not None:
+            previo.setdefault("fuentes", [previo["source"]])
+            if job["source"] not in previo["fuentes"]:
+                previo["fuentes"].append(job["source"])
+            if len(job.get("description") or "") > len(previo.get("description") or ""):
+                previo["description"] = job["description"]
             continue
-        # key es None cuando la empresa vino vacía — no deduplicar por
-        # título solo, dejar pasar (la URL exacta ya se chequeó arriba).
-        if key is not None and key in seen_keys:
-            continue
-        seen_urls.add(url)
+        if url:
+            por_url[url] = job
         if key is not None:
-            seen_keys.add(key)
+            por_key[key] = job
         unique_jobs.append(job)
 
     print(f"\nTotal ofertas encontradas: {len(all_jobs)} | Únicas: {len(unique_jobs)}")

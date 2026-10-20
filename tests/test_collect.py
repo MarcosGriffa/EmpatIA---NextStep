@@ -59,6 +59,26 @@ eq(ct.max_activos <= 2, True, "nunca más de 2 pedidos a la vez a Computrabajo")
 serie = 5 * 0.2 + 5 * 0.1
 eq(dur < serie * 0.7, True, f"tarda menos que en serie ({dur:.2f}s vs {serie:.2f}s)")
 
+print("\n== deduplicación: se queda la versión con descripción ==")
+
+
+class ConDesc(Falsa):
+    def search(self, query, max_results=25):
+        return [{"title": "Analista de Datos", "company": "Acme", "url": "https://jooble/x", "source": "jooble",
+                 "description": "Buscamos analista con SQL y Power BI."}]
+
+
+class SinDesc(Falsa):
+    def search(self, query, max_results=25):
+        return [{"title": "Analista de datos", "company": "ACME", "url": "https://ct/x", "source": "computrabajo",
+                 "description": ""}]
+
+
+r = pipeline.collect_jobs(["q"], [], False, general_sources=[SinDesc("computrabajo", 0), ConDesc("jooble", 0)])
+eq(len(r), 1, "el mismo aviso en dos portales queda una sola vez")
+eq(r[0]["description"], "Buscamos analista con SQL y Power BI.", "se queda con la descripción más completa")
+eq(r[0].get("fuentes"), ["computrabajo", "jooble"], "anota en qué portales apareció")
+
 print()
 if _fallos:
     print(f"FALLARON {len(_fallos)} test(s).")
