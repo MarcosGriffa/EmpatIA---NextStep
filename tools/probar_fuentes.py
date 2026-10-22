@@ -39,6 +39,11 @@ def main():
         for j in jobs[:2]:
             desc = "con descripción" if j.get("description") else "SIN descripción"
             print(f"         · {j['title'][:60]} — {j['company'][:25]} ({desc})")
+        if f.name == "computrabajo" and jobs:
+            from sources.computrabajo import fetch_full_description
+            texto = fetch_full_description(jobs[0]["url"])
+            print(f"         → descripción completa del 1.º aviso: {len(texto)} caracteres"
+                  + (f" ('{texto[:80]}...')" if texto else " (NO se pudo traer)"))
     print("\nSi una fuente da 0, mirá el mensaje [ERROR] que imprimió arriba.")
 
 

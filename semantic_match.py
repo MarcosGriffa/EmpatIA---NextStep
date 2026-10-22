@@ -247,6 +247,41 @@ def _veredicto_de_respaldo(job: dict, motivo: str) -> dict:
     }
 
 
+# Fuentes cuyo listado no trae descripción y de las que se puede traer el
+# aviso completo. Hoy sólo Computrabajo (ver sources/computrabajo.py).
+DESCRIPCION_MAX_PARALLEL = 3
+
+
+def completar_descripciones(jobs: list[dict]) -> int:
+    """Trae la descripción completa de las finalistas que llegaron sin ella,
+    ANTES de que las lea el LLM. Agregado el 22/10/2026: en producción, 9 de
+    las 10 ofertas mostradas eran de Computrabajo sin descripción, o sea que
+    el LLM las puntuaba sólo por el título. Se hace sólo con las finalistas
+    (no con las ~250 ofertas del listado) para no sumar demasiado tiempo ni
+    pegarle de más al sitio. Devuelve cuántas se completaron."""
+    faltan = [j for j in jobs if not (j.get("description") or "").strip()
+              and j.get("source") == "computrabajo" and j.get("url")]
+    if not faltan:
+        return 0
+    from sources.computrabajo import fetch_full_description
+
+    def _traer(job):
+        try:
+            return fetch_full_description(job["url"])
+        except Exception as e:  # noqa: BLE001
+            print(f"    [descripciones] error en {job.get('url')}: {e}")
+            return ""
+
+    with ThreadPoolExecutor(max_workers=DESCRIPCION_MAX_PARALLEL) as pool:
+        textos = list(pool.map(_traer, faltan))
+    completadas = 0
+    for job, texto in zip(faltan, textos):
+        if texto:
+            job["description"] = texto
+            completadas += 1
+    return completadas
+
+
 def explain_many(cv_text: str, jobs: list[dict], max_workers: int | None = None) -> list[dict]:
     """explain_match sobre varias ofertas EN PARALELO. Devuelve los veredictos
     en el mismo orden que `jobs`. Un error en una oferta no tumba al resto."""
@@ -304,6 +339,11 @@ def rank_and_explain(
     to_explain = finalists[:explain_top_n]
     print(f"Analizando con IA {len(to_explain)} ofertas finalistas "
           f"({min(LLM_MAX_PARALLEL, max(1, len(to_explain)))} en paralelo)...")
+
+    t0 = _time.perf_counter()
+    n_completadas = completar_descripciones(to_explain)
+    sin_desc = sum(1 for j in to_explain if not (j.get("description") or "").strip())
+    print(f"[descripciones] {n_completadas} completadas en {_time.perf_counter() - t0:.1f}s | siguen sin descripción: {sin_desc}")
 
     t0 = _time.perf_counter()
     veredictos = explain_many(cv_text, to_explain)

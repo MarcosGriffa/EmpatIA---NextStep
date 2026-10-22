@@ -74,7 +74,10 @@ class CareerjetSource(JobSource):
             if resp.status_code != 200:
                 # El cuerpo de la respuesta suele decir el motivo (clave sin
                 # aprobar, IP no válida, sitio no verificado...).
-                print(f"    [careerjet] ERROR {resp.status_code}: {resp.text[:400]}")
+                # En una sola línea: Render corta los logs por renglón y el
+                # motivo (ej. la IP rechazada) quedaba en otra línea.
+                motivo = " ".join(resp.text.split())[:300]
+                print(f"    [careerjet] ERROR {resp.status_code}: {motivo}")
                 return []
             data = resp.json()
         except Exception as e:

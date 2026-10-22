@@ -62,6 +62,24 @@ eq(mejor_fuera_de_10["title"] in [x["title"] for x in r], True,
 r_all = sm.rank_and_explain("cv", [dict(j) for j in jobs], embedding_top_k=30, explain_top_n=10)
 eq(len(r_all), 10, "sin show_top_n devuelve todas las que leyó (uso de notificaciones_semanales.py)")
 
+print("\n== completar_descripciones ==")
+import sources.computrabajo as ct  # noqa: E402
+
+pedidas = []
+ct.fetch_full_description = lambda url: (pedidas.append(url), "" if "rota" in url else f"Descripción de {url}")[1]
+finalistas = [
+    {"title": "A", "source": "computrabajo", "url": "https://ct/a", "description": ""},
+    {"title": "B", "source": "computrabajo", "url": "https://ct/b", "description": "ya tenía"},
+    {"title": "C", "source": "jooble", "url": "https://jb/c", "description": ""},
+    {"title": "D", "source": "computrabajo", "url": "https://ct/rota", "description": ""},
+]
+n = sm.completar_descripciones(finalistas)
+eq(n, 1, "completa sólo las de Computrabajo sin descripción que se pudieron traer")
+eq(finalistas[0]["description"], "Descripción de https://ct/a", "la descripción queda en la oferta")
+eq(finalistas[1]["description"], "ya tenía", "no pisa una descripción que ya existía")
+eq("https://jb/c" in pedidas, False, "no le pide nada a otros portales")
+eq(finalistas[3]["description"], "", "si falla la descarga, la oferta sigue igual")
+
 print()
 if _fallos:
     print(f"FALLARON {len(_fallos)} test(s).")
