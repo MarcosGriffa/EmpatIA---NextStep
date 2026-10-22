@@ -129,7 +129,13 @@ def fetch_full_description(url: str) -> str:
 
     soup = BeautifulSoup(resp.text, "html.parser")
     p = soup.select_one("div.mb40.pb40.bb1 p.mbB")
-    return _txt(p)
+    texto = _txt(p)
+    if not texto:
+        # Respaldo por si Computrabajo cambia las clases del HTML: el
+        # resumen que el propio aviso publica para buscadores.
+        meta = soup.select_one('meta[name="description"]') or soup.select_one('meta[property="og:description"]')
+        texto = (meta.get("content") or "").strip() if meta else ""
+    return texto
 
 
 class ComputrabajoSource(JobSource):
